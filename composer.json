@@ -1,31 +1,53 @@
 {
-	"require": {
-		"mothership-ec/cog-mothership-user"     : "~4.0",
-		"mothership-ec/cog-mothership-cms"      : "~4.0",
-		"mothership-ec/cog-mothership-ecommerce": "~3.0",
-		"mothership-ec/cog-mothership-discount" : "~2.0",
-		"mothership-ec/cog-mothership-returns"  : "~5.0",
-		"mothership-ec/cog-mothership-voucher"  : "~2.0",
-		"mothership-ec/cog-mothership-reports"  : "~2.0"
-	},
-	"config": {
-		"bin-dir": "bin"
-	},
-	"scripts": {
-		"post-package-install": [
-			"Message\\Cog\\Config\\FixtureManager::postInstall"
-		],
-		"pre-package-update": [
-			"Message\\Cog\\Config\\FixtureManager::preUpdate"
-		],
-		"post-package-update": [
-			"Message\\Cog\\Config\\FixtureManager::postUpdate"
-		]
-	},
-	"autoload": {
-		"psr-4": {
-			""                   : "app/",
-			"Mothership\\Site\\" : "app/site/src"
-		}
+  "name": "mothership-ec/mothership",
+  "description": "Mothership: E-commerce for Humans",
+  "keywords": [
+	"mothership",
+	"ecommerce",
+	"cms",
+	"content",
+	"editing",
+	"cog"
+  ],
+  "homepage": "http://mothership-ec",
+  "license": "MIT",
+  "authors": [
+	{
+	  "name": "The Mothership Development Team",
+	  "email": "dev@mothership.ec"
 	}
+  ],
+  "support": {
+	"wiki": "http://wiki.mothership.ec/",
+	"issues": "http://github.com/mothership-ec/mothership/issues"
+  },
+  "require": {
+	"mothership-ec/cog-mothership-user"      : "~4.0",
+	"mothership-ec/cog-mothership-cms"       : "~4.0",
+	"mothership-ec/cog-mothership-ecommerce" : "~3.0",
+	"mothership-ec/cog-mothership-discount"  : "~2.0",
+	"mothership-ec/cog-mothership-returns"   : "~5.0",
+	"mothership-ec/cog-mothership-voucher"   : "~2.0",
+	"mothership-ec/cog-mothership-reports"   : "~2.0"
+  },
+  "config": {
+	"bin-dir": "bin"
+  },
+  "scripts": {
+	"post-package-install": [
+	  "Message\\Cog\\Config\\FixtureManager::postInstall"
+	],
+	"pre-package-update": [
+	  "Message\\Cog\\Config\\FixtureManager::preUpdate"
+	],
+	"post-package-update": [
+	  "Message\\Cog\\Config\\FixtureManager::postUpdate"
+	]
+  },
+  "autoload": {
+	"psr-4": {
+	  "": "app/",
+	  "Mothership\\Site\\": "app/site/src"
+	}
+  }
 }

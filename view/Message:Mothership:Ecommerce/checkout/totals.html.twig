@@ -1,0 +1,74 @@
+{% macro renderTotals(order, partsToRender, footer) %}
+{% set partsToRender = partsToRender ?: ['discount', 'subTotal', 'shipping', 'payment'] %}
+{% set footer = footer ?: 'amountDue' %}
+
+{% set amountDue = 0 %}
+{% set amountPaid = order.totalGross %}
+	<div class="totals col-4">
+		{% if 'subTotal' in partsToRender %}
+			<div class="subtotal">
+				<span>Subtotal</span>
+				<span data-checkout-live-update>{{ order.items.getTotalBasePrice|price }}</span>
+			</div>
+			{% set amountDue = amountDue + order.productGross %}
+		{% endif %}
+
+		{% if 'discount' in partsToRender and order.productDiscount %}
+			<div>
+				<span>Discount total</span>
+				<span data-checkout-live-update>{{ (order.productDiscount * -1)|price }}</span>
+			</div>
+		{% endif %}
+
+		{% if 'shipping' in partsToRender %}
+			<div>
+				<span>Shipping</span>
+				<span data-checkout-live-update>{{ order.shippingGross|price }}</span>
+			</div>
+			{% set amountDue = amountDue + order.shippingGross %}
+		{% endif %}
+
+		{% if 'voucher' in partsToRender %}
+		{% for payment in order.payments %}
+		{% if payment.method.getName == 'voucher' %}
+			<div>
+				<span>Voucher</span>
+				<span class="amount" data-checkout-live-update>{{ (0 - payment.amount)|price }}</span>
+			</div>
+			{% set amountDue = amountDue - payment.amount %}
+			{% set amountPaid = amountPaid - payment.amount %}
+		{% endif %}
+		{% endfor %}
+		{% endif %}
+
+		{% if 'amountDue' in partsToRender %}
+		<div>
+			<span>Amount due</span>
+			<span data-checkout-live-update>{{ (amountDue)|price }}</span>
+		</div>
+		{% endif %}
+
+		{% if 'payment' in partsToRender %}
+		{% for payment in order.payments %}
+			<div>
+				<span>{{ payment.method.getDisplayName }}</span>
+				<span data-checkout-live-update>{{ payment.amount|price }}</span>
+			</div>
+			{% set amountDue = amountDue - payment.amount %}
+		{% endfor %}
+		{% endif %}
+		{% if footer == 'amountDue' %}
+		<div class="amount">
+			<span>Amount due</span>
+			<span data-checkout-live-update>{{ (amountDue)|price }}</span>
+		</div>
+		{% endif %}
+
+		{% if footer == 'amountPaid' %}
+			<div class="amount">
+				<span>Amount paid</span>
+				<span data-checkout-live-update>{{ amountPaid|price }}</span>
+			</div>
+		{% endif %}
+	</div>
+{% endmacro %}

@@ -1,0 +1,30 @@
+{% extends 'Message:Mothership:User::account:account-layout' %}
+{% block title %}Return an Item | {{ app.cfg.app.name }}{% endblock %}
+
+{% block account_content %}
+	<h1>Return - {{ return.item.productName }}</h1>
+	<div class="return">
+		<header>
+			<p>{{ return.authorship.createdAt()|date }}</p>
+		</header>
+		<p>
+			<a href="{{ url('ms.user.return.document', {'returnID': return.id}) }}">Print</a>
+		</p>
+		<dl>
+			<dt>Reason</dt>
+			<dd>{{ return.reason }}</dd>
+			<dt>Resolution</dt>
+			<dd>{{ return.resolution }}</dd>
+			<dt>Status</dt>
+			<dd>{{ return.item.status }}</dd>
+			{% if return.isExchangeResolution %}
+				<dt>Exchange Item</dt>
+				<dd>{{ return.exchangeItem.productName }} - {{ return.exchangeItem.options }}</dd>
+				<dt>Exchange Item Status</dt>
+				<dd>{{ return.exchangeItem.status }}</dd>
+			{% endif %}
+			<dt>Balance</dt>
+			<dd>{{ return.balance|price }}</dd>
+		</dl>
+	</div>
+{% endblock %}

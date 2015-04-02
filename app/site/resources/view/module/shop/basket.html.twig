@@ -1,0 +1,30 @@
+<a href="{{ url('ms.ecom.checkout') }}" class="basket-icon open-canvas" data-direction="right">Basket <span>{{ basket.items|length }}</span></a>
+<section class="basket off-canvas" data-height data-offcanvas data-swipe="left">
+	<nav>
+		<div>
+			<a href="{{ url('ms.ecom.checkout') }}">Go to Checkout</a>
+		</div>
+		<a href="#" class="close"><i class="fa fa-times"></i></a>
+	</nav>
+	<div class="contents">
+		<section class="details">
+			<p>Total item(s) - {{ basket.items|length }}</p>
+			<strong>{{ totalListPrice|price(basket.currencyID) }}</strong>
+		</section>
+		{% if basket.items|length > 0 %}
+			<ul class="items">
+				{% for item in basket.items.getRows %}
+					<li>
+						{{ getResizedImage(item.first.product.getUnitImage(item.first.unit, 'default'), 70, 70) }}
+						<h4>{{ item.first.productName }} <span>{{ item.first.unit.options.colour }} - {{ item.sum('gross')|price }}</span></h4>
+						<p class="qty">Qty: {{ item.quantity }}, {{ item.first.unit.options.size }}</p>
+						<a href="{{ url('ms.ecom.checkout.remove',{'unitID':item.first.unitID}) }}" class="remove">Remove</a>
+					</li>
+				{% endfor %}
+			</ul>
+		{% else %}
+			<p class="empty">Your shopping cart is empty&hellip; Go and add something!</p>
+			<a class="go-shopping" href="#">Go shopping</a>
+		{% endif %}
+	</div>
+</section>

@@ -1,0 +1,14 @@
+{% for page in pages %}
+	<section class="col-3">
+		<h4>{{ page.title }}</h4>
+		<ul>
+			{% for child in children[page.id] %}
+				<li>
+					<a href="{{ child.slug }}">
+						{{ child.title }}
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</section>
+{% endfor %}

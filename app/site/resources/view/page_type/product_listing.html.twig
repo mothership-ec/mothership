@@ -1,0 +1,10 @@
+{% extends 'Mothership:Site::templates/base' %}
+
+{% block content %}
+	<main class="content" id="content" role="main">
+		<h1>{{ page.title }}</h1>
+		{{ render(controller('Mothership:Site::Controller:Module:Shop#productBlocks', {
+			page: page
+		})) }}
+	</main>
+{% endblock %}

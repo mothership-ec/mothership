@@ -1,0 +1,40 @@
+{{ form_start(form, {'attr': {'id': 'payment-form' }}) }}
+	{# Form elements not defined in form class as they need to have no name attribute and SF2 does not support this #}
+	<span class="payment-errors"></span>
+	<div class="form-row">
+		<label>Card Number</label>
+		<input type="text" size="20" data-stripe="number" class="card-number" required="required" placeholder="0000000000000000"/>
+	</div>
+	<div class="form-row cvc">
+		<label>CVC</label>
+		<div class="help-clear">
+			<input type="text" size="4" data-stripe="cvc" class="card-cvc" placeholder="123"/>
+		</div>
+		<div class="help">
+			<span>Info</span>
+			<p>{{ 'ms.stripe.card.cvc' | trans }}</p>
+		</div>
+	</div>
+	<div class="form-row expiration">
+		<label>Expiration</label>
+		<div class="month">
+			<div>
+				<input type="text" size="2" data-stripe="exp-month" class="card-expiry-month" placeholder="MM" required="required"/>
+			</div>
+			<span> / </span>
+		</div>
+		<div class="year">
+			<div>
+				<input type="text" size="4" data-stripe="exp-year" class="card-expiry-year" placeholder="YYYY" required="required"/>
+			</div>
+			<span>(MM/YYYY)</span>
+		</div>
+	</div>
+	{% if ('ms.stripe.card.security' | trans) %}
+		<div class="security-info"><p>{{ 'ms.stripe.card.security' | trans }}</p></div>
+	{% endif %}
+	<div class="form-row total">
+		Total: {{ payable.payableAmount | price(payable.payableCurrency) }}
+		<button type="submit" class="continue">Make payment</button>
+	</div>
+{{ form_end(form) }}

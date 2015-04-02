@@ -1,0 +1,23 @@
+<ul>
+	{% for page in pages %}
+	{% if page.visibilityMenu %}
+		<li {{ page.id in active ? ' class="current"' }} >
+			<a href="{{ page.hasTag('submenu') ? '#' : page.slug }}" data-pushid="{{ page.id }}">
+				{{ page.title }}
+			</a>
+
+			{% if page.hasTag('submenu') == true  %}
+				<div class="sub-navigation">
+					{{
+						render(controller('Mothership:Site::Controller:Module:Menu#menu', {
+							page: page,
+							currentPage: currentPage,
+							active: active
+						}))
+					}}
+				</div>
+			{% endif %}
+		</li>
+	{% endif %}
+	{% endfor %}
+</ul>

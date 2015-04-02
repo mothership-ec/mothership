@@ -1,0 +1,17 @@
+{% extends 'Message:Mothership:User::account:account-layout' %}
+{% block title %}Completed Return | {{ app.cfg.app.name }}{% endblock %}
+
+{% block account_content %}
+	<h1>Return an item</h1>
+	<div class="return">
+		<p>Thank you, your returns have entered our order processing system.</p>
+		<h2>What next?</h2>
+		<p>Please <a href="{{ url('ms.user.return.document', {returnID: return.id}) }}">print this confirmation</a> and place it in the package with your returning item(s).</p>
+		<p>If you are unable to print, please write the following Returns Number(s) and include this in your package:</p>
+		<p><strong>Returns Number R{{ return.id }}</strong></p>
+		<p><em>Please note that no money will change hands until we have fully processed your return(s).</em></p>
+		<p><em>Please note that the amounts shown are approximate and are provided for your reference only. You will be informed
+			by email of any final adjustments to your order total for your returned items.</em></p>
+		<a href="{{ url('ms.user.order.detail', {orderID: return.item.orderID}) }}" class="button">back to order</a>
+	</div>
+{% endblock %}

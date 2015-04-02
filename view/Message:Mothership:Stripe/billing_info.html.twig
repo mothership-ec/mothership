@@ -1,0 +1,18 @@
+<section class="billing">
+	<h3>Billing Information</h3>
+	<div class="adr">
+		<span class="n">{{ address.name }}</span>
+		<div class="address">
+			{% for line in address.lines %}
+				<span>{{ line }}</span>
+			{% endfor %}
+		</div>
+		<span class="locality">{{ address.town }}</span>
+		{% if billing.state|length %}
+			<span class="region">{{ address.state }}</span>
+		{% endif %}
+		<span class="postal-code">{{ address.postcode }}</span>
+		<span class="country-name">{{ address.country }}</span>
+	</div>
+	<div class="total">Total: {{ payable.payableAmount | price(payable.payableCurrency) }}</div>
+</section>

@@ -1,0 +1,30 @@
+{% extends 'Mothership:Site::templates/base' %}
+
+{% block title %}Checkout | {{ app.cfg.app.name }}{% endblock %}
+
+{% block stylesheets %}
+	{{ parent() }}
+
+	{% stylesheets
+
+	'@Mothership:Site::resources/assets/css/checkout.css'
+
+	output='/assets/css/app_checkout-*.css'
+	filter='csscogulerewrite,?cssmin'
+	%}
+	<link rel="stylesheet" href="{{ asset_url }}">
+	{% endstylesheets %}
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+
+	{% include 'Message:Mothership:Ecommerce::checkout:includes:js-block' %}
+
+	{% javascripts
+	output='/assets/js/app_checkout-*.js'
+	filter='?jsmin'
+	%}
+	<script src="{{ asset_url }}"></script>
+	{% endjavascripts %}
+{% endblock %}

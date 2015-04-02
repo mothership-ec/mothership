@@ -1,0 +1,15 @@
+.DS_Store
+/namespaces.php
+/vendor
+/config/local/*/
+.idea
+/data/*
+/bin/*
+/public/assets/*
+/public/files/*
+/public/resize/*
+/public/cogules/*
+/public/barcodes/*
+/logs/*
+/tmp/*
+

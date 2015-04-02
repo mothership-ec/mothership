@@ -1,0 +1,14 @@
+{% stylesheets
+	'@Mothership:Site::resources/assets/css/basic.css'
+	'@Mothership:Site::resources/assets/css/layout.css'
+	'@Mothership:Site::resources/assets/css/fonts.css'
+	'@Mothership:Site::resources/assets/css/account.css'
+	'@Mothership:Site::resources/assets/css/styles.css'
+	'@Mothership:Site::resources/assets/css/mobile.css'
+	output='/assets/css/<Add vendor name>-*.css'
+	filter='csscogulerewrite,?cssmin'
+%}
+<link rel="stylesheet" href="{{ asset_url }}">
+{% endstylesheets %}
+
+

@@ -1,0 +1,10 @@
+{# Flash messages #}
+{% for type, messages in app.session.getFlashBag.all %}
+	<div class="row">
+		<div class="feedback {{ type }} col-12">
+			{% for message in messages %}
+				<p>{{ message|raw }}</p>
+			{% endfor %}
+		</div>
+	</div>
+{% endfor %}

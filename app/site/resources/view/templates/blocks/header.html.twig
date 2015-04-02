@@ -1,0 +1,33 @@
+<header class="header" role="banner" id="top">
+
+	{# Shop Access #}
+	{% block shopaccess %}
+		{% include '@Mothership:Site::module:menu:shopaccess' %}
+	{% endblock %}
+
+	{# Site logo #}
+	<h1 class="logo">
+		<a href="/">{{app.cfg.app.name }}</a>
+	</h1>
+
+	<span class="nav-open">
+		<i class="fa fa-bars" data-direction="right"></i>
+	</span>
+
+	{# Basket #}
+	{% block basket %}
+		{{ render(controller('Mothership:Site::Controller:Module:Shop#basket')) }}
+	{% endblock %}
+
+	{# Main navigation #}
+	{% block navigation %}
+		<nav class="navigation row nav-offcanvas" role="navigation">
+			{{
+				render(controller('Mothership:Site::Controller:Module:Menu#menu', {
+					currentPage: page
+				}))
+			}}
+		</nav>
+	{% endblock %}
+
+</header>

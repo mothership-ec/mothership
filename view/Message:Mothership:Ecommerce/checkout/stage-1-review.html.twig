@@ -1,0 +1,101 @@
+{% extends 'Message:Mothership:Ecommerce::checkout:checkout-layout' %}
+
+{% block content %}
+	<main class="checkout" id="main-content">
+		<section class="row">
+			<div class="col-12">
+				<h1>Checkout</h1>
+				<div class="progress">
+					<div class="active">
+						<p><strong>Stage 01</strong> Your selection</p>
+					</div>
+					<div>
+						<p><strong>Stage 02</strong> Your details</p>
+					</div>
+					<div>
+						<p><strong>Stage 03</strong> Delivery details</p>
+					</div>
+					<div>
+						<p><strong>Stage 04</strong> Payment</p>
+					</div>
+					<div>
+						<p><strong>Stage 05</strong> Confirmation</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		{% if order.items|length != 0 %}
+		<section class="selection row">
+			<div class="col-12">
+			{{ form_start(form, {'attr': {id: 'checkout-selection-form'}}) }}
+				<h2>Your Selection</h2>
+				<table class="cf">
+					<colgroup>
+						<col width="60">
+		                <col>
+		                <col width="160">
+		                <col width="160">
+		                <col width="160">
+		            </colgroup>
+					<thead class="cf">
+						<tr>
+							<th class="item">Item(s)</th>
+							<th></th>
+							<th class="quantity">Quantity</th>
+							<th class="price">Price</th>
+							<th class="remove"></th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for item in basket %}
+							<tr>
+								<td class="image">
+									{{ getResizedImage(item.item.product.getUnitImage(item.item.unit, 'default'), 80, 80) }}
+								</td>
+								<td class="item">
+									{{ item.item.productName }} <span>{{ item.item.options }}</span>
+								</td>
+								<td class="quantity">{{ form_widget(form['items'][item.item.unitID]) }}
+								</td>
+								<td class="price" data-checkout-live-update>{{ (item.item.basePrice * item.quantity)|price }}
+								</td>
+								<td class="remove"><a href="{{ url('ms.ecom.checkout.remove',{'unitID':item.item.unitID}) }}">Remove</a></td>
+								</tr>
+							{% endfor %}
+					</tbody>
+				</table>
+				<button type="submit" class="update">Update</button>
+			{{ form_end(form) }}
+			</div>
+		</section>
+		<section class="row">
+			{% if moduleExists('Message:Mothership:Discount') %}
+				<div class="discount-code col-4">
+					{{ render(controller('Message:Mothership:Discount::Controller:AddDiscount#index')) }}
+				</div>
+			{% endif %}
+			{% if moduleExists('Message:Mothership:Voucher') %}
+				<div class="gift-voucher col-4">
+					{{ render(controller('Message:Mothership:Voucher::Controller:AddVoucher#index')) }}
+				</div>
+			{% endif %}
+			{% import 'Message:Mothership:Ecommerce::checkout:totals' as totals %}
+			{{ totals.renderTotals(order) }}
+		</section>
+		<nav class="checkout-nav row">
+			<div class="col-12">
+				<a href="/shop" class="button cancel">Continue shopping</a>
+				<a href="{{ url('ms.ecom.checkout.details')}} " class="button continue">Continue to details</a>
+			</div>
+		</nav>
+	{% else %}
+		<section class="empty row">
+			<div class="col-12">
+				<h2>Your cart is empty</h2>
+				<p>You don’t have anything currently in your shopping cart. Please take your time to browse the store.</p>
+				<a href="/shop" class="button continue">Continue shopping</a>
+			</div>
+		</section>
+	{% endif %}
+	</main>
+{% endblock %}

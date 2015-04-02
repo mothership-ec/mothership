@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Site Admin</title>
+		{% block stylesheets %}
+			{% stylesheets
+				'@::resources/assets/css/delivery_note_print.css'
+
+				output='/assets/css/ms_print.css'
+				filter='csscogulerewrite'
+			%}
+				<link rel="stylesheet" href="{{ asset_url }}">
+			{% endstylesheets %}
+		{% endblock %}
+
+	</head>
+	<body>
+
+		{% block content %}{% endblock %}
+
+	</body>
+</html>

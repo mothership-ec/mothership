@@ -1,0 +1,13 @@
+{% extends 'Mothership:Site::templates/base' %}
+
+{% block title %}Access denied | {{ app.cfg.app.name }}{% endblock %}
+
+{% block content %}
+	<main class="content error-page">
+		<div class="col-12">
+			<h1>Internal server error</h1>
+			<p>An error occured while processing your request. This error has been logged and will be investigated.</p>
+			<p>If the problem persists, please <a href="/contact-us">contact us</a>.</p>
+		</div>
+	</main>
+{% endblock %}

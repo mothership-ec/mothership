@@ -1,0 +1,16 @@
+{% extends 'Message:Mothership:User::account:account-layout' %}
+{% block title %}Return an Item | {{ app.cfg.app.name }}{% endblock %}
+
+{% block account_content %}
+	<h1>Return an item</h1>
+	<div class="return">
+		<dl>
+			<dt>Item to be returned</dt>
+			<dd>{{ item.productName }} - {{ item.options }}</dd>
+		</dl>
+		{{ form_start(form) }}
+			{{ form_row(form.note) }}
+			<button class="button submit">Submit</button>
+		{{ form_end(form) }}
+	</div>
+{% endblock %}

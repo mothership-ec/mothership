@@ -1,0 +1,734 @@
+/* ======================================================= */
+/*                                                         */
+/*                                                         */
+/*    Skeleton Checkout CSS                                */
+/*                                                         */
+/*                                                         */
+/* ======================================================= */
+/*
+/*    Mothership
+/*    http://mothership.ec
+/*
+/* ======================================================= */
+
+.checkout
+{
+    position: relative;
+
+    float: left;
+
+    width: 100%;
+    padding: 0;
+}
+
+.checkout,
+.checkout *
+{
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.basket-icon {
+    display: none;
+}
+
+.checkout .field.inline {
+    clear: both;
+}
+
+
+/* Progress
+ *
+ * Main progress bar which runs across the top of the Checkout.
+ * Will signify to the customer where abouts they're currently
+ * in the checkout process
+ *
+---------------------------------------------------------- */
+
+
+.progress
+{
+    float: left;
+
+    width: 100%;
+    margin: 0;
+
+    border: 1px solid #eee;
+    border-right: none;
+    border-left: 1px solid #eee;
+}
+
+.progress div
+{
+    float: left;
+
+    width: 20%;
+
+    border-right: 1px solid #eee;
+}
+
+.progress p
+{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 20px;
+}
+
+.progress strong
+{
+    display: block;
+    float: left;
+
+    width: 100%;
+}
+
+.progress .active
+{
+    border-color: #eee;
+    background: #eee;
+}
+
+
+/* Product list
+---------------------------------------------------------- */
+
+
+.selection table
+{
+    width: 100%;
+    margin-bottom: 20px;
+
+    border-collapse: collapse;
+
+    vertical-align: top;
+}
+
+.selection th,
+.selection td
+{
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+.selection .item
+{
+    text-align: left;
+}
+
+.selection img
+{
+    margin: 0 20px 0 0;
+}
+
+.selection input
+{
+    display: inline-block;
+
+    max-width: 100px;
+    margin: 0;
+}
+
+
+/*
+ * Update button to be used when JS is disabled. Updates
+ * Cart totals and amount.
+ */
+
+
+.update
+{
+    display: none;
+}
+
+.no-js .update
+{
+    display: inline-block;
+
+    margin: 0 0 20px;
+}
+
+
+/* Totals
+---------------------------------------------------------- */
+
+
+.totals
+{
+    float: right;
+}
+
+.totals span
+{
+    font-size: 16px;
+
+    display: block;
+    float: left;
+
+    width: 50%;
+    height: auto;
+    padding: 15px 0 0;
+
+    text-align: right;
+
+    border: none;
+}
+
+.totals .amount span
+{
+    font-size: 1.75em;
+}
+
+
+/* Discounts
+---------------------------------------------------------- */
+
+
+.discounts .help
+{
+    top: 45px;
+}
+
+
+/* Help
+---------------------------------------------------------- */
+
+
+.help-clear
+{
+    margin-right: 60px;
+}
+
+.help
+{
+    position: absolute;
+    right: 30px;
+    bottom: 6px;
+
+    float: left;
+
+    width: auto;
+
+    cursor: help;
+}
+
+.help span
+{
+    line-height: 20px;
+
+    position: relative;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+
+    text-align: center;
+    text-indent: -999em;
+
+    background: #ccc;
+}
+
+.help span:before
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    content: '?';
+    text-indent: 0;
+}
+
+.help p
+{
+    position: absolute;
+    z-index: 100;
+
+    display: none;
+    float: left;
+
+    width: 300px;
+    padding: 20px;
+
+    border-radius: 0 5px 5px 5px;
+    background: #ccc;
+}
+
+.help:hover p
+{
+    display: block;
+}
+
+
+/* Navigation
+---------------------------------------------------------- */
+
+
+.checkout-nav
+{
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.checkout-nav .continue
+{
+    float: right;
+}
+
+
+/* Login & register
+---------------------------------------------------------- */
+
+
+.login-register button
+{
+    float: right;
+}
+
+
+/* Delivery details
+---------------------------------------------------------- */
+
+
+.adr span
+{
+    line-height: 1.1;
+
+    display: block;
+    clear: both;
+
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+/* Payment
+---------------------------------------------------------- */
+
+
+.payment
+{
+    position: relative;
+
+    float: none;
+    overflow: hidden;
+
+    width: 100%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.payment .billing
+{
+    float: left;
+
+    width: 100%;
+    max-width: 30%;
+}
+
+.payment .card-info
+{
+    float: left;
+
+    width: 100%;
+    max-width: 70%;
+    padding: 0 0 0 35px;
+
+    border-left: 1px solid #ccc;
+    background: #fff;
+}
+
+.payment .cards ul
+{
+    padding-left: 0;
+}
+
+.payment .cards li
+{
+    font-size: 36px;
+
+    float: left;
+
+    width: auto;
+
+    list-style-type: none;
+
+    color: #666;
+}
+
+.payment-form .total
+{
+    font-size: 24px;
+
+    float: left;
+
+    width: 100%;
+    margin-top: 40px;
+    padding-top: 40px;
+
+    border-top: 1px solid #ccc;
+}
+
+.payment-form .total button
+{
+    float: right;
+}
+
+.payment .form-row
+{
+    position: relative;
+
+    float: left;
+
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.payment input
+{
+    margin: 0;
+}
+
+.payment .card-number {
+    width: 200px;
+    letter-spacing: 0px;
+}
+
+.payment .cvc
+{
+    float: left;
+
+    width: 100px;
+}
+
+.payment .expiration
+{
+    float: left;
+
+    width: 75%;
+}
+
+.payment .expiration label
+{
+    width: 100%;
+}
+
+.payment .month,
+.payment .year
+{
+    position: relative;
+
+    float: left;
+}
+
+.payment .month
+{
+    width: 80px;
+}
+
+.payment .year
+{
+    width: 160px;
+}
+
+.payment .month div
+{
+    margin-right: 40px;
+}
+
+.payment .year div
+{
+    margin-right: 100px;
+}
+
+.payment .month span,
+.payment .year span
+{
+    font-size: 12px;
+    line-height: 40px;
+    line-height: 32px;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    height: 32px;
+}
+
+.payment .month span
+{
+    width: 40px;
+
+    text-align: center;
+}
+
+.payment .year span
+{
+    width: 100px;
+
+    text-align: center;
+}
+
+.payment .security-info
+{
+    float: left;
+
+    width: 100%;
+
+    font-size: 0.85em;
+}
+
+.payment .payment-errors
+{
+    font-weight: bold;
+
+    display: block;
+
+    padding-bottom: 10px;
+
+    color: red;
+}
+
+
+/* Failed / Empty
+---------------------------------------------------------- */
+
+.checkout .empty,
+.failed
+{
+    display: table;
+    float: left;
+
+    width: 100%;
+    min-height: 400px;
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+.checkout .empty div,
+.failed div
+{
+    display: table-cell;
+    float: none;
+
+    height: 100%;
+
+    vertical-align: middle;
+}
+
+/* Media styles
+---------------------------------------------------------- */
+
+
+@media screen and (max-width: 768px)
+{
+    .checkout .button,
+    .checkout button
+    {
+        float: left;
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .checkout .cancel
+    {
+        display: none;
+    }
+
+    /* Progression */
+
+    .progress
+    {
+        display: none;
+    }
+
+    /* Selection */
+
+    .selection thead,
+    .selection th
+    {
+        display: none;
+    }
+
+    .selection tr
+    {
+        float: left;
+
+        width: 100%;
+        margin-bottom: 20px;
+
+        border: 1px solid #ccc;
+        border-bottom: none;
+    }
+
+    .selection tr:nth-of-type(odd)
+    {
+        background: #fff;
+    }
+
+    .selection td
+    {
+        position: relative;
+
+        display: block;
+        float: left;
+
+        width: 100%;
+        height: auto;
+        padding: 30px 0 30px 50% !important;
+
+        text-align: left;
+        text-align: left !important;
+    }
+
+    .selection .image
+    {
+        width: 100%;
+        padding: 0 !important;
+    }
+
+    .selection .image img
+    {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .selection td:before
+    {
+        font-weight: bold;
+
+        position: absolute;
+        left: 0;
+
+        display: block;
+
+        width: 50%;
+
+        content: '';
+        text-indent: 20px;
+    }
+
+    .selection .item:before
+    {
+        content: 'Description';
+    }
+
+    .selection .order-status:before
+    {
+        content: 'Status';
+    }
+
+    .selection .quantity:before
+    {
+        content: 'Quantity';
+    }
+
+    .selection .price:before
+    {
+        content: 'Price';
+    }
+
+    .selection .total:before
+    {
+        content: 'Total';
+    }
+
+    .selection .quantity input
+    {
+        max-width: 100px !important;
+    }
+
+    .selection .remove
+    {
+        width: 100%;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+
+        text-align: center !important;
+    }
+
+
+    /* Payment */
+
+    .payment .billing,
+    .payment .card-info
+    {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+
+        border: none;
+    }
+
+    .payment .billing
+    {
+        padding-bottom: 20px;
+    }
+
+    .payment .billing .address
+    {
+        padding: 0;
+
+        border: none;
+    }
+
+    .payment .billing .adr,
+    .payment .billing .total
+    {
+        width: 100%;
+    }
+
+    .payment .billing .adr
+    {
+        padding-bottom: 20px;
+    }
+
+    .payment .form-row
+    {
+        float: left;
+
+        width: 100%;
+    }
+
+    .payment .month,
+    .payment .year
+    {
+        width: 50%;
+    }
+
+    .payment .month div,
+    .payment .year div
+    {
+        margin: 0;
+    }
+
+    .payment .month span,
+    .payment .year span
+    {
+        display: none;
+    }
+
+    .payment .form-row button
+    {
+        margin-top: 20px;
+    }
+
+    .help-clear
+    {
+        margin: 0;
+    }
+
+    .help
+    {
+        display: none;
+    }
+}

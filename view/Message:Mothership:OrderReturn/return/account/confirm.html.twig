@@ -1,0 +1,23 @@
+{% extends 'Message:Mothership:User::account:account-layout' %}
+{% block title %}Confirm Return | {{ app.cfg.app.name }}{% endblock %}
+
+{% block account_content %}
+	<h1>Return an item</h1>
+	<div class="return">
+		<dl>
+			<dt>Item to be returned</dt>
+			<dd>{{ item.getDescription }}</dd>
+		</dl>
+		<p><strong>{{ resolutionMessage }}</strong></p>
+		<p>{{ balanceMessage }} <strong>{{ balance|price }}</strong></p>
+		<dl>
+			<dt>Additional notes:</dt>
+			<dd>{{ data.note }}</dd>
+		</dl>
+		{{ form_start(confirmForm) }}
+			<p>Please view the <a href="{{ url('ms.return.terms') }}" target="_blank">terms and conditions for returning an item here</a>.</p>
+			{{ form_row(confirmForm.terms) }}
+			<button type="submit" class="button submit">Complete Returns Process</button>
+		{{ form_end(confirmForm) }}
+	</div>
+{% endblock %}

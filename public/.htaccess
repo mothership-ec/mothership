@@ -1,0 +1,9 @@
+Options -Indexes
+
+RewriteEngine on
+RewriteBase /
+
+# Direct all requests to Mothership system
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [L,QSA]

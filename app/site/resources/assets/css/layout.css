@@ -1,0 +1,272 @@
+/* ======================================================= */
+/*                                                         */
+/*                                                         */
+/*    Mothership Site                                      */
+/*                                                         */
+/*                                                         */
+/* ======================================================= */
+/*
+/*
+/*    Development by Message
+/*    http://www.message.co.uk
+/*
+/*    Layout Style Sheet v1.0
+/*    Created by Richard McCartney
+/*
+/*
+/* ======================================================= */
+
+
+/* Layout
+ *
+ * Grid systems are used for creating page layouts through a
+ * series of rows and columns that house your content. Mobile first
+ * fluid grid system that appropriately scales up to 12 columns
+ * as the device or viewport size increases
+ *
+---------------------------------------------------------- */
+
+
+.container {
+    position: relative;
+
+    overflow: hidden;
+
+    width: 100%;
+	max-width: 1164px; /* - Uncomment to use the 1140px grid system */
+    padding: 0px;
+    height: 100%;
+    margin: 0 auto;
+
+    -webkit-overflow-scrolling: touch;
+
+}
+
+.inner-container {
+	/*
+	 * Container used for off canvas elements; Mobile navigation &
+	 * shopping basket. Basket functionality will be present from
+	 * desktop to mobile devices.
+	 *
+	 * Transition animations are used to slide the container element
+	 * on opening / closing off canvas functionality.
+	 */
+    position: relative;
+
+	max-width: 1164px; /* - Uncomment to use the 1140px grid system */
+    padding: 0 12px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+
+    background: #fff;
+}
+
+.header,
+.content,
+.footer,
+.row {
+    position: relative;
+
+    float: left;
+
+    width: 100%;
+    height: auto;
+}
+
+.row {
+	/*
+	 * Use rows to create horizontal groups of columns. Rows must
+	 * be placed within a .container or .content
+	 *
+	 * Place any unique styles for row here.
+	 */
+}
+
+.header {
+	/*
+	 * Place any unique styles for row here.
+	 */
+}
+
+.content {
+	/*
+	 * Place any unique styles for row here.
+	 */
+}
+
+.footer {
+	/*
+	 * Place any unique styles for row here.
+	 */
+}
+
+
+/* Columns
+ *
+ * Completely fluid columns to be used to create your site
+ * layout. Will take a correct percentage of the main container
+ * width and display your content in a structured manner.
+ *
+ * This system doesn't require any .last classes to remove guttering.
+ * Column value must equal up to 12 columns max.
+ *
+---------------------------------------------------------- */
+
+
+.col-12,
+.col-11,
+.col-10,
+.col-9,
+.col-8,
+.col-7,
+.col-6,
+.col-5,
+.col-4,
+.col-3,
+.col-2,
+.col-1 {
+	/*
+	 * Sets the global placement and guttering for all columns
+	 */
+    position: relative;
+
+    float: left;
+
+    height: auto;
+    min-height: 1px;
+    padding: 0 12px;
+}
+
+.col-12 {
+    width: 100%;
+    max-width: 100%;
+}
+
+.col-11 {
+    width: 100%;
+    max-width: 91.666%;
+}
+
+.col-10 {
+    width: 100%;
+    max-width: 83.333%;
+}
+
+.col-9 {
+    width: 100%;
+    max-width: 75%;
+}
+
+.col-8 {
+    width: 100%;
+    max-width: 66.666%;
+}
+
+.col-7 {
+    width: 100%;
+    max-width: 58.333%;
+}
+
+.col-6 {
+    width: 100%;
+    max-width: 50%;
+}
+
+.col-5 {
+    width: 100%;
+    max-width: 41.666%;
+}
+
+.col-4 {
+    width: 100%;
+    max-width: 33.3333333333333333%;
+}
+
+.col-3 {
+    width: 100%;
+    max-width: 25%;
+}
+
+.col-2 {
+    width: 100%;
+    max-width: 16.666%;
+}
+
+.col-1 {
+    width: 100%;
+    max-width: 8.333%;
+}
+
+
+/*
+ * No Guttering class
+ *
+ * Even though the whole 1140px grid system works with out removing gutters
+ * sometimes its needed. These three classes will remove all or just one gutter
+ * when needed.
+ */
+
+
+.no-gutter {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.no-gutter-left {
+    padding-left: 0;
+}
+
+.no-gutter-right {
+    padding-right: 0;
+}
+
+
+/*
+ * 	PLEASE REMOVE THIS WHEN LIVE
+ */
+
+
+.example {
+	background: #EEE;
+	text-align: center;
+	padding: 10px 0 0;
+	margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+	/*
+	 * Mobile Styles for 768px breakpoint, amend this for other breakpoints
+	 * where required.
+	 */
+    .container,
+    .inner-container {
+        width: 100%;
+        max-width: 768px;
+        margin: 0;
+        padding: 0 5px;
+    }
+
+    .row {
+        padding: 0;
+    }
+
+    .col-12,
+    .col-11,
+    .col-10,
+    .col-9,
+    .col-8,
+    .col-7,
+    .col-6,
+    .col-5,
+    .col-4,
+    .col-3,
+    .col-2,
+    .col-1 {
+        width: 100%;
+        max-width: 768px;
+        margin: 0 0 20px;
+    }
+}

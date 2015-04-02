@@ -1,0 +1,30 @@
+{% extends 'Message:Mothership:Ecommerce::checkout:checkout-layout' %}
+
+{% block javascripts %}
+	{{ parent() }}
+	{% include 'Message:Mothership:Stripe::javascript' with { 'parent': parent() } %}
+{% endblock %}
+
+{% block title %}Secure Payment | {{ app.cfg.app.name }}{% endblock %}
+
+{% block content %}
+	<main class="checkout" id="main-content">
+		<h2>Secure Payment</h2>
+		<div class="payment">
+			{% include 'Message:Mothership:Stripe::billing_info' %}
+			<section class="card-info">
+				<div class="cards">
+					<h3>Cards Accepted</h3>
+					<ul>
+						<li><i class="pw pw-american-express"></i></li>
+						<li><i class="pw pw-mastercard"></i></li>
+						<li><i class="pw pw-visa"></i></li>
+					</ul>
+				 </div>
+				 <div class="payment-form">
+					{% include 'Message:Mothership:Stripe::form' %}
+				</div>
+			</section>
+		</div>
+	</main>
+{% endblock %}

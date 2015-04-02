@@ -1,0 +1,132 @@
+{% extends 'Message:Mothership:Ecommerce::checkout:checkout-layout' %}
+
+{% block content %}
+	<main class="checkout" id="main-content">
+		<section class="row">
+			<div class="col-12">
+				<h1>Checkout</h1>
+				<div class="progress">
+					<div>
+						<p><strong>Stage 01</strong> Your selection</p>
+					</div>
+					<div>
+						<p><strong>Stage 02</strong> Your details</p>
+					</div>
+					<div class="active">
+						<p><strong>Stage 03</strong> Delivery details</p>
+					</div>
+					<div>
+						<p><strong>Stage 04</strong> Payment</p>
+					</div>
+					<div>
+						<p><strong>Stage 05</strong> Confirmation</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="delivery-details row">
+			<div class="col-12">
+				<h1>Delivery details</h1>
+			</div>
+			<div class="address col-4">
+				<h3>Delivery address</h3>
+				{% if order.getAddress('delivery') %}
+					{% set delivery = order.getAddress('delivery') %}
+
+					<div class="adr">
+						<span class="n">{{ delivery.forename }} {{ delivery.surname }}</span>
+						<span class="street-address">{{ delivery.lines[1] }}</span>
+						<span class="extended-address">{{ delivery.lines[2] }}</span>
+						<span class="locality">{{ delivery.town }}</span>
+						{% if delivery.stateName %}
+							<span class="region">{{ delivery.stateName }}</span>
+						{% endif %}
+						<span class="postal-code">{{ delivery.postcode }}</span>
+						<span class="country-name">{{ delivery.country }}</span>
+					</div>
+					<p><a href="{{ url('ms.ecom.checkout.details.addresses')}}#delivery">Change</a></p>
+				{% endif %}
+			</div>
+			<div class="billing col-4">
+				<h3>Billing details</h3>
+				{% if order.getAddress('billing') %}
+					{% set billing = order.getAddress('billing') %}
+					<div class="adr">
+						<span class="n">{{ billing.forename }} {{ billing.surname }}</span>
+						<span class="street-address">{{ billing.lines[1] }}</span>
+						<span class="extended-address">{{ billing.lines[2] }}</span>
+						<span class="locality">{{ billing.town }}</span>
+						{% if billing.stateName %}
+							<span class="region">{{ billing.stateName }}</span>
+						{% endif %}
+						<span class="postal-code">{{ billing.postcode }}</span>
+						<span class="country-name">{{ billing.country }}</span>
+					</div>
+					<p><a href="{{ url('ms.ecom.checkout.details.addresses')}}#billing">Change</a></p>
+				{% endif %}
+			</div>
+			<div class="shipping col-4">
+				<h3>Delivery method</h3>
+				{% if showDeliveryMethodForm %}
+					{{ form_start(deliveryMethodForm) }}
+						{{ form_rest(deliveryMethodForm) }}
+						<button type="submit">Submit</button>
+					{{ form_end(deliveryMethodForm) }}
+				{% else %}
+					{{ shippingMethod }}
+				{% endif %}
+			</div>
+		</section>
+		<section class="selection row">
+			<div class="col-12">
+				<table class="cf">
+					<colgroup>
+						<col width="60">
+		                <col>
+		                <col width="160">
+		                <col width="160">
+		            </colgroup>
+					<thead class="cf">
+						<tr>
+							<th class="item">Item(s)</th>
+							<th></th>
+							<th class="quantity">Qty</th>
+							<th class="price">Price</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for item in basket %}
+							<tr>
+								<td class="image">
+									{{ getResizedImage(item.item.product.getUnitImage(item.item.unit, 'default'), 80, 80) }}
+								</td>
+								<td class="item">
+									{{ item.item.productName }} <span>{{ item.item.options }}</span>
+								</td>
+								<td class="quantity">{{ item.quantity }}</td>
+								<td class="price"><strong>{{ (item.item.basePrice * item.quantity)|price }}</strong></td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+		</section>
+		{{ form_start(continueForm) }}
+		<section class="row">
+			<div class="checkout-note col-8">
+				{{ form_rest(continueForm) }}
+			</div>
+			{% import 'Message:Mothership:Ecommerce::checkout:totals' as totals %}
+			{{ totals.renderTotals(order) }}
+		</section>
+		<nav class="checkout-nav row">
+			<div class="col-12">
+				<a href="/checkout" class="button cancel">Back to selection</a>
+				<button class="button continue">Continue to payment</button>
+				{# <a href="{{ url('ms.ecom.checkout.payment') }}" class="button continue">Continue to secure payment</a> #}
+			</div>
+		</nav>
+		{{ form_end(continueForm) }}
+	</main>
+
+{% endblock %}

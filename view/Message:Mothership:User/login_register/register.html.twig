@@ -1,0 +1,23 @@
+{% extends 'Mothership:Site::templates:base' %}
+
+{% block title %}{{ 'ms.user.register.title'|trans }} | {{ app.cfg.app.name }}{% endblock %}
+
+{% block content %}
+	<main class="content">
+		<div class="col-12">
+			<h1>{{ 'ms.user.register.title'|trans }}</h1>
+		</div>
+		<section class="account">
+			<div class="col-6">
+				{% block form %}
+					{{ render(controller('Message:Mothership:User::Controller:Register#form')) }}
+				{% endblock %}
+			</div>
+			<div class="col-6">
+				{% block login_link %}
+					<p><a href="{{ url('ms.user.login') }}">{{ 'ms.user.register.login-link-text'|trans }}</a></p>
+				{% endblock %}
+			</div>
+		</section>
+	</main>
+{% endblock %}

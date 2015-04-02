@@ -1,0 +1,30 @@
+<div class="row">
+	<div class="col-12">
+		<a href="#top" class="top">Back to top</a>
+	</div>
+</div>
+
+<footer class="footer row" role="contentinfo">
+	{{ render(controller('Mothership:Site::Controller:Module:Menu#footer')) }}
+	<section class="col-3">
+		<h4>Social</h4>
+		<ul class="social-links">
+			<li><a href="https://twitter.com/"><i class="fa-twitter"></i></a></li>
+			<li><a href="https://www.facebook.com/"><i class="fa-facebook"></i></a></li>
+			<li><a href="http://instagram.com"><i class="fa-instagram"></i></a></li>
+			<li><a href="http://pinterest.com"><i class="fa-pinterest"></i></a></li>
+		</ul>
+	</section>
+    {# Uncomment this if Mailing module is installed #}
+    {#<section class="col-3 newsletter form-inline">#}
+        {#<h3>Subscribe to our newsletter</h3>#}
+        {#{{#}
+            {#render(controller('Mothership:Site::Controller:Module:Subscribe#subscribe'))#}
+        {#}}#}
+    {#</section>#}
+</footer>
+<section class="copy row">
+	<div class="col-12">
+		<small>&copy; 2015 {{ (app.cfg.app.name) }}. Website by <a href="http://www.message.co.uk/">Message</a></small>
+	</div>
+</section>

@@ -1,0 +1,37 @@
+{% extends 'Message:Mothership:User::account:account-layout' %}
+
+{% block account_content %}
+	{% if user %}
+		<div class="col-12 no-gutter">
+			<h1>Hello {{ user.name }}</h1>
+		</div>
+	{% endif %}
+		<div class="col-12 no-gutter">
+			<h3>Account Detail</h3>
+			<dl>
+				<dt>Name</dt>
+					<dd>{{user.forename}} {{ user.surname }}</dd>
+				<dt>E-Mail-Address</dt>
+					<dd>{{ user.email }}</dd>
+			</dl>
+		</div>
+		{% if billingAddress %}
+			<div class="col-6 no-gutter">
+				{% set address = billingAddress %}
+				{% include 'Message:Mothership:Commerce::order:detail:address:detail' %}
+				<a href="{{ url('ms.user.edit') }}">Edit</a>
+			</div>
+		{% endif %}
+		{% if deliveryAddress %}
+			<div class="col-6 no-gutter">
+				{% set address = deliveryAddress %}
+				{% include 'Message:Mothership:Commerce::order:detail:address:detail' %}
+				<a href="{{ url('ms.user.edit') }}">Edit</a>
+			</div>
+		{% endif %}
+		<div class="col-12 no-gutter">
+			<a href="{{ url('ms.user.edit') }}">Edit account details and settings</a>
+			{# <p>Send me E-Mail updates? {{ subscribed }}</p> #}
+		</div>
+	</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'Mothership:Site::templates:base' %}
+
+{% block title %}{{ 'ms.user.password.request.title'|trans }} | {{ app.cfg.app.name }}{% endblock %}
+
+{% block content %}
+	<main class="content">
+		<section class="account">
+			<div class="password">
+				<h1>{{ 'ms.user.password.request.title'|trans }}</h1>
+				<p>{{ 'ms.user.password.request.intro'|trans({'%email%': app.cfg.app.defaultContactEmail}) }}</p>
+				{{ render(controller('Message:User::Controller:ForgottenPassword#request', {
+					resetRoute: 'ms.user.password.reset'
+				})) }}
+			</div>
+		</section>
+	</main>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% if current %}
+<section class="gallery col-6">
+	<div class="image">
+		<a href="{{ current.file.getPublicUrl }}" data-main>
+			{{ getResizedImage(current, 655, 655) }}
+		</a>
+	</div>
+	<ul class="thumbnails">
+		{% for key, thumb in thumbs %}
+			<li>
+				<a href="?gallery_image={{ key }}" data-zoom="{{ thumb.getUrl }}" data-preview="{{ getResizedUrl(thumb, 655, 655) }}">
+					{{ getResizedImage(thumb, 126, 126) }}
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
+</section>
+{% endif %}

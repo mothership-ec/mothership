@@ -1,0 +1,75 @@
+/* ======================================================= */
+/*                                                         */
+/*                                                         */
+/*    Mothership Account CSS                               */
+/*                                                         */
+/*                                                         */
+/* ======================================================= */
+/*
+/*    Mothership
+/*    http://mothership.ec
+/*
+/*    Style Sheet v1.0
+/*
+/* ======================================================= */
+
+.account nav {
+	float: right;
+}
+
+.account nav ul {
+	margin-top: 20px;
+	border-right: 1px solid #333;
+}
+
+.account-orders {
+    width: 100%; 
+    margin-bottom: 40px;
+
+    border-collapse: collapse;
+
+    vertical-align: top;
+}
+
+.order-listing th,
+.order-listing td,
+.account-orders th,
+.account-orders td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.account-orders img {
+    margin: 0 20px 0 0;
+}
+
+/* Required Fields
+------------------------------------------------------------ */
+
+.account .required label:after,
+.billing .required label:after,
+.delivery .required label:after,
+.account-details .required label:after {
+    content: '*';
+    font-size: 15px;
+    vertical-align: middle;
+    margin-left: 5px;
+    top: 0px;
+    position: relative;
+    color: #333;
+}
+
+.account form:after,
+.billing form:after,
+.delivery form:after,
+.account-details form:after {
+    content: '* Required field';
+    font-size: 15px;
+    vertical-align: middle;
+    margin: 10px 0;
+    top: 0px;
+    position: relative;
+    color: #999;
+    display: block;
+    clear: both;
+}

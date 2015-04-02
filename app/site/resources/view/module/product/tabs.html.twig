@@ -1,0 +1,28 @@
+<section class="tabs col-12">
+	{# Details #}
+	<div class="details">
+		<h3>Details</h3>
+		{% if content.details.value %}
+			{{ content.details | raw }}
+		{% else %}
+			<p>{{ product.description | nl2br }}</p>
+		{% endif %}
+	</div>
+
+	{# Fitting guide #}
+	{% if product.details.sizing.value %}
+		<div class="fitting">
+			<h3>Fitting guide</h3>
+			{{ product.details.sizing | raw }}
+		</div>
+	{% endif %}
+
+	{# Shipping and returns #}
+	{% if content.shipping.value %}
+		<div class="shipping">
+			<h3>Shipping &amp; returns</h3>
+			{{ content.shipping | raw }}
+		</div>
+	{% endif %}
+
+</section>

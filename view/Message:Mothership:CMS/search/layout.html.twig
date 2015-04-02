@@ -1,0 +1,12 @@
+{% extends 'Mothership:Site::templates/base' %}
+
+{% block content %}
+	<main class="content">
+		<div class="col-12">
+			<h1>{% block heading %}{% endblock %}</h1>
+		</div>
+		{% block listing %}
+		{% endblock %}
+	</main>
+{% endblock %}
+

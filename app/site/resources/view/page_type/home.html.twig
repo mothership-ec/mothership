@@ -1,0 +1,12 @@
+{% extends 'Mothership:Site::templates/base' %}
+
+{% block content %}
+
+	{% include '@Mothership:Site::module:carousel' %}
+
+	<main class="content" id="content" role="main">
+		<h1>{{ content.header.header }}</h1>
+		<h2>{{ content.header.subheader }}</h2>
+		{{ content.content.content | raw }}
+	</main>
+{% endblock %}

@@ -1,0 +1,693 @@
+/* ======================================================= */
+/*                                                         */
+/*                                                         */
+/*    Skeleton Theme CSS                                   */
+/*                                                         */
+/*                                                         */
+/* ======================================================= */
+/*
+/*    Mothership
+/*    http://mothership.ec
+/*
+/* ======================================================= */
+
+/*    Table of Contents
+/* ------------------------------------------------------- */
+/*
+/*    #Header & Shop access
+/*    #Home page
+/*    #Product listing
+/*    #Product page
+/*    #Blog listing
+/*    #Blog post
+/*    #Generic page
+/*    #Search results
+/*    #Footer
+/*    #Contact
+/*
+/*
+/* ======================================================= */
+
+
+/*    Header
+/* ------------------------------------------------------- */
+
+
+/*
+ * Access elements; Account links, Search & Basket
+ */
+
+
+.shop-access {
+    padding: 5px 0;
+
+    border-bottom: 1px solid #ccc;
+}
+
+.access .col-12 {
+    margin: 0;
+}
+
+.nav-open,
+.nav-close {
+    display: none;
+}
+
+
+
+/*
+ * Access links
+ */
+
+
+.shop-access {
+    display: block;
+    background: 
+}
+
+.shop-access ul {
+    display: inline-block;
+
+    padding: 0;
+}
+
+.shop-access li {
+    line-height: 32px;
+
+    float: left;
+
+    height: 32px;
+    margin: 0 20px 0 0;
+
+    list-style-type: none;
+}
+
+
+/*
+ * Basket
+ */
+
+
+.basket-icon {
+    margin-top: 20px;
+    line-height: 32px;
+
+    float: right;
+
+    height: 32px;
+
+    text-decoration: none;
+}
+
+.basket-icon span {
+    display: inline-block;
+
+    width: 32px;
+    margin-left: 10px;
+
+    text-align: center;
+
+    color: #fff;
+    border-radius: 16px;
+    background-color: #333;
+}
+
+.basket {
+    width: 300px;
+    background: #333;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    margin-right: -300px;
+
+    color: #FFF;
+}
+
+.basket .contents {
+    float: left;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.basket .contents::-webkit-scrollbar { 
+    display: none; 
+}
+
+.basket a {
+    color: #FFF;
+}
+
+.basket nav {
+    position: relative;
+}
+
+.basket nav div {
+    margin-right: 50px;
+    height: 50px;
+    border-bottom: 1px solid #444;
+    text-align: center;
+}
+
+.basket nav a {
+    line-height: 50px;
+    text-align: center;
+}
+
+.basket .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    border-bottom: 1px solid #444;
+    border-left: 1px solid #444;
+}
+
+.basket .details {
+    padding: 20px;
+}
+
+.basket ul {
+    padding: 0;
+}
+
+.basket li {
+    list-style-type: none;
+    padding: 20px 20px 40px;
+    padding-bottom: 1px solid #444;
+    float: left;
+}
+
+.basket .empty {
+    padding: 20px;
+}
+
+.basket .go-shopping {
+    width: 100%;
+    text-align: center;
+    float: left;
+}
+
+/*
+ * Search
+ */
+
+
+.search form {
+    float: right;
+
+    margin: 0;
+    width: auto;
+}
+
+
+/*
+ * Logo
+ */
+
+
+.logo {
+    float: left;
+}
+
+
+/*
+ * Navigation
+ */
+
+.navigation {
+    position: relative;
+    z-index: 2;
+    padding: 0 10px;
+
+    float: left;
+    clear: both;
+
+    width: 100%;
+
+    background: #EEE;
+}
+
+.navigation ol {
+    text-align: center;
+    position: relative;
+}
+
+.navigation ul,
+.navigation li,
+.subnav-wrapper ul,
+.subnav-wrapper li {
+    display: inline-block;
+}
+
+.navigation ol,
+.navigation ul,
+.subnav-wrapper ul {
+    max-width: 100%;
+}
+
+.navigation li {
+    width: auto;
+    margin: 0 30px 0 0;
+
+    list-style-type: none;
+}
+
+.navigation li:last-child {
+    margin-right: 0;
+}
+
+.navigation a {
+    float: left;
+    height: 100%;
+    text-decoration: none;
+    color: #121212;
+    padding: 10px 0;
+
+}
+
+.navigation .current > a,
+.navigation a.current {
+    color: #be8e2d;
+    position: relative;
+}
+
+.navigation a.current:after {
+    font-family: "FontAwesome";
+    font-size: 2em;
+    content: '\f0d8';
+    color: #121212;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -20px;
+    pointer-events: none
+}
+
+/*
+ * Sub navigation
+ */
+
+.subnav-wrapper,
+.sub-navigation {
+    position: relative;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+
+    display: none;
+    float: left;
+
+    width: 100%;
+    height: auto;
+    background: #131313;
+}
+
+.sub-navigation ul {
+    margin: 0;
+}
+
+.subnav-wrapper li {
+    padding: 10px;
+    font-size: 0.85em;
+    margin-bottom: 0;
+}
+
+.subnav-wrapper a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.subnav-wrapper a:hover {
+    text-decoration: underline;
+}
+
+.subnav-wrapper {
+    position: relative;
+    z-index: 1;
+
+    display: none;
+
+    -webkit-transition: margin .2s;
+         -o-transition: margin .2s;
+            transition: margin .2s;
+}
+
+.sub-navigation .current a,
+.subnav-wrapper .current a {
+    color: #3071a9;
+}
+
+.subnav-wrapper ol {
+    width: 1164px;
+    margin: auto;
+    list-style: none;
+
+    padding-left: 280px;
+}
+
+.mobile-back {
+    display: none;
+}
+
+.no-js .navigation li:hover .sub-navigation {
+    display: none;
+}
+/*    Home page
+/* ------------------------------------------------------- */
+
+/*
+ * Here add all your classes and Id's related to home page elements
+ * modules and content.
+ */
+
+
+ /* Carousel */
+
+ .carousel {
+    position: relative;
+    min-height: 406px;
+    clear: both;
+}
+
+.carousel a {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+
+.carousel ul {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.carousel li {
+    position: relative;
+}
+
+.carousel img {
+    margin-bottom: 0;
+}
+
+.carousel .wrap {
+    height: 100%;
+    margin: auto;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.carousel .overlay {
+    background: rgba(0, 0, 0, 0.8);
+
+    padding: 10px;
+    margin: 5% 0;
+    width: 40%;
+
+    color: #fff;
+
+}
+
+.carousel .overlay-left {
+    position: absolute;
+    left: 60px;
+}
+
+.carousel .overlay-right {
+    position: absolute;
+    right: 60px;
+}
+
+.carousel .overlay h2,
+.promo-block .overlay h2 {
+    margin: 0 0 5px 0;
+}
+
+.carousel .overlay p,
+.promo-block .overlay p {
+    margin: 5 pxl;
+}
+
+.carousel .arrow {
+    background: url(../images/carousel-arrow.png);
+    opacity: .5;
+    width: 80px;
+    height: 210px;
+
+    border: 0;
+    outline: 0;
+    text-indent: -999em;
+
+    position: absolute;
+    bottom: 30%;
+
+}
+
+.carousel .arrow:hover {
+    opacity: 1;
+}
+
+.carousel .arrow.previous {
+    left: 10px;
+    background-position: left center;
+    background-repeat: no-repeat;
+}
+
+.carousel .arrow.next {
+    right: 10px;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+.carousel .arrow.disabled {
+    display: none;
+}
+
+.carousel .indicators {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    left: 0;
+    margin: 0px auto;
+    text-align: center;
+    padding: 0;
+}
+
+.carousel .indicators li {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    background: #999;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+}
+
+.carousel .indicators li.active {
+    background: #333;
+}
+
+
+/*    Product listing
+/* ------------------------------------------------------- */
+
+/*
+ * Here add all your classes and Id's related to product
+ * listing elements modules and content.
+ */
+
+
+/*    Product page
+/* ------------------------------------------------------- */
+
+/*
+ * Here add all your classes and Id's related to product
+ * page elements modules and content.
+ */
+
+
+.gallery .thumbnails {
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+.gallery .thumbnails li {
+    float: left;
+}
+
+.product-info select {
+    position: relative;
+    float: none;
+    clear: both;
+}
+
+.error-msg {
+    position: relative;
+
+    width: 100%;
+    max-width: 294px;
+    margin-bottom: 20px;
+    padding: 5px 0;
+
+    text-align: center;
+
+    color: #fff;
+    border-radius: 3px;
+    background: #bf1e2a;
+}
+
+.error-msg p {
+    margin: 0;
+}
+
+.error-msg:before {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+
+    display: block;
+
+    width: 0;
+    height: 0;
+    margin-left: -10px;
+
+    content: '';
+
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #bf1e2a;
+    border-left: 10px solid transparent;
+}
+
+.modal-image {
+    float: left;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.modal-image span {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.tab-menu {
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid #CCC;
+    margin-bottom: 20px;
+}
+
+.tab-menu li {
+    float: left;
+    width: auto;
+    font-size: .875em;
+    font-weight: 400;
+    line-height: 1.42857143;
+    display: inline-block;
+    margin-right: 2px;
+    margin-bottom: 0;
+    padding: 5px 15px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    color: #333;
+    border: 1px solid transparent;
+    border-bottom: none;
+    border-color: #CCC;
+    border-radius: 4px 4px 0px 0px;
+    background-color: #fff;
+    background-image: none;
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+.tab-menu li.current {
+    opacity: 1;
+    border-bottom: 1px solid #FFF;
+    padding-bottom: 6px;
+    margin-bottom: -1px;
+}
+
+/*    Search results
+/* ------------------------------------------------------- */
+
+
+.search-results {
+    padding: 0;
+}
+
+.search-results li {
+    float: left;
+    width: 100%;
+    list-style-type: none;
+    border-bottom: 1px solid #CCC;
+    padding-bottom: 20px;
+}
+
+
+/*    Footer
+/* ------------------------------------------------------- */
+
+
+.top {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.footer {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 20px;
+
+    float: left;
+
+    width: 100%;
+
+    background: #EEE;
+}
+
+.footer .social-links {
+    padding: 0;
+}
+
+.footer .social-links li {
+    font-family: "FontAwesome";
+    font-size: 1.3em;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer .social-links i {
+    font-style: normal;
+}
+
+.footer .social-links a {
+    text-decoration: none;
+}
+
+.footer .social-links a:hover {
+    text-decoration: none;
+    color: #be8e2d;
+}
+
+
+.copy {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

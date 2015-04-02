@@ -1,0 +1,40 @@
+{% extends 'Message:Mothership:Ecommerce::checkout:checkout-layout' %}
+
+{% block content %}
+	<div class="row">
+		<div class="feedback error col-12">
+			<p>Your payment has failed</p>
+		</div>
+	</div>
+	<main class="checkout" id="main-content">
+		<section class="row">
+			<div class="col-12">
+				<h1>Checkout</h1>
+				<div class="progress">
+					<div>
+						<p><strong>Stage 01</strong> Your selection</p>
+					</div>
+					<div>
+						<p><strong>Stage 02</strong> Your details</p>
+					</div>
+					<div>
+						<p><strong>Stage 03</strong> Delivery details</p>
+					</div>
+					<div>
+						<p><strong>Stage 04</strong> Payment</p>
+					</div>
+					<div class="active">
+						<p><strong>Stage 05</strong> Confirmation</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="failed row">
+			<div class="col-12">
+				<h2>Payment failed!</h2>
+				<p>Your payment with provider has failed. <a href="{{ url('ms.ecom.checkout.confirm') }}">Try again</a></p>
+			</div>
+		</section>
+	</main>
+
+{% endblock %}

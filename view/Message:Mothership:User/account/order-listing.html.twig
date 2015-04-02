@@ -1,0 +1,10 @@
+{% extends 'Message:Mothership:User::account:account-layout' %}
+
+
+{% block account_content %}
+	<h1>Account orders</h1>
+	<h3>Order history</h3>
+	{% set orderLink = 'ms.user.order.detail'%}
+	{% set userLink = 'ms.user.account'%}
+	{% include 'Message:Mothership:Commerce::order:order:summary' %}
+{% endblock %}

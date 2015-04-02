@@ -1,0 +1,35 @@
+{% extends 'Mothership:Site::templates/base' %}
+
+{% block javascripts %}
+	{{ parent() }}
+	{% javascripts
+	'@Message:Mothership:ControlPanel::resources:assets:js:filteredSelect.jquery.js'
+	'@Message:Mothership:User::resources/assets/js/state-filter.js'
+
+	output='/assets/js/ms_account-*.js'
+	filter='?jsmin'
+	%}
+	<script src="{{ asset_url }}"></script>
+	{% endjavascripts %}
+{% endblock %}
+
+{% block title %}Your Account | {{ app.cfg.app.name }}{% endblock %}
+
+{% block content %}
+	<main class="content">
+		<section class="account">
+			<nav class="col-3">
+				{% block account_menu %}
+					<ul>
+						<li><a href="{{ url('ms.user.account') }}">Account</a></li>
+						<li><a href="{{ url('ms.user.order.listing') }}">Orders</a></li>
+					</ul>
+				{% endblock %}
+			</nav>
+			<div class="col-9">
+				{% block account_content %}
+				{% endblock %}
+			</div>
+		</section>
+	</main>
+{% endblock %}

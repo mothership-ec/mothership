@@ -1,0 +1,31 @@
+<section class="product-info col-6">
+	{# Product title & varient #}
+	<h1>
+		{{ product.displayName }}
+		{% if content.product.option.value %}
+			<span>
+				{{ content.product.option.value }}
+			</span>
+		{% endif %}
+	</h1>
+
+	{# Price #}
+	<h3>
+		{{ product.hasVariablePricing and not content.product.option.value ? 'From ' }}
+		{{ product.getPriceFrom | price }}
+	</h3>
+
+	{# Product selector#}
+	{{
+		render(controller('Message:Mothership:Commerce::Controller:Module:ProductSelector#index', {
+			product: content.product.product.product,
+			options: {
+				(content.product.option.name): content.product.option.value
+			}
+		}))
+	}}
+
+	{# Short description #}
+	<p>{{ product.shortDescription | nl2br }}</p>
+
+</section>

@@ -1,0 +1,19 @@
+<section class="carousel">
+	<ul>
+		{% for slide in page.content.carousel %}
+		{% if not slide.link.value.target is empty %}<a href="{{ slide.link }}">{% endif %}
+			<li>
+				<img src="{{ getResizedUrl(slide.image, 1140, 400) }}">
+				<div class="wrap">
+					{% if not slide.header.value is empty or not slide.subheader.value is empty %}
+					<div class="overlay overlay-{{ slide.overlay_pos }}">
+						{% if not slide.header.value is empty %}<h2>{{ slide.header }}</h2>{% endif %}
+						{% if not slide.subheader.value is empty %}<p>{{ slide.subheader }}</p>{% endif %}
+					</div>
+					{% endif %}
+				</div>
+			</li>
+		{% if not slide.link.value.target is empty %}</a>{% endif %}
+		{% endfor %}
+	</ul>
+</section>

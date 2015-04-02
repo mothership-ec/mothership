@@ -1,0 +1,35 @@
+{% extends 'Mothership:Site::templates/base' %}
+
+{% block content %}
+	<main class="content" id="content" role="main">
+		{% set product = content.product.product.product %}
+		<div class="row">
+			{# Product info #}
+			{% block productinfo %}
+				{% include 'Mothership:Site::module:product:product_info' %}
+			{% endblock %}
+
+			{# Product gallery #}
+			{% block gallery %}
+				{{
+					render(controller('Mothership:Site::Controller:Module:Gallery#gallery', {
+						product: product,
+						gallery: content.gallery
+					}))
+				}}
+			{% endblock %}
+		</div>
+		<div class="row">
+			{# Product tabs #}
+			{% block tabs %}
+				{% include 'Mothership:Site::module:product:tabs' %}
+			{% endblock %}
+		</div>
+		{# Cross sell #}
+		{{
+			render(controller('Mothership:Site::Controller:Module:Shop#crossSell', {
+				crossSell: content.cross_sell
+			}))
+		}}
+	</main>
+{% endblock %}

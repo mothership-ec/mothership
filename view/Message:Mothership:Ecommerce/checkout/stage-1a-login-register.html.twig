@@ -1,0 +1,43 @@
+{% extends 'Message:Mothership:Ecommerce::checkout:checkout-layout' %}
+
+{% block content %}
+	<main class="checkout" id="main-content">
+		<section class="row">
+			<div class="col-12">
+				<h1>Checkout</h1>
+				<div class="progress">
+					<div>
+						<p><strong>Stage 01</strong> Your selection</p>
+					</div>
+					<div class="active">
+						<p><strong>Stage 02</strong> Your details</p>
+					</div>
+					<div>
+						<p><strong>Stage 03</strong> Delivery details</p>
+					</div>
+					<div>
+						<p><strong>Stage 04</strong> Payment</p>
+					</div>
+					<div>
+						<p><strong>Stage 05</strong> Confirmation</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="login-register row">
+			<div class="col-6">
+				<h2>{{ app.cfg.app.name }} members</h2>
+				{{ render(controller('Message:User::Controller:Authentication#login', {
+					redirectURL: url('ms.ecom.checkout.details'),
+					forgottenPasswordRoute: 'ms.cp.password.request'
+				})) }}
+			</div>
+			<div class="col-6">
+				<h2>If you're new to the website&hellip;</h2>
+				<p><a href="{{ url('ms.ecom.checkout.details.register') }}">Enter your personal details</a></p>
+			</div>
+		</section>
+	</main>
+
+
+{% endblock %}

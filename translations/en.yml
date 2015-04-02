@@ -1,0 +1,29 @@
+page:
+  home:
+    carousel:
+      name: Carousel
+      description: The slides for the carousel
+      singularName: carousel slide
+    promos:
+      name: Promos
+      description: A promo which links to another page
+      singularName: promo
+    content:
+      name: Content
+      description: The content to appear beneath the promos
+  product:
+    product:
+      name: Product
+      description: Select which product to display
+    details:
+      help: This text will appear under the 'Details' tab. If it is left blank it will default to the product description.
+    gallery:
+      name: Gallery
+      description: Images to appear in product gallery
+      singularName: gallery image
+    cross_sell:
+      name: Cross sell
+      description: Product pages that will appear under the 'You May Also Like' section
+ms.cms.content:
+  home:
+    confirm: Are you sure you wish to save the home page?

@@ -1,0 +1,24 @@
+<section class="shop-access nav-offcanvas">
+	<span class="nav-close close">
+		<i class="fa fa-close" data-direction="left"></i>
+	</span>
+
+	<div class="search form-inline">
+		{{ render(controller('Message:Mothership:CMS::Controller:Module:Search#search')) }}
+	</div>
+
+	<ul>
+		{% if app.user %}
+			<li>
+				<a href="{{ url('ms.user.account') }}">Account</a>
+			</li>
+			<li>
+				<a href="{{ url('user.logout') }}">Log out</a>
+			</li>
+		{% else %}
+			<li>
+				<a href="{{ url('ms.user.login') }}">Login</a>
+			</li>
+		{% endif %}
+	</ul>
+</section>

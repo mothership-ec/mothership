@@ -1,0 +1,16 @@
+{% extends 'Mothership:Site::templates/base' %}
+
+{% block title %}Access denied | {{ app.cfg.app.name }}{% endblock %}
+
+{% block content %}
+	<main class="content error-page">
+		<div class="col-12">
+			<h1>Not found</h1>
+			<p>Unfortunately, the page you're looking for, <em>{{ app.request.pathinfo }}</em>, can't be found. Sorry about that!</p>
+			<p>This could be due to a number of errors, but it's usually a misspelling in the URL (the web address above), or an old link.</p>
+			<p>You could try <a href="#terms">searching the site</a> for this missing page.</p>
+			<p>Please let us know how you got here, so we can make sure this doesn't happen again.</p>
+			{{ render(controller('Message:Mothership:CMS::Controller:Module:Form#brokenLinkForm')) }}
+		</div>
+	</main>
+{% endblock %}

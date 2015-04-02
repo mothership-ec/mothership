@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	{# Site meta details #}
+	{% block meta %}
+		{% include '@Mothership:Site::templates:blocks:meta' %}
+	{% endblock %}
+
+	{# Site stylesheets #}
+	{% block stylesheets %}
+		{% include '@Mothership:Site::templates:blocks:stylesheets' %}
+	{% endblock %}
+
+	<!--[if lt IE 9]>
+	    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	{# Site javascript #}
+	{% block javascripts %}
+		{% include '@Mothership:Site::templates:blocks:javascript' %}
+	{% endblock %}
+</head>
+<body>
+	{# Container #}
+	<div id="container" class="container">
+		<div class="inner-container">
+		{# Header #}
+		{% block header %}
+			{% include '@Mothership:Site::templates:blocks:header' %}
+			{% include '@Mothership:Site::templates:blocks:feedback' %}
+		{% endblock %}
+
+		{# Content #}
+		{% block content %}
+		{% endblock %}
+
+		{# Footer #}
+		{% block footer %}
+			{% include '@Mothership:Site::templates:blocks:footer' %}
+		{% endblock %}
+		</div>
+	</div>
+</body>
+</html>

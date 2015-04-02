@@ -1,0 +1,94 @@
+{% extends 'Message:Mothership:User::account:account-layout' %}
+
+{% block account_content %}
+<h1>Account orders</h1>
+<div class="row">
+	<h3>Order Details</h3>
+	<dl>
+		<dt>Order No.</dt>
+			<dd>{{ order.orderID }}</dd>
+		<dt>Date</dt>
+			<dd>{{ order.authorship.createdAt|date }}</dd>
+		<dt>Status</dt>
+			<dd>{{ order.status.name }}</dd>
+		<dt>Customer</dt>
+			<dd>{{ order.user.title }} {{ order.user.forename }} {{ order.user.surname }}
+				 {{ address.name }} <br />
+			   	 {% for line in address.lines if line %}
+   					{{ line }} <br />
+				 {% endfor %}
+				 {{ address.town }} <br />
+				 {% if address.state %}
+					{{ address.state }} <br />
+				 {% endif %}
+				 {{ address.postcode }} <br />
+				 {{ address.country }} </td>
+			</dd>
+	</dl>
+</div>
+<div class="row">
+	{% set items = order.items %}
+	<table class="account-orders">
+		<thead>
+			<tr>
+				<th class="item">Item</th>
+				<th class="description">Description</th>
+				<th class="order-status">Status</th>
+				<th class="qty">QTY</th>
+				<th class="unit-price">Unit Price</th>
+				{% if moduleExists('Message\\Mothership\\OrderReturn') %}
+					<th class="return"><span>Return</span></th>
+				{% endif %}
+			</tr>
+		</thead>
+		<tbody>
+
+			{% for item in items %}
+				<tr>
+					<td class="item">{{ getResizedImage(item.product.getUnitImage(item.unit), 80, 80) }}</td>
+					<td class="description">{{ item.description }}</td>
+					<td class="order-status">{{ item.status.name }}</td>
+					<td class="qty">1</td>
+					<td class="unit-price">{{ item.gross|price }}</td>
+					{% if moduleExists('Message\\Mothership\\OrderReturn') %}
+						<td class="return">
+							{% if despatchedStatus is defined and item.status.code == despatchedStatus %}
+							<a href="{{ url('ms.user.return.create',{itemID: item.id}) }}">Return / Exchange<a>
+							{% endif %}
+						</td>
+					{% endif %}
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+<div class="row">
+	<h3>Returns</h3>
+	{% if not returns is empty %}
+		<table class="account-orders">
+			<thead>
+			<tr>
+				<th class="item"><span>Item</span></th>
+				<th class="description"><span>Description</span></th>
+				<th class="description"><span>Reason</span></th>
+				<th><span>Status</span></th>
+				<th><span>Balance</span></th>
+			</tr>
+			</thead>
+			<tbody>
+				{% for return in returns %}
+					<tr>
+						<td>{{ return.item.productName }}</a></td>
+						<td>{{ return.item.description }}</td>
+						<td>{{ return.reason }}</td>
+						<td>{{ return.item.status }}</td>
+						<td>{{ return.balance|price }}</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	{% else %}
+		<p>{{ 'ms.commerce.return.status.none'|trans }}</p>
+	{% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends 'Message:Mothership:User::account:account-layout' %}
+
+{% block content %}
+
+{{ form_start(form) }}
+	{{ form_rest(form) }}
+	<button type="submit">Update</button>
+{{ form_end(form) }}
+
+{% endblock %}

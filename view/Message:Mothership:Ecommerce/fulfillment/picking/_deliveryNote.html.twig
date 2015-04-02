@@ -1,0 +1,146 @@
+
+<div class="page last">
+	<div class="packingslip-labels">
+		<h1><img src="/cogules/Mothership:Site/images/logo.png" title="Mothership Site" /></h1>
+			<dl class="half-col">
+				<h2>Order details</h2>
+				<dt>Order number</dt>
+				<dd><time>{{ order.id }}</time></dd>
+				<dt>Order date</dt>
+				<dd><time>{{ order.authorship.createdAt.date|date('d/n/Y') }}</time></dd>
+			</dl>
+			<dl class="half-col">
+				<h2>Customer details</h2>
+				<dl class="half-col">
+					<dt>Billing address</dt>
+					<dd>
+						{% if  order.getAddress('billing').name | length > 0 %}
+							{{ order.getAddress('billing').name }}<br />
+						{% endif %}
+						{% for line in order.getAddress('billing').lines %}
+							{% if line | length > 0 %}
+								{{ line }}<br />
+							{% endif %}
+						{% endfor %}
+						{% if  order.getAddress('billing').town | length > 0 %}
+							{{ order.getAddress('billing').town }}<br />
+						{% endif %}
+						{% if order.getAddress('billing').state | length > 0%}
+							{{ order.getAddress('billing').state }}
+						{% endif %}
+						{% if order.getAddress('billing').postcode | length > 0%}
+							{{ order.getAddress('billing').postcode }}<br />
+						{% endif %}
+						{% if order.getAddress('billing').country | length > 0 %}
+							{{ order.getAddress('billing').country }}<br />
+						{% endif %}
+					</dd>
+					<dt>Telephone</dt>
+					<dd>
+						{{ order.getAddress('billing').telephone }}
+					</dd>
+				</dl>
+				<dl class="half-col">
+					<dt>Delivery address</dt>
+					<dd>
+						{% if  order.getAddress('delivery').name | length > 0 %}
+							{{ order.getAddress('delivery').name }}<br />
+						{% endif %}
+						{% for line in order.getAddress('delivery').lines %}
+							{% if line | length > 0 %}
+								{{ line }}<br />
+							{% endif %}
+						{% endfor %}
+						{% if  order.getAddress('delivery').town | length > 0 %}
+							{{ order.getAddress('delivery').town }}<br />
+						{% endif %}
+						{% if order.getAddress('delivery').state | length > 0%}
+							{{ order.getAddress('delivery').state }}
+						{% endif %}
+						{% if order.getAddress('delivery').postcode | length > 0%}
+							{{ order.getAddress('delivery').postcode }}<br />
+						{% endif %}
+						{% if order.getAddress('delivery').country | length > 0 %}
+							{{ order.getAddress('delivery').country }}<br />
+						{% endif %}
+					</dd>
+					<dt>Email</dt>
+					<dd>
+						{{ order.user.email }}
+					</dd>
+				</dl>
+			</dl>
+			<hr />
+			<h2>Items</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Item</th>
+						<th>Status</th>
+						<th>Quantity</th>
+					</tr>
+				</thead>
+				<tbody>
+				{% for item in order.items %}
+					<tr>
+						<td>{{ item.productName }}</td>
+
+						{% if item.status.code == 1000 %}
+							<td>Sent</td>
+						{% elseif item.status.code > 0 and item.status.code <= 300 %}
+							<td>Included</td>
+						{% elseif item.status.code > 1100  %}
+							<td>Returned</td>
+						{% endif %}
+
+						<td>1</td>
+					</tr>
+				{% endfor %}
+				</tbody>
+			</table>
+
+
+				{% for note in order.notes %}
+					{% if note.raisedFrom == "checkout" %}
+					<h2>Customer Notes</h2>
+						{{ note.note }}
+					{% endif %}
+				{% endfor %}
+
+			</dl>
+
+		<div class="labels">
+			<div class="label delivery-address">
+				{% if  order.getAddress('delivery').name | length > 0 %}
+					{{ order.getAddress('delivery').name }}<br />
+				{% endif %}
+				{% for line in order.getAddress('delivery').lines %}
+					{% if line | length > 0 %}
+						{{ line }}<br />
+					{% endif %}
+				{% endfor %}
+				{% if  order.getAddress('delivery').town | length > 0 %}
+					{{ order.getAddress('delivery').town }}<br />
+				{% endif %}
+				{% if order.getAddress('delivery').state | length > 0%}
+					{{ order.getAddress('delivery').state }}
+				{% endif %}
+				{% if order.getAddress('delivery').postcode | length > 0%}
+					{{ order.getAddress('delivery').postcode }}<br />
+				{% endif %}
+				{% if order.getAddress('delivery').country | length > 0 %}
+					{{ order.getAddress('delivery').country }}<br />
+				{% endif %}
+			</div>
+			<div class="label return-address">
+				<span>RETURNS:</span>
+				<span>Mothership Site</span>
+				<span>Address 1</span>
+				<span>Address 2</span>
+				<span>City</span>
+				<span>Post Code</span>
+				<span>Country</span>
+			</div>
+		</div>
+	</div>
+</div>

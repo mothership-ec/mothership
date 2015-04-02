@@ -4,7 +4,7 @@
 
 <img src="readme_files/dashboard.jpg">
 
-It incorporates the full range of applications you'd expect to run an online store, with some rather nice surprises too, including fully integrated EPOS (Electronic Point Of Sale). Here's an incomplete list (it does much more!) of the headline functionality Mothership currently supports:
+It incorporates the full range of applications you'd expect to run an online store, with some rather nice surprises too, including fully integrated EPOS (Electronic Point Of Sale). Here's an incomplete list (it does much more!) of the headline functionality Mothership currently supports (some modules have not been open sourced yet):
 
 * CMS
 * Inventory

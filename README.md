@@ -42,6 +42,11 @@ To install Mothership using the installer:
 ### Manually
 
 + Run `composer create-project mothership-ec/mothership * <path to installation>`
++ Add your database details to `config/db.yml`
++ Run `bin/cog migrate:run` from the installation directory in the terminal
++ Run `bin/cog asset:dump` and `bin/cog asset:generate` from the installation directory in the terminal
++ Run `chmod -R 777 tmp public logs data` from the installation directory in the terminal
++ Run `bin/cog task:run user:create_admin` in your terminal to create the first admin user
 
 ## System requirements
 

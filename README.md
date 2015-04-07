@@ -4,7 +4,7 @@
 
 <img src="readme_files/dashboard.jpg">
 
-It incorporates the full range of applications you'd expect to run an online store, with some rather nice surprises too, including fully integrated EPOS (Electronic Point Of Sale). Here's an incomplete list (it does much more!) of the headline functionality Mothership currently supports (some modules have not been open sourced yet):
+It incorporates the full range of applications you'd expect to run an online store, with some rather nice surprises too, including fully integrated EPOS (Electronic Point Of Sale). Here's an incomplete list (it does much more!) of the headline functionality Mothership currently supports:
 
 * CMS
 * Inventory
@@ -16,10 +16,13 @@ It incorporates the full range of applications you'd expect to run an online sto
 * Multiple tax rates
 * Gift Vouchers
 * Discount tokens
+* Reports
+
+## Coming soon!
+
 * Campaign Monitor mailing list integration
 * Xero online accounts integration
 * Electronic Point Of Sale
-* Reports
 
 A comprehensive [Functionality Reference list](http://wiki.mothership.ec/Functionality_Reference) is available on the Mothership Wiki.
 

@@ -53,16 +53,25 @@ There are two ways to install Mothership:
 
 To install Mothership using the installer:
 
-+ <a href="http://mothership.ec/files/downloads/mothership.phar">Download the installer</a>
-+ Create an empty database
-+ Run `php <path to>mothership.phar` in the terminal
-+ Follow the instructions and answer the questions
+1. <a href="http://mothership.ec/files/downloads/mothership.phar">Download the installer</a>
+1. Create an empty database
+1. Run `php <path to>mothership.phar` in the terminal
+1. Follow the instructions and answer the questions
 
 ### Manually
 
-+ Run `composer create-project mothership-ec/mothership * <path to installation>`
-+ Add your database details to `config/db.yml`
-+ Run `bin/cog migrate:run` from the installation directory in the terminal
-+ Run `bin/cog asset:dump` and `bin/cog asset:generate` from the installation directory in the terminal
-+ Run `chmod -R 777 tmp public logs data` from the installation directory in the terminal
-+ Run `bin/cog task:run user:create_admin` in your terminal to create the first admin user
+1. Run `composer create-project mothership-ec/mothership * <path to installation>`
+1. Add your database details to `config/db.yml`
+1. Run `bin/cog migrate:run` from the installation directory in the terminal
+1. Run `bin/cog asset:dump` and `bin/cog asset:generate` from the installation directory in the terminal
+1. Run `chmod -R 777 tmp public logs data` from the installation directory in the terminal
+1. Run `bin/cog task:run user:create_admin` in your terminal to create the first admin user
+
+## Working on and contributing to this repository
+
+To set up an environment to develop on this repository
+
+1. Clone the repo and run update it using Composer
+1. Create a `config/local` directory
+1. Copy **all** config files into this directory. Be sure not to commit any of these config files.
+1. Follow instructions from **3.** onwards from the manual install guide above

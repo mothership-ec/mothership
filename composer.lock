@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "39e9a00ed4067305f1a14a5ffafca899",
+    "hash": "05ae98fb5ef5fe4450913ed14aec0eff",
     "packages": [
         {
             "name": "dflydev/markdown",
@@ -909,22 +909,22 @@
         },
         {
             "name": "mothership-ec/cog-mothership-cms",
-            "version": "4.1.1",
+            "version": "4.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog-mothership-cms.git",
-                "reference": "fcf5a26c380c03dd07582e5c39e46d4cce3ca2c8"
+                "reference": "6a1a41d72dae8e32571f2a56c561582abcd0d1b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-cms/zipball/fcf5a26c380c03dd07582e5c39e46d4cce3ca2c8",
-                "reference": "fcf5a26c380c03dd07582e5c39e46d4cce3ca2c8",
+                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-cms/zipball/6a1a41d72dae8e32571f2a56c561582abcd0d1b7",
+                "reference": "6a1a41d72dae8e32571f2a56c561582abcd0d1b7",
                 "shasum": ""
             },
             "require": {
                 "mothership-ec/cog": "~4.2",
                 "mothership-ec/cog-imageresize": "~2.0",
-                "mothership-ec/cog-mothership-cp": "~3.0",
+                "mothership-ec/cog-mothership-cp": "~3.3",
                 "mothership-ec/cog-mothership-file-manager": "~3.0",
                 "mothership-ec/cog-mothership-reports": "~2.0",
                 "mothership-ec/cog-mothership-user": "~4.0",
@@ -959,7 +959,7 @@
                 "editing",
                 "mothership"
             ],
-            "time": "2015-04-02 11:08:09"
+            "time": "2015-04-07 09:42:46"
         },
         {
             "name": "mothership-ec/cog-mothership-commerce",
@@ -1020,16 +1020,16 @@
         },
         {
             "name": "mothership-ec/cog-mothership-cp",
-            "version": "3.2.0",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog-mothership-cp.git",
-                "reference": "f252b7f3abbb3ec3c3265f4fc5682d47fd0c65f6"
+                "reference": "78cc0ccc753b999e43495c71ecd1e74168df32f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-cp/zipball/f252b7f3abbb3ec3c3265f4fc5682d47fd0c65f6",
-                "reference": "f252b7f3abbb3ec3c3265f4fc5682d47fd0c65f6",
+                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-cp/zipball/78cc0ccc753b999e43495c71ecd1e74168df32f2",
+                "reference": "78cc0ccc753b999e43495c71ecd1e74168df32f2",
                 "shasum": ""
             },
             "require": {
@@ -1066,7 +1066,7 @@
                 "control panel",
                 "mothership"
             ],
-            "time": "2015-04-02 09:51:17"
+            "time": "2015-04-07 09:20:35"
         },
         {
             "name": "mothership-ec/cog-mothership-discount",

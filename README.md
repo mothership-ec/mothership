@@ -21,8 +21,8 @@ It incorporates the full range of applications you'd expect to run an online sto
 ## Coming soon!
 
 * Electronic Point Of Sale
-* Campaign Monitor mailing list integration
 * Xero online accounts integration
+* Campaign Monitor mailing list integration
 
 A comprehensive [Functionality Reference list](http://wiki.mothership.ec/Functionality_Reference) is available on the Mothership Wiki.
 

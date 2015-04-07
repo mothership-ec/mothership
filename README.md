@@ -36,7 +36,7 @@ To set up <a href="http://mothership.ec">Mothership</a> using the installer, you
 + A **Unix-like** operating system (i.e. OSX, Linux, etc)
 	+ Mothership **will not** work in a Windows environment at present
 + **Composer**
-	+ Composer is a PHP dependency manager which can be downloaded from <a href="https://getcomposer.org/download/">the Composer website</a>.
+	+ Composer is a PHP dependency manager which can be downloaded from <a href="https://getcomposer.org/download/">the Composer website</a>. It handles the installation, updating and removal of Mothership modules.
 	+ It is recommended that you install Composer globally
 
 ## Installation

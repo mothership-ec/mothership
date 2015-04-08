@@ -14,13 +14,13 @@ It incorporates the full range of applications you'd expect to run an online sto
 * Returns
 * Multiple currencies
 * Multiple tax rates
-* Gift Vouchers
+* Gift vouchers
 * Discount tokens
 * Reports
 
 ## Coming soon!
 
-* Electronic Point Of Sale
+* Electronic Point of Sale (EPOS)
 * Xero online accounts integration
 * Campaign Monitor mailing list integration
 
@@ -32,7 +32,6 @@ To set up <a href="http://mothership.ec">Mothership</a> using the installer, you
 
 + **PHP** 5.4.0 or higher
 	+ **PHP intl extention** (see <a href="http://php.net/manual/en/intl.setup.php">http://php.net/manual/en/intl.setup.php</a>)
-	+ It is also recommended that you set the memory_limit in your php.ini file to at least 256M, as the process of copying and minifying all the CSS and JavaScript from the individual modules can be quite intensive. However, we hope to optimise this in the future.
 + **MySQL** 5.1.0 or higher
 + **Apache**
 	+ **We cannot currently offer any guarantee that Mothership works with Nginx or other server software**
@@ -71,7 +70,7 @@ To install Mothership using the installer:
 
 To set up an environment to develop on this repository
 
-1. Clone the repo and run update it using Composer
+1. Clone the repo and install the dependencies using Composer
 1. Create a `config/local` directory
 1. Copy **all** config files into this directory. Be sure not to commit any of these config files.
 1. Follow instructions from **3.** onwards from the manual install guide above

@@ -20,7 +20,7 @@ It incorporates the full range of applications you'd expect to run an online sto
 
 ## Coming soon!
 
-* Electronic Point Of Sale
+* Electronic Point of Sale (EPOS)
 * Xero online accounts integration
 * Campaign Monitor mailing list integration
 

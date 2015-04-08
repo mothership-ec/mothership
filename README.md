@@ -32,7 +32,6 @@ To set up <a href="http://mothership.ec">Mothership</a> using the installer, you
 
 + **PHP** 5.4.0 or higher
 	+ **PHP intl extention** (see <a href="http://php.net/manual/en/intl.setup.php">http://php.net/manual/en/intl.setup.php</a>)
-	+ It is also recommended that you set the memory_limit in your php.ini file to at least 256M, as the process of copying and minifying all the CSS and JavaScript from the individual modules can be quite intensive. However, we hope to optimise this in the future.
 + **MySQL** 5.1.0 or higher
 + **Apache**
 	+ **We cannot currently offer any guarantee that Mothership works with Nginx or other server software**

@@ -14,7 +14,7 @@ It incorporates the full range of applications you'd expect to run an online sto
 * Returns
 * Multiple currencies
 * Multiple tax rates
-* Gift Vouchers
+* Gift vouchers
 * Discount tokens
 * Reports
 

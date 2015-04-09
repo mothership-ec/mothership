@@ -8,12 +8,7 @@
 	{{ render(controller('Mothership:Site::Controller:Module:Menu#footer')) }}
 	<section class="col-3">
 		<h4>Social</h4>
-		<ul class="social-links">
-			<li><a href="https://twitter.com/"><i class="fa-twitter"></i></a></li>
-			<li><a href="https://www.facebook.com/"><i class="fa-facebook"></i></a></li>
-			<li><a href="http://instagram.com"><i class="fa-instagram"></i></a></li>
-			<li><a href="http://pinterest.com"><i class="fa-pinterest"></i></a></li>
-		</ul>
+		{{ render(controller('Message:Mothership:CMS::Controller:Module:Social#links')) }} 
 	</section>
     {# Uncomment this if Mailing module is installed #}
     {#<section class="col-3 newsletter form-inline">#}

@@ -662,26 +662,46 @@
     background: #EEE;
 }
 
-.footer .social-links {
+.footer .social {
     padding: 0;
 }
 
-.footer .social-links li {
+.footer .social li {
     font-family: "FontAwesome";
     font-size: 1.3em;
     display: inline-block;
     margin-right: 10px;
 }
 
-.footer .social-links i {
+.footer .social i {
     font-style: normal;
 }
 
-.footer .social-links a {
-    text-decoration: none;
+.footer .social a {
+    display: none;
 }
 
-.footer .social-links a:hover {
+.footer .social a:before {
+    visibility: visible;
+}
+
+.footer .social .facebook:before {
+    content: '\f09a';
+}
+
+.footer .social .twitter:before {
+    content: '\f099';
+}
+
+.footer .social .instagram:before {
+    content: '\f16d';
+}
+
+.footer .social .pinterest:before {
+    content: '\f0d2';
+}
+
+.footer .social a:hover {
     text-decoration: none;
     color: #be8e2d;
 }

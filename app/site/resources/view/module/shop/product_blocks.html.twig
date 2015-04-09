@@ -1,7 +1,11 @@
 <section class="product-listing">
 	<div class="row">
 		{% for key, page in pages %}
-			{% set image = page.content.gallery.all[0].image ?: page.content.product.product.product.image %}
+			{% set image = page.content.gallery.all[0].image ?: 
+				page.content.product.product.product.getImage('default', {
+					(page.content.product.option.name) : page.content.product.option.value
+				}) 
+			%}
 			<div class="product col-3">
 				<a href="{{ page.slug }}">
 					{{ getResizedImage(image, 360,455) }}

@@ -10,7 +10,9 @@
 				<a href="{{ page.slug }}">
 					{{ getResizedImage(image, 360,455) }}
 					<h3>{{ page.content.product.product.product.displayName }}</h3>
-					<h5>{{ page.content.product.option.value }} <span class="price">{{ page.content.product.product.product.getPrice | price }}</span></h5>
+					<h5>{{ page.content.product.option.value }} 
+						<span class="price">{{ page.content.product.product.product.getPrice | price }}</span>
+					</h5>
 				</a>
 			</div>
 		{% endfor %}

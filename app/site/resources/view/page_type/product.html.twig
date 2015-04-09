@@ -14,7 +14,8 @@
 				{{
 					render(controller('Mothership:Site::Controller:Module:Gallery#gallery', {
 						product: product,
-						gallery: content.gallery
+						gallery: content.gallery,
+						options: content.product.option
 					}))
 				}}
 			{% endblock %}

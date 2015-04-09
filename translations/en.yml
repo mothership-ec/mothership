@@ -24,6 +24,7 @@ page:
     cross_sell:
       name: Cross sell
       description: Product pages that will appear under the 'You May Also Like' section
+      singularName: Cross sell product
 ms.cms.content:
   home:
     confirm: Are you sure you wish to save the home page?

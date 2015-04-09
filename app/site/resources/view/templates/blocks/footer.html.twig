@@ -6,11 +6,19 @@
 
 <footer class="footer row" role="contentinfo">
 	{{ render(controller('Mothership:Site::Controller:Module:Menu#footer')) }}
+
 	<section class="col-3">
+		{# 
+		 - Social Links
+		 - 
+		 - These links are rendered based on the networks given in 
+		 - config/social.yml. Edit this file to change the social networks 
+		 - settings
+		 #}
 		<h4>Social</h4>
 		{{ render(controller('Message:Mothership:CMS::Controller:Module:Social#links')) }} 
 	</section>
-    {# Uncomment this if Mailing module is installed #}
+    {# Uncomment this if Mailing module is installed (when it's released) #}
     {#<section class="col-3 newsletter form-inline">#}
         {#<h3>Subscribe to our newsletter</h3>#}
         {#{{#}

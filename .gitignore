@@ -11,3 +11,4 @@
 /public/barcodes/*
 /logs/*
 /tmp/*
+/config/local/*

@@ -71,5 +71,6 @@ To install Mothership using the installer:
 To set up an environment to develop on this repository
 
 1. Clone the repo and install the dependencies using Composer
-1. Edit the config files to describe your environment (be sure not to commit any of these config files)
+1. Create a `config/local` directory
+1. Move **all** config files into this directory. Be sure not to commit any of these config files.
 1. Follow instructions from **3.** onwards from the manual install guide above

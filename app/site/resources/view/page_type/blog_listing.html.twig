@@ -1,0 +1,13 @@
+{% extends 'Mothership:Site::templates/base' %}
+
+{% block content %}
+	<main class="content generic"  id="content" role="main">
+		<div class="row">
+			<div class="col-12">
+				{{ render(controller('Mothership:Site::Controller:Module:Blog#blogListing', {
+					page: page
+				})) }}
+			</div>
+		</div>
+	</main>
+{% endblock %}

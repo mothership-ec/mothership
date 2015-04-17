@@ -537,6 +537,12 @@
     float: left;
 }
 
+.gallery .spinner {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 .product-info select {
     position: relative;
     float: none;
@@ -585,6 +591,7 @@
     width: 100%;
     position: relative;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .modal-image span {

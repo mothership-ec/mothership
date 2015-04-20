@@ -6,27 +6,28 @@
 
 	<main class="content" id="content" role="main">
 		{{ content.content.content | raw }}
-	</main>
 
-	{# Promos #}
-	<section class="promo">
-		{% if page.content.promos.count != 0 %}
-		<ul>
-		{% for promo in page.content.promos %}
-			<li>
-				{% if promo.link.value.target %}<a href="{{ promo.link }}">{% endif %}
-				{{ getResizedImage(promo.image, 400, 200) }}
-				{% if promo.header.value or promo.subheader.value %}
-				<div class="overlay">
-					{% if promo.header.value %}<h2>{{ promo.header }}</h2>{% endif %}
-					{% if promo.subheader.value %}<p>{{ promo.subheader }}</p>{% endif %}
-				</div>
-				{% endif %}
-				{% if promo.link.value.target %}</a>{% endif %}
-			</li>
-		{% endfor %}
-		</ul>
-		{% endif %}
-	</section>
-	{# End Promos #}
+			{# Promos #}
+		<section class="promo">
+			{% if page.content.promos.count != 0 %}
+			<ul>
+			{% for promo in page.content.promos %}
+				<li>
+					{% if promo.link.value.target %}<a href="{{ promo.link }}">{% endif %}
+					{{ getResizedImage(promo.image, 400, 200) }}
+					{% if promo.header.value or promo.subheader.value %}
+					<div class="overlay">
+						{% if promo.header.value %}<h2>{{ promo.header }}</h2>{% endif %}
+						{% if promo.subheader.value %}<p>{{ promo.subheader }}</p>{% endif %}
+					</div>
+					{% endif %}
+					{% if promo.link.value.target %}</a>{% endif %}
+				</li>
+			{% endfor %}
+			</ul>
+			{% endif %}
+		</section>
+		{# End Promos #}
+	
+	</main>
 {% endblock %}

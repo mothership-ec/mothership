@@ -272,8 +272,9 @@
 
 .navigation .current > a,
 .navigation a.current {
-    color: #009;
+    color: #285171;
     position: relative;
+    font-weight: bold;
 }
 
 .navigation a.current:after {

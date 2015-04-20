@@ -270,6 +270,10 @@
 
 }
 
+.navigation a:hover {
+    text-decoration: underline;
+}
+
 .navigation .current > a,
 .navigation a.current {
     color: #285171;

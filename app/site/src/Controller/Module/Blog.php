@@ -11,7 +11,6 @@ class Blog extends Controller
 	{
 		$pageLoader = $this->get('cms.page.loader');
 		$pagination = $this->get('pagination');
-
 		$pagination->setCurrentPage($this->get('http.request.master')->query->get('list-page', 1));
 		$pagination->setMaxPerPage(3);
 		$pageLoader

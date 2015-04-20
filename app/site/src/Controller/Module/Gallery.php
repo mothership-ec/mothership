@@ -10,7 +10,7 @@ class Gallery extends Controller
 {
 	protected $_productImage;
 
-	public function gallery(Product $product, RepeatableContainer $gallery, $options = null)
+	public function productGallery(Product $product, RepeatableContainer $gallery, $options = null)
 	{
 		$currentIndex = $this->get('http.request.master')->query->get('gallery_image', 0);
 		$thumbs  = [];
@@ -29,7 +29,24 @@ class Gallery extends Controller
 
 		$current = (array_key_exists($currentIndex, $thumbs)) ? $thumbs[$currentIndex] : $thumbs[0];
 
-		return $this->render('Mothership:Site::module:product:gallery', [
+		return $this->render('Mothership:Site::module:gallery', [
+			'thumbs'  => (count($thumbs) > 1) ? $thumbs : [],
+			'current' => $current,
+		]);
+	}
+
+	public function gallery(RepeatableContainer $gallery)
+	{
+		$currentIndex = $this->get('http.request.master')->query->get('gallery_image', 0);
+		$thumbs = [];
+
+		if (count($gallery)) {
+			$thumbs  = $this->_getFilesFromGallery($gallery);
+		}
+
+		$current = (array_key_exists($currentIndex, $thumbs)) ? $thumbs[$currentIndex] : $thumbs[0];
+
+		return $this->render('Mothership:Site::module:gallery', [
 			'thumbs'  => (count($thumbs) > 1) ? $thumbs : [],
 			'current' => $current,
 		]);

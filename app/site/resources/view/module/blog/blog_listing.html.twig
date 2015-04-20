@@ -1,69 +1,57 @@
-{# Some strange code coming up, prepare yourself! #}
-{% for page in pages %}
-	{% set date = page.content.date.value ?: page.authorship.createdAt %}
-	{% if currentYear == null or currentYear > date|date('Y') %}
-		{% set currentYear = date|date('Y') %}
-		{# 
-		 - These are to close the section/ul tags coming after this.
-		 - They do NOT relate to any tags *before* this file even though
-		 - they come earlier in the file.
-		 #}
-		{% if not loop.first %}</ul></section>{% endif %}
+{% import 'Mothership:Site::macro:authorship' as auth %}
 
-		{# Open a section and a list #}
-		<section class="press-listing">
-			<h1>{{ date|date('Y') }}</h1>
-			<ul>
-	{% endif %}
-	<li>
-		<a href="{{ page.slug}}">
-			{{ 
-				getResizedImage(page.content.images.get(0).image, 900, 900)
-			}}
-			{{ 
-				(page.content.description.value ? 
-				page.content.description : 
-				'<p>' ~ page.title ~ '</p>')|raw 
-			}}
-			<span>{{ date|date('d-m-Y') }}</span>
-		</a>
-	</li>
+<section>
+{% for page in pages %}
+	<article class="row">
+			
+		{% if page.content.images.get(0).image %}
+		<div class="col-3">
+			{{ getResizedImage(page.content.images.get(0).image, 200, 200) }}
+		</div>
+		{% endif %}
+		
+		<div class="col-9">
+			<h1><a href="{{ page.slug }}">{{ page.title }}</a></h1>
+			<span class="post-meta">{{ auth.authorship(page) }}</span>
+			<div class="description">
+				{{ ((page.content.description.value ?: page.content.body.value)|length > 300 
+					? page.content.description.value ?: page.content.body.value|slice(0, 300) ~ '...' 
+					: page.content.description.value ?: page.content.body.value) | raw }}
+			</div>
+		</div>
+	</article>
 {% endfor %}
-{# These close the final open tags #}
-{% if pages|length %}
-	</ul>
-	</section>
-{% endif %}
 
 {% if pagination %}
-<div class="pagination">
-	{% if pagination.hasPreviousPage() %}
-		<a href="?list-page={{ pagination.getPreviousPage() }}" class="newer">Previous</a>
-	{% else %}
-		<span href="#" class="newer disabled">Previous</span>
-	{% endif %}
-	<ol>
-		{% for i in range(1, pagination.getCountPages()) %}
-			{% if i == pagination.getCurrentPage() %}
-				{% set liClass = "active" %}
-			{% elseif i == 1 or i >= (pagination.adapter.count / 20) %}
-				{% set liClass = "end" %}
-			{% elseif (i > pagination.getCurrentPage() + 5) or (i < pagination.getCurrentPage() - 5) %}
-				{% set liClass = "out-of-range" %}
-			{% else %}
-				{% set liClass = "" %}
-			{% endif %}
-			{% set nodots = (pagination.getCurrentPage() + 5 >= i or pagination.getCurrentPage() - 5 <= i) %}
-			<li class="{% if nodots %}nodots{% endif %} {{ liClass }}" >
-				<a href="?list-page={{ i }}">{{ i }}</a>
-			</li>
-		{% endfor %}
-	</ol>
-	{% if pagination.hasNextPage() %}
-		<a href="?list-page={{ pagination.getNextPage() }}" class="older">Next</a>
-	{% else %}
-		<span href="#" class="older disabled">Next</span>
-	{% endif %}
-</div>
+	<div class="pagination">
+		{% if pagination.hasPreviousPage() %}
+			<a href="?list-page={{ pagination.getPreviousPage() }}" class="newer">Previous</a>
+		{% else %}
+			<span href="#" class="newer disabled">Previous</span>
+		{% endif %}
+		<ol>
+			{% for i in range(1, pagination.getCountPages()) %}
+				{% if i == pagination.getCurrentPage() %}
+					{% set liClass = "active" %}
+				{% elseif i == 1 or i >= (pagination.adapter.count / 20) %}
+					{% set liClass = "end" %}
+				{% elseif (i > pagination.getCurrentPage() + 5) or (i < pagination.getCurrentPage() - 5) %}
+					{% set liClass = "out-of-range" %}
+				{% else %}
+					{% set liClass = "" %}
+				{% endif %}
+				{% set nodots = (pagination.getCurrentPage() + 5 >= i or pagination.getCurrentPage() - 5 <= i) %}
+				<li class="{% if nodots %}nodots{% endif %} {{ liClass }}" >
+					<a href="?list-page={{ i }}">{{ i }}</a>
+				</li>
+			{% endfor %}
+		</ol>
+		{% if pagination.hasNextPage() %}
+			<a href="?list-page={{ pagination.getNextPage() }}" class="older">Next</a>
+		{% else %}
+			<span href="#" class="older disabled">Next</span>
+		{% endif %}
+	</div>
 {% endif %}
+</section>
 

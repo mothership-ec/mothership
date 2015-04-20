@@ -1,11 +1,20 @@
 {% extends 'Mothership:Site::templates/base' %}
+{% import 'Mothership:Site::macro:authorship' as auth %}
 
 {% block content %}
 	<main class="content generic"  id="content" role="main">
 		<div class="row">
-			<div class="col-12">
+			<div class="col-9">
 				<h1>{{ page.title }}</h1>
-				{{ content.content | raw }}
+				<span class="post-meta">{{ auth.authorship(page) }}</span>
+				{{ content.body | raw }}
+			</div>
+			<div class="col-3">
+				{{
+					render(controller('Mothership:Site::Controller:Module:Gallery#gallery', {
+						gallery: content.images
+					}))
+				}}
 			</div>
 		</div>
 	</main>

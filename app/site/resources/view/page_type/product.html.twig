@@ -12,7 +12,7 @@
 			{# Product gallery #}
 			{% block gallery %}
 				{{
-					render(controller('Mothership:Site::Controller:Module:Gallery#gallery', {
+					render(controller('Mothership:Site::Controller:Module:Gallery#productGallery', {
 						product: product,
 						gallery: content.gallery,
 						options: content.product.option

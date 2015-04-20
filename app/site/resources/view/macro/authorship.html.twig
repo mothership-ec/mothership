@@ -1,0 +1,7 @@
+{% macro authorship(page) %}
+	{% set date = page.content.date.value ?: page.authorship.createdAt %}
+	By {{ page.content.author.value|default(page.authorship.createdUser.name) }}, 
+	<time pubdate datetime="{{ date|date(constant('DATE_W3C')) }}">
+		{{ date|date('j F Y') }}
+	</time>
+{% endmacro %}

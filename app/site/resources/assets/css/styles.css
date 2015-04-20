@@ -572,6 +572,7 @@
     width: 100%;
     position: relative;
     cursor: pointer;
+    opacity: 0;
 }
 
 .modal-image span {

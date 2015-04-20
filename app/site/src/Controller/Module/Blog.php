@@ -12,11 +12,13 @@ class Blog extends Controller
 		$pageLoader = $this->get('cms.page.loader');
 		$pagination = $this->get('pagination');
 
+		$pagination->setCurrentPage(1);
+		$pagination->setMaxPerPage(3);
 		$pageLoader
-			// ->setPagination($pagination)
+			->setPagination($pagination)
 			->includeDeleted(false)
 			->includeUnpublished(false)
-			// ->orderBy(Page\PageOrder::CREATED_DATE)
+			->orderBy(Page\PageOrder::CREATED_DATE)
 		;
 
 		$pages = $pageLoader->getChildren($page);

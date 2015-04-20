@@ -4,6 +4,12 @@
 	<main class="content" id="content" role="main">
 		{% set product = content.product.product.product %}
 		<div class="row">
+			{# Breadcrumb #}
+			{{
+				render(controller('Message:Mothership:CMS::Controller:Navigation:Breadcrumb#breadcrumb', {
+				page: page,
+				}))
+			}}
 			{# Product info #}
 			{% block productinfo %}
 				{% include 'Mothership:Site::module:product:product_info' %}

@@ -17,6 +17,13 @@
 					? page.content.description.value ?: page.content.body.value|slice(0, 300) ~ '...' 
 					: page.content.description.value ?: page.content.body.value) | raw }}
 			</div>
+			<div class="social">
+			{{
+				render(controller('Message:Mothership:CMS::Controller:Module:Social#share', {
+					page: page
+				}))
+			}}
+			</div>
 		</div>
 	</article>
 {% endfor %}

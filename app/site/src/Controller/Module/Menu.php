@@ -14,7 +14,10 @@ class Menu extends Controller
 
 	public function menu(Page $currentPage = null, Page $page = null, array $active = null)
 	{
-		$pages = $this->get('cms.page.loader')->getChildren($page);
+		$pages = $this->get('cms.page.loader')
+			->includeDeleted(false)
+			->includeUnpublished(false)
+			->getChildren($page);
 		$pages = ($pages) ? (array) $pages : [];
 
 		if ($currentPage && (null === $active)) {

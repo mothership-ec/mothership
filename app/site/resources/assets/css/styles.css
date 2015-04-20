@@ -643,6 +643,128 @@
     margin-bottom: -1px;
 }
 
+/*    Blog listing
+/* ------------------------------------------------------- */
+
+/*
+ * Here add all your classes and Ids related to blog listing
+ * page elements modules and content.
+ */
+
+.breadcrumb {
+    margin: 20px 0 0 0;
+    font-size: 0.85em;
+    color: #7f7f7f;
+    overflow: hidden;
+}
+
+.breadcrumb li {
+    float: left;
+}
+
+.breadcrumb li:after {
+    content: '\232A';
+    margin: 0px 10px;
+}
+
+.breadcrumb li.bc-primary:after {
+    content: '';
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+article .post-meta {
+    display: block;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/*    Pagination
+/* ------------------------------------------------------- */
+
+.pagination {
+    margin: 30px 0px;
+    width: 100%;
+    padding: 10px 0px;
+    text-align: center;
+    font-size: 0.857em;
+    overflow: hidden;
+    position: relative;
+    clear: both;
+    margin: auto;
+}
+
+.pagination ol {
+    text-align: center;
+    width: 90%;
+    margin: 0px auto;
+}
+
+.pagination li {
+    display: inline-block;
+    list-style: none;
+    width: auto;
+    float: none;
+    padding: 5px;
+    margin: 0px 0px 10px 0px;
+}
+
+.pagination .newer {
+    float: left;
+    opacity: .8;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.pagination .older {
+    float: right;
+    opacity: .8;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.pagination .newer:hover,
+.pagination .older:hover {
+    opacity: 1;
+}
+
+.pagination .disabled {
+    opacity: 0.2;
+    padding: 5px 0px 0px 0px;
+}
+
+.pagination .disabled:hover {
+    opacity: 0.2;
+}
+
+.pagination a {
+    display: block;
+    padding: 4px 0 1px;
+}
+
+.pagination li a {
+    margin: 0 5px;
+    text-decoration: none;
+    display: block;
+    padding: 0 5px;
+    border: 1px solid #121212;
+    color: #121212;
+}
+
+.pagination li.active a {
+    color: #000;
+    border: 1px solid #000;
+}
+
+.pagination li a:hover {
+    color: #f58027;
+}
+
+
 /*    Search results
 /* ------------------------------------------------------- */
 

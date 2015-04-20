@@ -681,6 +681,16 @@ article .post-meta {
     color: #666;
 }
 
+
+article .image {
+    margin-right: 20px;
+}
+
+article .image figcaption {
+    font-size: 0.8em;
+    color: #666; 
+}
+
 /*    Pagination
 /* ------------------------------------------------------- */
 

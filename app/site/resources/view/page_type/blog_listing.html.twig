@@ -4,6 +4,7 @@
 	<main class="content generic"  id="content" role="main">
 		<div class="row">
 			<div class="col-12">
+				<h1>{{ page.title }}</h1>
 				{{ render(controller('Mothership:Site::Controller:Module:Blog#blogListing', {
 					page: page
 				})) }}

@@ -3,12 +3,11 @@
 <section>
 {% for page in pages %}
 	<article class="row">
-			
-		{% if page.content.images.get(0).image %}
-		<div class="col-3">
-			{{ getResizedImage(page.content.images.get(0).image, 200, 200) }}
+		<div class="col-3 no-gutter">
+			{% if page.content.images.get(0).image %}
+				{{ getResizedImage(page.content.images.get(0).image, 710, 'AUTO') }}
+			{% endif %}
 		</div>
-		{% endif %}
 		
 		<div class="col-9">
 			<h1><a href="{{ page.slug }}">{{ page.title }}</a></h1>

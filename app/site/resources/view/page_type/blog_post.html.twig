@@ -7,12 +7,10 @@
 			<div class="col-9">
 				<h1>{{ page.title }}</h1>
 				<span class="post-meta">{{ auth.authorship(page) }}</span>
-				{{ content.body|raw }}
-			</div>
-			<div class="col-3">
+				<div class="col-5">
 			{% for image in content.images %}
 				<div class="image">
-					{{ getResizedImage(image.image, 300, 'AUTO') }}
+					{{ getResizedImage(image.image, 710, 'AUTO') }}
 					<div class="caption">
 						<h3>
 							{{ image.caption_heading|raw }}
@@ -24,10 +22,12 @@
 				</div>
 			{% endfor %}
 			</div>
+				{{ content.body|raw }}
+			</div>
 		</article>
 		
 		<div class="row">
-			<section class="comments col-12 no-gutter">
+			<section class="comments col-9 no-gutter">
 				{{
 					render(controller('Message:Mothership:CMS::Controller:Module:Blog:Comments#display',
 					{

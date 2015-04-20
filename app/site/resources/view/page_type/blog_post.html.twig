@@ -5,6 +5,12 @@
 	<main class="content generic"  id="content" role="main">
 		<article class="row">
 			<div class="col-9">
+				{# Breadcrumb #}
+				{{
+					render(controller('Message:Mothership:CMS::Controller:Navigation:Breadcrumb#breadcrumb', {
+					page: page,
+					}))
+				}}
 				<h1>{{ page.title }}</h1>
 				<span class="post-meta">{{ auth.authorship(page) }}</span>
 				<div class="col-5">

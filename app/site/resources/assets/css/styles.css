@@ -651,6 +651,26 @@
  * page elements modules and content.
  */
 
+.breadcrumb {
+    margin: 20px 0 0 0;
+    font-size: 0.85em;
+    color: #7f7f7f;
+    overflow: hidden;
+}
+
+.breadcrumb li {
+    float: left;
+}
+
+.breadcrumb li:after {
+    content: '\232A';
+    margin: 0px 10px;
+}
+
+.breadcrumb li.bc-primary:after {
+    content: '';
+}
+
 article {
     margin-bottom: 20px;
 }

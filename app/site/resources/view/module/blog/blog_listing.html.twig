@@ -11,17 +11,18 @@
 		
 		<div class="col-9">
 			<h1><a href="{{ page.slug }}">{{ page.title }}</a></h1>
-			<span class="post-meta">{{ auth.authorship(page) }}</span>
-			<div class="description">
-				{{ ((page.content.description.value ?: page.content.body.value)|length > 300 
-					? page.content.description.value ?: page.content.body.value|slice(0, 300) ~ '...' 
-					: page.content.description.value ?: page.content.body.value) | raw }}
-			</div>
+			<span class="post-meta">{{ auth.authorship(page) }}
 			{{
 				render(controller('Message:Mothership:CMS::Controller:Module:Social#share', {
 					page: page
 				}))
 			}}
+			</span>
+			<div class="description">
+				{{ ((page.content.description.value ?: page.content.body.value)|length > 300 
+					? page.content.description.value ?: page.content.body.value|slice(0, 300) ~ '...' 
+					: page.content.description.value ?: page.content.body.value) | raw }}
+			</div>
 		</div>
 	</article>
 {% endfor %}

@@ -799,6 +799,9 @@ article .image figcaption {
 /*    Social links
 /* ------------------------------------------------------- */
 
+.post-meta .social {
+    margin-top: 5px;
+}
 
 .social {
     padding: 0;

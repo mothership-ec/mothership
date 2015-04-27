@@ -79,8 +79,7 @@ class Home implements PageTypeInterface
 				'constraints' => [
 					new Constraints\NotBlank
 				]
-			]))
-			->add($factory->getField('link', 'link', 'Link')->setScope('cms'));
+			]));
 		;
 
 	}

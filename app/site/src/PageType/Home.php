@@ -80,8 +80,7 @@ class Home implements PageTypeInterface
 					new Constraints\NotBlank
 				]
 			]))
-			->add($factory->getField('link', 'link', 'Link')->setScope('cms'))
-			->add($factory->getField('file', 'image', 'Image')->setAllowedTypes(File\Type::IMAGE));
+			->add($factory->getField('link', 'link', 'Link')->setScope('cms'));
 		;
 
 	}

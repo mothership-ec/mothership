@@ -1,4 +1,4 @@
-<section class="carousel">
+{# <section class="carousel">
 	<ul>
 		{% for slide in page.content.carousel %}
 		{% if not slide.link.value.target is empty %}<a href="{{ slide.link }}">{% endif %}
@@ -16,4 +16,26 @@
 		{% if not slide.link.value.target is empty %}</a>{% endif %}
 		{% endfor %}
 	</ul>
+</section>
+ #}
+<section>
+	<ul class="carousel">
+		<li>
+			<img src="/resize/files/t-short-sleeve_553x200-491b57.jpg">
+		</li>
+		<li>
+			<img src="/resize/files/t-short-sleeve_553x200-491b57.jpg">
+		</li>
+		<li>
+			<img src="/resize/files/t-short-sleeve_553x200-491b57.jpg">
+		</li>
+		<li>
+			<img src="/resize/files/t-short-sleeve_553x200-491b57.jpg">
+		</li>
+		<li>
+			<img src="/resize/files/t-short-sleeve_553x200-491b57.jpg">
+		</li>
+
+	</ul>
+	<div class="thumbnails"></div>
 </section>

@@ -25,6 +25,7 @@
 						}}
 					</div>	
 				</span>
+				{% if content.images|length %}
 				<div class="col-5">
 					{% for image in content.images %}
 						<div class="image">
@@ -40,6 +41,7 @@
 						</div>
 					{% endfor %}
 				</div>
+				{% endif %}
 				{{ content.body|raw }}
 			</div>
 		</article>

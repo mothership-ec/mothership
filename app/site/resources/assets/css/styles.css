@@ -504,12 +504,14 @@
 
 .promo ul {
     padding: 0;
+    text-align: center;
 }
 
 .promo li {
     list-style: none;
     display: inline-block;
     vertical-align: top;
+    width: 33%;
 }
 
 
@@ -684,6 +686,12 @@ article .post-meta {
     display: block;
     margin-bottom: 20px;
     color: #666;
+    overflow: hidden;
+}
+
+article .post-meta .col-6 h4 {
+    float: left;
+    margin: 0 10px 0 0;
 }
 
 

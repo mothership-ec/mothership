@@ -3,7 +3,6 @@
 	'@Mothership:Site::resources/assets/js/jquery.touch-swipe.js'
 	'@Mothership:Site::resources/assets/js/jquery.gallery.js'
 	'@Mothership:Site::resources/assets/js/jquery.menu.js'
-	'@Mothership:Site::resources/assets/js/jquery.carousel.js'
 	'@Mothership:Site::resources/assets/js/jquery.offcanvas.js'
 	'@Mothership:Site::resources/assets/js/jquery.basket.js'
 	'@Mothership:Site::resources/assets/js/jquery.setup.js'
@@ -13,3 +12,20 @@
 	<!-- filter='?jsmin' -->
 	<script src="{{ asset_url }}"></script>
 {% endjavascripts %}
+
+{% javascripts
+	'@Mothership:Site::resources/assets/js/jquery.carousel.js'
+
+	output='/assets/js/carousel-*.js'
+%}
+	<!-- filter='?jsmin' -->
+	<script src="{{ asset_url }}"></script>
+{% endjavascripts %}
+
+{% stylesheets
+	'@Mothership:Site::resources/assets/css/carousel.css'
+	output='/assets/css/carousel-*.css'
+	filter='csscogulerewrite,?cssmin'
+%}
+<link rel="stylesheet" href="{{ asset_url }}">
+{% endstylesheets %}

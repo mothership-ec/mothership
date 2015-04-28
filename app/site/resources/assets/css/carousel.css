@@ -1,0 +1,53 @@
+.carousel,
+.carousel .thumbs {
+	overflow: hidden;
+	clear: both;
+	position: relative;
+}
+
+.carousel .thumbs li {
+	padding: 20px;
+}
+
+.carousel ul, 
+.carousel ol {
+	list-style: none;
+}
+
+.carousel .slides > li, 
+.carousel .thumbs > ul > li {
+	float: left;
+}
+
+.carousel li, 
+.carousel img {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.slides {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+}
+
+.carousel a.arrow-left:before {
+	content: '<';
+}
+
+.carousel a.arrow-right:after {
+	content: '>';
+}
+
+.carousel .arrow {
+	position: absolute;
+}
+
+.carousel .arrow.left {
+	left: 0;
+}
+
+.carousel .arrow.right {
+	right: 0;
+}

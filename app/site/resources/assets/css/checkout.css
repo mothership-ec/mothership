@@ -94,6 +94,11 @@
 /* Product list
 ---------------------------------------------------------- */
 
+.loading .selection table,
+.loading .totals  {
+    opacity: 0.3;
+}
+
 
 .selection table
 {
@@ -180,6 +185,7 @@
 {
     font-size: 1.75em;
 }
+
 
 
 /* Discounts

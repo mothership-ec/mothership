@@ -270,10 +270,15 @@
 
 }
 
+.navigation a:hover {
+    text-decoration: underline;
+}
+
 .navigation .current > a,
 .navigation a.current {
-    color: #be8e2d;
+    color: #285171;
     position: relative;
+    font-weight: bold;
 }
 
 .navigation a.current:after {
@@ -495,6 +500,21 @@
     background: #333;
 }
 
+/* Promo */ 
+
+.promo ul {
+    padding: 0;
+    text-align: center;
+}
+
+.promo li {
+    list-style: none;
+    display: inline-block;
+    vertical-align: top;
+    width: 33%;
+}
+
+
 
 /*    Product listing
 /* ------------------------------------------------------- */
@@ -522,6 +542,12 @@
 
 .gallery .thumbnails li {
     float: left;
+}
+
+.gallery .spinner {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .product-info select {
@@ -572,6 +598,7 @@
     width: 100%;
     position: relative;
     cursor: pointer;
+    overflow: hidden;
 }
 
 .modal-image span {
@@ -623,6 +650,151 @@
     margin-bottom: -1px;
 }
 
+/*    Blog listing
+/* ------------------------------------------------------- */
+
+/*
+ * Here add all your classes and Ids related to blog listing
+ * page elements modules and content.
+ */
+
+.breadcrumb {
+    margin: 20px 0 0 0;
+    font-size: 0.85em;
+    color: #7f7f7f;
+    overflow: hidden;
+}
+
+.breadcrumb li {
+    float: left;
+}
+
+.breadcrumb li:after {
+    content: '\232A';
+    margin: 0px 10px;
+}
+
+.breadcrumb li.bc-primary:after {
+    content: '';
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+article .post-meta {
+    display: block;
+    margin-bottom: 20px;
+    color: #666;
+    overflow: hidden;
+}
+
+article .share-links {
+    margin: 10px 0;
+}
+
+article .share-links h4 {
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
+
+article .share-links ul {
+    display: inline-block;
+}
+
+article .image {
+    margin-right: 20px;
+}
+
+article .image figcaption {
+    font-size: 0.8em;
+    color: #666; 
+}
+
+/*    Pagination
+/* ------------------------------------------------------- */
+
+.pagination {
+    margin: 30px 0px;
+    width: 100%;
+    padding: 10px 0px;
+    text-align: center;
+    font-size: 0.857em;
+    overflow: hidden;
+    position: relative;
+    clear: both;
+    margin: auto;
+}
+
+.pagination ol {
+    text-align: center;
+    width: 90%;
+    margin: 0px auto;
+}
+
+.pagination li {
+    display: inline-block;
+    list-style: none;
+    width: auto;
+    float: none;
+    padding: 5px;
+    margin: 0px 0px 10px 0px;
+}
+
+.pagination .newer {
+    float: left;
+    opacity: .8;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.pagination .older {
+    float: right;
+    opacity: .8;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.pagination .newer:hover,
+.pagination .older:hover {
+    opacity: 1;
+}
+
+.pagination .disabled {
+    opacity: 0.2;
+    padding: 5px 0px 0px 0px;
+}
+
+.pagination .disabled:hover {
+    opacity: 0.2;
+}
+
+.pagination a {
+    display: block;
+    padding: 4px 0 1px;
+}
+
+.pagination li a {
+    margin: 0 5px;
+    text-decoration: none;
+    display: block;
+    padding: 0 5px;
+    border: 1px solid #121212;
+    color: #121212;
+}
+
+.pagination li.active a {
+    color: #000;
+    border: 1px solid #000;
+}
+
+.pagination li a:hover {
+    color: #f58027;
+}
+
+
 /*    Search results
 /* ------------------------------------------------------- */
 
@@ -637,6 +809,57 @@
     list-style-type: none;
     border-bottom: 1px solid #CCC;
     padding-bottom: 20px;
+}
+
+/*    Social links
+/* ------------------------------------------------------- */
+
+
+
+.social {
+    padding: 0;
+}
+
+.social li {
+    font-family: "FontAwesome";
+    font-size: 1.3em;
+    display: inline-block;
+    margin-right: 10px;
+    width: 20px;
+}
+
+.social i {
+    font-style: normal;
+}
+
+.social a {
+    visibility: hidden;
+    text-decoration: none;
+}
+
+.social a:before {
+    visibility: visible;
+}
+
+.social .facebook a:before {
+    content: '\f09a';
+}
+
+.social .twitter a:before {
+    content: '\f099';
+}
+
+.social .instagram a:before {
+    content: '\f16d';
+}
+
+.social .pinterest a:before {
+    content: '\f0d2';
+}
+
+.social a:hover {
+    text-decoration: none;
+    color: #be8e2d;
 }
 
 
@@ -661,31 +884,6 @@
 
     background: #EEE;
 }
-
-.footer .social-links {
-    padding: 0;
-}
-
-.footer .social-links li {
-    font-family: "FontAwesome";
-    font-size: 1.3em;
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.footer .social-links i {
-    font-style: normal;
-}
-
-.footer .social-links a {
-    text-decoration: none;
-}
-
-.footer .social-links a:hover {
-    text-decoration: none;
-    color: #be8e2d;
-}
-
 
 .copy {
     margin-top: 20px;

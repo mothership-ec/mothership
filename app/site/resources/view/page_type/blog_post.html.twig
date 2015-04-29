@@ -1,0 +1,65 @@
+{% extends 'Mothership:Site::templates/base' %}
+{% import 'Mothership:Site::macro:authorship' as auth %}
+
+{% block content %}
+	<main class="content generic"  id="content" role="main">
+		<article class="row">
+			<div class="col-9">
+				{# Breadcrumb #}
+				{{
+					render(controller('Message:Mothership:CMS::Controller:Navigation:Breadcrumb#breadcrumb', {
+					page: page,
+					}))
+				}}
+				<h1>{{ page.title }}</h1>
+				<span class="post-meta">
+					{{ auth.authorship(page) }}
+ 					<div class="share-links">
+	 					<h4>Share:</h4>
+							{{
+								render(controller('Message:Mothership:CMS::Controller:Module:Social#share', {
+									page: page
+								}))
+							}}
+					</div>	
+				</span>
+				{% if content.images|length %}
+				<div class="col-5">
+					{% for image in content.images %}
+						<div class="image">
+							{{ getResizedImage(image.image, 710, 'AUTO') }}
+							<figcaption>
+								<h3>
+									{{ image.caption_heading|raw }}
+								</h3>
+								{% if image.caption.value %}
+									<span>{{ image.caption|raw }}</span>
+								{% endif %}
+							</figcaption>
+						</div>
+					{% endfor %}
+				</div>
+				{% endif %}
+				{{ content.body|raw }}
+			</div>
+		</article>
+		
+		<div class="row">
+			<section class="comments col-9 no-gutter">
+				{{
+					render(controller('Message:Mothership:CMS::Controller:Module:Blog:Comments#display',
+					{
+						'pageID': page.id
+					}))
+				}}
+				{{
+					render(controller('Message:Mothership:CMS::Controller:Module:Blog:Comments#commentForm',
+					{
+						'page'   : page,
+						'content': content
+					}))
+				}}
+			</section>
+		</div>
+	</main>
+{% endblock %}

@@ -6,16 +6,19 @@
 
 <footer class="footer row" role="contentinfo">
 	{{ render(controller('Mothership:Site::Controller:Module:Menu#footer')) }}
+
 	<section class="col-3">
+		{# 
+		 - Social Links
+		 - 
+		 - These links are rendered based on the networks given in 
+		 - config/social.yml. Edit this file to change the social networks 
+		 - settings
+		 #}
 		<h4>Social</h4>
-		<ul class="social-links">
-			<li><a href="https://twitter.com/"><i class="fa-twitter"></i></a></li>
-			<li><a href="https://www.facebook.com/"><i class="fa-facebook"></i></a></li>
-			<li><a href="http://instagram.com"><i class="fa-instagram"></i></a></li>
-			<li><a href="http://pinterest.com"><i class="fa-pinterest"></i></a></li>
-		</ul>
+		{{ render(controller('Message:Mothership:CMS::Controller:Module:Social#links')) }} 
 	</section>
-    {# Uncomment this if Mailing module is installed #}
+    {# Uncomment this if Mailing module is installed (when it's released) #}
     {#<section class="col-3 newsletter form-inline">#}
         {#<h3>Subscribe to our newsletter</h3>#}
         {#{{#}
@@ -25,6 +28,8 @@
 </footer>
 <section class="copy row">
 	<div class="col-12">
-		<small>&copy; 2015 {{ (app.cfg.app.name) }}. Website by <a href="http://www.message.co.uk/">Message</a></small>
+		<small>
+			&copy; {{ 'now'|date('Y') }} {{ (app.cfg.app.name) }}. Website by <a href="http://www.mothership.ec/">Mothership</a>
+		</small>
 	</div>
 </section>

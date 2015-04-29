@@ -153,10 +153,10 @@
 	Carousel.prototype.zoom = function (slide) {
 		var self = this,
 			$zoom,
-			$zoomSlide = self.$slides.find(':nth-child('+slide+')'),
-			$zoomImage = $zoomSlide.data('zoom') ?
-				 $('<img src="'+$zoomSlide.data('zoom')+'">') :
-				$zoomSlide.children('img')
+			$zoomSlide = self.$slides.children('*:nth-child('+(slide+1)+')'), // slide+1 as nth-child is 1 indexed
+			$zoomImage = $('<img src="'+ 
+				($zoomSlide.data('zoom') || $zoomSlide.data('image') || $zoomSlide.children('img').first().attr('src')) +
+				'">')
 		;
 
 		if (slide > self.slideCount - 1) {
@@ -165,11 +165,16 @@
 
 		if (typeof self.$zoom === 'undefined') {
 			$zoom = $('<div class="zoom">');
-			self.$element.append($zoom);
+			$zoom.hide();
+			$zoom.on('click.carousel', '.unzoom', function (e) {
+				e.preventDefault();
+				self.unZoom();
+			});
+			self.$element.after($zoom);
 			self.$zoom = $zoom;
+		} else {
+			$zoom = self.$zoom;
 		}
-
-		$zoom = self.$zoom;
 
 		slide = slide || self.currentSlide;
 
@@ -178,8 +183,9 @@
 		}
 
 		$zoom.html($zoomImage);
-
+		$zoom.prepend('<a href="#" class="unzoom">X</a>')
 		$zoom.slideDown();
+		self.$element.stop().slideUp();
 
 		self.zoomed = true;
 	};
@@ -187,9 +193,9 @@
 	Carousel.prototype.unZoom = function () {
 		var self = this;
 
-		if (!this.zoomed) return false;
-
-		self.$zoom.slideUp();
+		if (!self.zoomed) return false;
+		self.$zoom.stop().slideUp();
+		self.$element.slideDown();
 
 		self.zoomed = false;
 	};
@@ -236,7 +242,7 @@
 		if (!this.config.allowZoom) return false;
 
 		self.$slides.children().each(function (k, v) {
-			$(v).on('click', function () {
+			$(v).on('click.carousel', function () {
 				self.zoom(k);
 			});
 		});
@@ -300,5 +306,11 @@ $(document).on('ready', function() {
 	window.carousel3 = $('#carousel3').carousel({
 		useThumbs: true,
 		allowZoom: true
+	});
+	window.carousel4 = $('#carousel4').carousel({
+		allowZoom: true
+	});
+	window.carousel5 = $('#carousel5').carousel({
+		useThumbs: true
 	});
 });

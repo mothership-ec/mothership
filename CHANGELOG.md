@@ -10,6 +10,7 @@
 - Improved styling on default homapage promos
 - Amended `Product` page type to extend `AbstractProduct`
 - Amended `ProductListing` page type to extend `AbstractProductListing`
+- Fix issue where forgotten password link would direct users to the admin forgotten password link
 
 ## 1.0.0
 

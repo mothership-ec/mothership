@@ -1,0 +1,104 @@
+{% import 'Mothership:Site::macro:authorship' as auth %}
+
+<section>
+{% for page in pages %}
+	<article class="row">
+		<div class="col-3 no-gutter">
+			<a href="{{ page.slug }}">
+			{% if page.content.images.get(0).image %}
+				<a href="{{ page.slug }}">
+					{{ getResizedImage(page.content.images.get(0).image, 710, 'AUTO') }}
+				</a>	
+			{% endif %}
+			</a>
+		</div>
+		
+		<div class="col-9">
+			<h1><a href="{{ page.slug }}">{{ page.title }}</a></h1>
+			<span class="post-meta">
+				{{ auth.authorship(page) }}
+				<div class="share-links">
+	 					<h4>Share:</h4>
+							{{
+								render(controller('Message:Mothership:CMS::Controller:Module:Social#share', {
+									page: page
+								}))
+							}}
+					</div>	
+			</span>
+			<div class="description">
+				{{ ((page.content.description.value ?: page.content.body.value)|length > 300 
+					? page.content.description.value ?: page.content.body.value|slice(0, 300) ~ '...' 
+					: page.content.description.value ?: page.content.body.value) | raw }}
+			</div>
+		</div>
+	</article>
+{% endfor %}
+
+{% if pagination %}
+<div class="pagination">
+	{% if pagination.hasPreviousPage() %}
+		<a href="?list-page={{ pagination.getPreviousPage() }}" class="newer">Previous</a>
+	{% else %}
+		<span href="#" class="newer disabled">Previous</span>
+	{% endif %}
+
+	<ol>
+		<li class="{% if pagination.getCurrentPage() == 1 %}active{% endif %}">
+			<a href="?list-page=1">1</a>
+		</li>
+		{% if pagination.getCountPages() > 1 %}
+			{% if pagination.getCurrentPage() > 3 and pagination.getCountPages() > 4 %}
+				<li>...</li>
+			{% endif %}
+			
+			{% if pagination.getCountPages() > 2 %}
+				{# 
+				 - Set low and high variables for middle loop
+				 #}
+				{% set low = pagination.getCurrentPage() < 3 ?
+								2 :
+								(
+									pagination.getCurrentPage() > pagination.getCountPages() - 2 
+										and pagination.getCountPages() > 3 ?
+									pagination.getCountPages() - 2  :
+									pagination.getCurrentPage() - 1
+								)
+				%}
+				{% set high = pagination.getCurrentPage() > pagination.getCountPages() - 2 ?
+								pagination.getCountPages() - 1 :
+								(
+									pagination.getCurrentPage() < 3 and pagination.getCountPages() > 3 ?
+									3 : 
+									pagination.getCurrentPage() + 1
+								)
+				%}
+				
+				{% for i in range(low, high) %}
+					<li class="{% if pagination.getCurrentPage() == i %}active{% endif %}">
+						<a href="?list-page={{ i }}">{{ i }}</a>
+					</li>
+				{% endfor %}
+			{% endif %}
+
+			{% if pagination.getCurrentPage() < pagination.getCountPages() - 2 and pagination.getCountPages() > 4 %}
+				<li>...</li>
+			{% endif %}
+			
+			{% if pagination.getCountPages() != 1 %}
+				<li class="{% if pagination.getCurrentPage() == pagination.getCountPages() %}active{% endif %}">
+					<a href="?list-page={{ pagination.getCountPages() }}">{{ pagination.getCountPages() }}</a>
+				</li>
+			{% endif %}
+		{% endif %}
+	</ol>
+
+	{% if pagination.hasNextPage() %}
+		<a href="?list-page={{ pagination.getNextPage() }}" class="older">Next</a>
+	{% else %}
+		<span href="#" class="older disabled">Next</span>
+	{% endif %}
+</div>
+{% endif %}
+</section>
+

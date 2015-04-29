@@ -54,6 +54,9 @@
 							'data-toggle-inverted': 'true'
 						}
 					}) }}
+					{% if app.cfg.checkout.saveAddresses %}
+						{{ form_row(form.save) }}
+					{% endif %}
 				</div>
 			</section>
 			<section class="delivery registration row" id="delivery">

@@ -1,7 +1,6 @@
 .DS_Store
 /namespaces.php
 /vendor
-/config/local/*/
 .idea
 /data/*
 /bin/*
@@ -12,4 +11,4 @@
 /public/barcodes/*
 /logs/*
 /tmp/*
-
+/config/local/*

@@ -18,6 +18,8 @@ class Services implements ServicesInterface
 				->add(new PageType\Generic)
 				->add(new PageType\Product)
 				->add(new PageType\ProductListing)
+				->add(new PageType\BlogListing)
+				->add(new PageType\BlogPost($c['user.groups']))
 				->add(new PageType\RedirectToFirstChild)
 			;
 

@@ -2,10 +2,11 @@
 
 namespace Mothership\Site\PageType;
 
+use Message\Mothership\Ecommerce\PageType\AbstractProductListing;
 use Message\Mothership\CMS\PageType\PageTypeInterface;
 use Message\Cog\Field\Factory as FieldFactory;
 
-class ProductListing implements PageTypeInterface
+class ProductListing extends AbstractProductListing
 {
 	public function getName()
 	{

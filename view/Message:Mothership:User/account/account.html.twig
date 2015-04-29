@@ -31,7 +31,9 @@
 		{% endif %}
 		<div class="col-12 no-gutter">
 			<a href="{{ url('ms.user.edit') }}">Edit account details and settings</a>
-			{# <p>Send me E-Mail updates? {{ subscribed }}</p> #}
+			{% if subscribed is defined %}
+			<p>Send me E-Mail updates? {{ subscribed }}</p>
+			{% endif %}
 		</div>
 	</div>
 {% endblock %}

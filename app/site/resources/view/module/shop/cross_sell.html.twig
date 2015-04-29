@@ -11,7 +11,11 @@
 						(product.option.name): product.option.value
 					})
 				%}
-				{% set image = cross_sell_page.content.gallery.all[0].image ?: product.product.product.image %}
+				{% set image = cross_sell_page.content.gallery.all[0].image ?: 
+					cross_sell_page.content.product.product.product.getImage('default', {
+						(cross_sell_page.content.product.option.name) : cross_sell_page.content.product.option.value
+					}) 
+				%}
 				<a href="{{ cross_sell_page.slug }}">
 					{{ getResizedImage(image, 360,455) }}
 					<h3>{{ product.product.product.displayName }}</h3>

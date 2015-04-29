@@ -6,7 +6,9 @@
 		<div class="col-3 no-gutter">
 			<a href="{{ page.slug }}">
 			{% if page.content.images.get(0).image %}
-				{{ getResizedImage(page.content.images.get(0).image, 710, 'AUTO') }}
+				<a href="{{ page.slug }}">
+					{{ getResizedImage(page.content.images.get(0).image, 710, 'AUTO') }}
+				</a>	
 			{% endif %}
 			</a>
 		</div>

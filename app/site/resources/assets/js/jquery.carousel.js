@@ -10,12 +10,13 @@
  *   - type (slide): the type of animation (currently supports slide and none)
  *   - speed (500): if the animation supports speed, then this value will be used
  * imagesPerSlide (1): the number of images shown at any one time
+ * allowZoom (false): if true then then images will zoom on click
  */
 ;
 (function($, window, document) {
 	'use strict';
 
-	var Carousel = function ($element, config) {
+	function Carousel ($element, config) {
 		var defaults = {
 			useArrows: true,
 			animation: {
@@ -23,7 +24,8 @@
 				speed: 500,
 			},
 			useThumbs: false,
-			imagesPerSlide: 1
+			imagesPerSlide: 1,
+			allowZoom: false
 		};
 
 		this.$element     = $element;
@@ -31,6 +33,7 @@
 		this.width        = $element.width();
 		this.currentSlide = 0;
 		this.controls     = {};
+		this.zoomed       = false;
 	};
 
 	Carousel.prototype.goTo = function (slide) {
@@ -67,10 +70,6 @@
 			return;
 		}
 
-		if (typeof self.controls.arrowLeft !== 'undefined' && this.currentSlide + 1 = this.slideCount - 1)) {
-			self.controls.arrowLeft.addClass('disabled');
-		}
-
 		return this.goTo(this.currentSlide + 1);
 	};
 
@@ -79,9 +78,6 @@
 			return;
 		}
 
-		if (typeof self.controls.arrowLeft !== 'undefined' && this.currentSlide + 1 = this.slideCount - 1)) {
-			self.controls.arrowLeft.addClass('disabled')
-		}
 
 		return this.goTo(this.currentSlide - 1);
 	};
@@ -100,46 +96,124 @@
 			$(item).outerWidth(self.width/self.config.imagesPerSlide);
 		});
 
+		self._updateControls();
+
 		$slides.css('margin-left', - self.currentSlide*this.width+'px');
 	};
 
+	Carousel.prototype._updateControls = function () {
+		if (typeof this.controls.arrowLeft !== 'undefined') {
+			if (this.currentSlide <= 0) {
+				this.controls.arrowLeft.addClass('disabled')
+			} else {
+				this.controls.arrowLeft.removeClass('disabled')
+			}
+		}
+
+		if (typeof this.controls.arrowRight !== 'undefined') {
+			if (this.currentSlide + 1 >= this.slideCount) {
+				this.controls.arrowRight.addClass('disabled');
+			} else {
+				this.controls.arrowRight.removeClass('disabled');
+			}
+		}
+	};
+
 	Carousel.prototype.init = function () {
-		var self   = this;
+		var self = this;
 
 		self.$element.data('instance', self);
 		self.$slides = self.$element.children('.slides');
-
-		self.update();
 
 		self._initControls();
 
 		$(window).on('orientationchange.carousel resize.carousel', function () {
 			self.update();
 		});
+
+		self.$slides.children().each(function (k, v) {
+			var $v = $(v),
+				image
+			;
+
+			if (image = $v.data('image')) {
+				$v.append($('<img src="'+image+'">'));
+			}
+		});
+
+		self.update();
 	};
 
 	Carousel.prototype._initControls = function () {
 		this._initArrows();
 		this._initThumbs();
+		this._initZoom();
+	};
+
+	Carousel.prototype.zoom = function (slide) {
+		var self = this,
+			$zoom,
+			$zoomSlide = self.$slides.find(':nth-child('+slide+')'),
+			$zoomImage = $zoomSlide.data('zoom') ?
+				 $('<img src="'+$zoomSlide.data('zoom')+'">') :
+				$zoomSlide.children('img')
+		;
+
+		if (slide > self.slideCount - 1) {
+			throw new Error('Slide out of range');
+		}
+
+		if (typeof self.$zoom === 'undefined') {
+			$zoom = $('<div class="zoom">');
+			self.$element.append($zoom);
+			self.$zoom = $zoom;
+		}
+
+		$zoom = self.$zoom;
+
+		slide = slide || self.currentSlide;
+
+		if (self.zoomed) {
+			self.unZoom();
+		}
+
+		$zoom.html($zoomImage);
+
+		$zoom.slideDown();
+
+		self.zoomed = true;
+	};
+
+	Carousel.prototype.unZoom = function () {
+		var self = this;
+
+		if (!this.zoomed) return false;
+
+		self.$zoom.slideUp();
+
+		self.zoomed = false;
 	};
 
 	Carousel.prototype._initThumbs = function () {
-		if (!this.config.useThumbs) return false;
 		var self = this,
-			$thumbs = (this.config.thumbElement ? 
-				this.config.thumbElement : 
+			$thumbs = (self.config.thumbElement ? 
+				self.config.thumbElement : 
 				self.$element.children('.thumbs')),
 			thumbCarousel,
 			defaultThumbConfig = {
 				imagesPerSlide: 2.6
 			}
 		;
+
+		if (!self.config.useThumbs) return false;
+		
 		$thumbs.append($('<ul class="slides">'));
 
 		self.$slides.children().each(function(k, v) {
 			var imgurl = $(v).data('thumb'),
 				element = $('<li><a class="thumb" data-slide="'+k+'" href="#"><img src="'+imgurl+'"></a></li>')
 			;
+
 			$thumbs.children('.slides').append(element);
 		});
 
@@ -156,12 +230,25 @@
 		return thumbCarousel;
 	};
 
+	Carousel.prototype._initZoom = function () {
+		var self = this;
+
+		if (!this.config.allowZoom) return false;
+
+		self.$slides.children().each(function (k, v) {
+			$(v).on('click', function () {
+				self.zoom(k);
+			});
+		});
+	};
+
 	Carousel.prototype._initArrows = function () {
-		if (!this.config.useArrows) return false;
 		var self = this,
 			arrowLeft = self.config.arrowLeft,
 			arrowRight = self.config.arrowRight
 		;
+
+		if (!self.config.useArrows) return false;
 
 		if (typeof arrowLeft === 'undefined') {
 			arrowLeft = self.$element.children('.arrow.left');
@@ -185,6 +272,7 @@
 			e.preventDefault();
 			self.prev.call(self);
 		});
+
 		arrowRight.on('click.carousel', function (e) {
 			e.preventDefault();
 			self.next.call(self);
@@ -196,6 +284,7 @@
 
 	$.fn.carousel = function (options) {
 		var carousel = new Carousel(this, options);
+
 		carousel.init();
 
 		return carousel;
@@ -204,8 +293,12 @@
 })(jQuery, window, document);
 
 $(document).on('ready', function() {
-	window.carousel = $('.carousel').carousel({
-		imagesPerSlide: 1,
+	window.carousel1 = $('#carousel1').carousel();
+	window.carousel2 = $('#carousel2').carousel({
 		useThumbs: true
+	});
+	window.carousel3 = $('#carousel3').carousel({
+		useThumbs: true,
+		allowZoom: true
 	});
 });

@@ -32,12 +32,8 @@
 	padding: 0;
 }
 
-.carousel a.arrow-left:before {
-	content: '<';
-}
-
-.carousel a.arrow-right:after {
-	content: '>';
+.carousel .arrow.disabled {
+	display: none;
 }
 
 .carousel .arrow {

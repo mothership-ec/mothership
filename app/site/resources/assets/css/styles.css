@@ -689,11 +689,18 @@ article .post-meta {
     overflow: hidden;
 }
 
-article .post-meta .col-6 h4 {
-    float: left;
+article .share-links {
+    margin: 10px 0;
+}
+
+article .share-links h4 {
+    display: inline-block;
     margin: 0 10px 0 0;
 }
 
+article .share-links ul {
+    display: inline-block;
+}
 
 article .image {
     margin-right: 20px;
@@ -807,9 +814,7 @@ article .image figcaption {
 /*    Social links
 /* ------------------------------------------------------- */
 
-.post-meta .social {
-    margin-top: 5px;
-}
+
 
 .social {
     padding: 0;

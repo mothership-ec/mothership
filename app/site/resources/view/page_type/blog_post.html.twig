@@ -13,16 +13,14 @@
 				}}
 				<h1>{{ page.title }}</h1>
 				<span class="post-meta">
-					<div class="col-6">
-						{{ auth.authorship(page) }}
-					</div>	 
-					<div class="col-6">
-						<h4>Share:</h4>
-						{{
-							render(controller('Message:Mothership:CMS::Controller:Module:Social#share', {
-								page: page
-							}))
-						}}
+					{{ auth.authorship(page) }}
+ 					<div class="share-links">
+	 					<h4>Share:</h4>
+							{{
+								render(controller('Message:Mothership:CMS::Controller:Module:Social#share', {
+									page: page
+								}))
+							}}
 					</div>	
 				</span>
 				{% if content.images|length %}

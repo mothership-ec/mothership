@@ -7,7 +7,7 @@
 - Added social share links to blog pages
 - Fix issues with product gallery
 - Social links appear by default
-- Improved styling on default homapage promos
+- Improved styling on default homepage promos
 - Amended `Product` page type to extend `AbstractProduct`
 - Amended `ProductListing` page type to extend `AbstractProductListing`
 - Fix issue where forgotten password link would direct users to the admin forgotten password link

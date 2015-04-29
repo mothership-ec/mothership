@@ -29,7 +29,7 @@
 				<h2>{{ app.cfg.app.name }} members</h2>
 				{{ render(controller('Message:User::Controller:Authentication#login', {
 					redirectURL: url('ms.ecom.checkout.details'),
-					forgottenPasswordRoute: 'ms.cp.password.request'
+					forgottenPasswordRoute: 'ms.user.password.request'
 				})) }}
 			</div>
 			<div class="col-6">

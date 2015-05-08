@@ -45,7 +45,7 @@
 					{{ form_row(form.billing.countryID) }}
 					{{ form_row(form.billing.stateID, {
 						attr: {
-							'data-state-filter-country-selector': '#' ~ form.billing.countryID.vars.id
+							'data-state-filter-country-id': form.billing.countryID.vars.id
 						}
 					}) }}
 					{{ form_row(form.deliverToDifferent, {
@@ -79,7 +79,7 @@
 					{{ form_row(form.delivery.countryID) }}
 					{{ form_row(form.delivery.stateID, {
 						attr: {
-							'data-state-filter-country-selector': '#' ~ form.delivery.countryID.vars.id
+							'data-state-filter-country-id': form.delivery.countryID.vars.id
 						}
 					}) }}
 				</div>

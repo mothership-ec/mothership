@@ -50,7 +50,7 @@
 						{{ form_row(form.addresses.billing.countryID) }}
 						{{ form_row(form.addresses.billing.stateID, {
 							attr: {
-								'data-state-filter-country-selector': '#' ~ form.addresses.billing.countryID.vars.id
+								'data-state-filter-country-id': form.addresses.billing.countryID.vars.id
 							}
 						}) }}
 						{{ form_row(form.addresses.billing.telephone) }}
@@ -81,7 +81,7 @@
 						{{ form_row(form.addresses.delivery.countryID) }}
 						{{ form_row(form.addresses.delivery.stateID, {
 							attr: {
-								'data-state-filter-country-selector': '#' ~ form.addresses.delivery.countryID.vars.id
+								'data-state-filter-country-id': form.addresses.delivery.countryID.vars.id
 							}
 						}) }}
 						{{ form_row(form.addresses.delivery.telephone) }}

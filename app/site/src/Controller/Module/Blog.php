@@ -37,6 +37,8 @@ class Blog extends Controller
 			->orderBy(Page\PageOrder::CREATED_DATE_REVERSE)
 		;
 
+		$data = [];
+
 		if (null !== $filters) {
 			$filters = $this->_getFilters($filters);
 			$form = $this->_getFiltersForm($filters);
@@ -51,6 +53,7 @@ class Blog extends Controller
 		return $this->render('Mothership:Site::module:blog:blog_listing', [
 			'pages'      => $pageLoader->getChildren($page),
 			'pagination' => $pagination,
+			'data'       => $data,
 		]);
 	}
 
@@ -88,7 +91,8 @@ class Blog extends Controller
 	 */
 	private function _getFiltersForm(FilterCollection $filters)
 	{
-		$form = $this->createForm($this->get('filter.form_factory')->getForm($filters));
+		$form = $this->get('filter.form_factory')->getForm($filters);
+		$form = $this->createForm($form);
 		$form->handleRequest();
 
 		return $form;
@@ -102,8 +106,16 @@ class Blog extends Controller
 	 */
 	private function _getPagination()
 	{
+		// Set pagination to 1
+		if ($this->get('request')->server->has('HTTP_X_REQUESTED_WITH') &&
+			strtolower($this->get('request')->server->get('HTTP_X_REQUESTED_WITH')) == 'xmlhttprequest') {
+			$listPage = 1;
+		} else {
+			$listPage = $this->get('http.request.master')->query->get('list-page', 1);
+		}
+
 		$pagination = $this->get('pagination');
-		$pagination->setCurrentPage($this->get('http.request.master')->query->get('list-page', 1));
+		$pagination->setCurrentPage($listPage);
 		$pagination->setMaxPerPage(self::POSTS_PER_PAGE);
 
 		return $pagination;

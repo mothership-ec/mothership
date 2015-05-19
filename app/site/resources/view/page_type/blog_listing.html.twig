@@ -1,12 +1,45 @@
 {% extends 'Mothership:Site::templates/base' %}
 
+{% block javascripts %}
+	{{ parent() }}
+	<script>
+		$(document).ready(function() {
+			var button = $('.filter-form-button'),
+				form = $('#page-filter-form')
+			;
+
+			button.hide();
+
+			form.change(function(data) {
+				form.delay(5).submit(function() {
+					console.log('submitting form');
+					$.ajax({
+						url : {{ url('app.blog.listing', {
+							page: page.id,
+							filters: 'app.page_filters'
+						}) }},
+						type: 'get',
+						data: form.serialize()
+				});
+			});
+					
+		});
+	</script>
+{% endblock %}
+
 {% block content %}
+	<div id='filter-form'>
+		{{ render(controller('Message:Mothership:CMS::Controller:Module:PageFilter#filterForm', {
+			filters: 'app.page_filters'
+		})) }}
+	</div>
 	<main class="content generic"  id="content" role="main">
 		<div class="row">
 			<div class="col-12">
 				<h1>{{ page.title }}</h1>
 				{{ render(controller('Mothership:Site::Controller:Module:Blog#blogListing', {
-					page: page
+					page: page,
+					filters: 'app.page_filters'
 				})) }}
 			</div>
 		</div>

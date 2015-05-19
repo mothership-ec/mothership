@@ -22,8 +22,9 @@
 	"issues": "http://github.com/mothership-ec/mothership/issues"
   },
   "require": {
+	"mothership-ec/cog" : "dev-feature/filtering-component as 4.4.0",
 	"mothership-ec/cog-mothership-user"      : "~4.0",
-	"mothership-ec/cog-mothership-cms"       : "~4.0",
+	"mothership-ec/cog-mothership-cms"       : "dev-feature/page-filtering as 4.4.0",
 	"mothership-ec/cog-mothership-ecommerce" : "~3.0",
 	"mothership-ec/cog-mothership-discount"  : "~2.0",
 	"mothership-ec/cog-mothership-returns"   : "~5.0",

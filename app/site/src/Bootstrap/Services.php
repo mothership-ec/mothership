@@ -91,5 +91,21 @@ class Services implements ServicesInterface
 		$services['app.shop.product_page_loader'] = function($c) {
 			return new \Mothership\Site\Shop\ProductPageLoader($c['cms.page.loader'], $c['cms.page.content_loader']);
 		};
+
+		$services['app.page_filters'] = function($c) {
+			return new \Message\Cog\Filter\FilterCollection([
+				$c['app.page_filters.tag_filter']
+			]);
+		};
+
+		$services['app.page_filters.tag_filter'] = function($c) {
+			$tags = $c['cms.page.tag.loader']->getAll();
+			$filter = new \Message\Mothership\CMS\Page\Filter\TagFilter('tag', 'Filter by tag');
+			$filter->setOptions([
+				'choices' => array_combine($tags, $tags)
+			]);
+
+			return $filter;
+		};
 	}
 }

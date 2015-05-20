@@ -775,12 +775,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog.git",
-                "reference": "fd6528cc2faab55dba87fed50c5d6378fa7ae55d"
+                "reference": "e1b70676f1e3795ddf858b6d2d7aa4fee84fba1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog/zipball/fd6528cc2faab55dba87fed50c5d6378fa7ae55d",
-                "reference": "fd6528cc2faab55dba87fed50c5d6378fa7ae55d",
+                "url": "https://api.github.com/repos/mothership-ec/cog/zipball/e1b70676f1e3795ddf858b6d2d7aa4fee84fba1e",
+                "reference": "e1b70676f1e3795ddf858b6d2d7aa4fee84fba1e",
                 "shasum": ""
             },
             "require": {
@@ -860,7 +860,7 @@
                 "cog",
                 "framework"
             ],
-            "time": "2015-05-18 14:56:38"
+            "time": "2015-05-19 16:51:26"
         },
         {
             "name": "mothership-ec/cog-imageresize",
@@ -916,12 +916,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog-mothership-cms.git",
-                "reference": "60765f3a5e04421dd8dbe9a65d41f4bda9242afb"
+                "reference": "68ca1b172155dc0e1f9862f0c9f6c0578a694d00"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-cms/zipball/60765f3a5e04421dd8dbe9a65d41f4bda9242afb",
-                "reference": "60765f3a5e04421dd8dbe9a65d41f4bda9242afb",
+                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-cms/zipball/68ca1b172155dc0e1f9862f0c9f6c0578a694d00",
+                "reference": "68ca1b172155dc0e1f9862f0c9f6c0578a694d00",
                 "shasum": ""
             },
             "require": {
@@ -962,20 +962,20 @@
                 "editing",
                 "mothership"
             ],
-            "time": "2015-05-18 15:20:29"
+            "time": "2015-05-19 16:50:46"
         },
         {
             "name": "mothership-ec/cog-mothership-commerce",
-            "version": "5.3.1",
+            "version": "5.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog-mothership-commerce.git",
-                "reference": "5bfba8dd044170634b7496cf21ff4165a39afb41"
+                "reference": "369e99809b4d518873e2f93c2fa85c8ca1922aa5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-commerce/zipball/5bfba8dd044170634b7496cf21ff4165a39afb41",
-                "reference": "5bfba8dd044170634b7496cf21ff4165a39afb41",
+                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-commerce/zipball/369e99809b4d518873e2f93c2fa85c8ca1922aa5",
+                "reference": "369e99809b4d518873e2f93c2fa85c8ca1922aa5",
                 "shasum": ""
             },
             "require": {
@@ -1019,7 +1019,7 @@
                 "orders",
                 "products"
             ],
-            "time": "2015-04-28 14:59:07"
+            "time": "2015-05-20 10:23:59"
         },
         {
             "name": "mothership-ec/cog-mothership-cp",
@@ -3047,22 +3047,24 @@
         {
             "name": "zendframework/zend-debug",
             "version": "2.2.10",
-            "target-dir": "Zend/Debug",
             "source": {
                 "type": "git",
-                "url": "https://github.com/zendframework/Component_ZendDebug.git",
-                "reference": "792f2015009bc182a5c9e6fd1b98fdfcfbcb717b"
+                "url": "https://github.com/zendframework/zend-debug.git",
+                "reference": "5cdd04f1822366b754fc041b0134628bc66ccc41"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/Component_ZendDebug/zipball/792f2015009bc182a5c9e6fd1b98fdfcfbcb717b",
-                "reference": "792f2015009bc182a5c9e6fd1b98fdfcfbcb717b",
+                "url": "https://api.github.com/repos/zendframework/zend-debug/zipball/5cdd04f1822366b754fc041b0134628bc66ccc41",
+                "reference": "5cdd04f1822366b754fc041b0134628bc66ccc41",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "require-dev": {
+                "fabpot/php-cs-fixer": "1.7.*",
+                "phpunit/phpunit": "~4.0",
+                "satooshi/php-coveralls": "dev-master",
                 "zendframework/zend-escaper": "*"
             },
             "suggest": {
@@ -3077,19 +3079,20 @@
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Zend\\Debug\\": ""
+                "psr-4": {
+                    "Zend\\Debug\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
+            "homepage": "https://github.com/zendframework/zend-debug",
             "keywords": [
                 "debug",
                 "zf2"
             ],
-            "time": "2015-02-17 20:01:36"
+            "time": "2014-03-05 17:29:35"
         }
     ],
     "packages-dev": [],

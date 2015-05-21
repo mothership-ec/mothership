@@ -95,8 +95,6 @@ class Services implements ServicesInterface
 		$services['app.page_filters'] = function($c) {
 			return new \Message\Cog\Filter\FilterCollection([
 				$c['app.page_filters.tag_filter'],
-				$c['app.page_filters.author_filter'],
-				$c['app.page_filters.range_filter'],
 			]);
 		};
 

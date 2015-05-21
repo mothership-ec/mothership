@@ -35,14 +35,14 @@
 {% endfor %}
 
 {% if pagination %}
-<div class="pagination">
+<div class="pagination" id="pagination-menu">
 	{% if pagination.hasPreviousPage() %}
 		<a href="?list-page={{ pagination.getPreviousPage() }}" class="newer">Previous</a>
 	{% else %}
 		<span href="#" class="newer disabled">Previous</span>
 	{% endif %}
 
-	<ol id="pagination-menu">
+	<ol>
 		<li class="{% if pagination.getCurrentPage() == 1 %}active{% endif %}">
 			<a href="?list-page=1">1</a>
 		</li>

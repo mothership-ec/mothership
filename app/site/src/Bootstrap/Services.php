@@ -96,6 +96,7 @@ class Services implements ServicesInterface
 			return new \Message\Cog\Filter\FilterCollection([
 				$c['app.page_filters.tag_filter'],
 				$c['app.page_filters.author_filter'],
+				$c['app.page_filters.range_filter'],
 			]);
 		};
 
@@ -105,13 +106,6 @@ class Services implements ServicesInterface
 			$filter->setOptions([
 				'choices' => array_combine($tags, $tags)
 			]);
-
-			return $filter;
-		};
-
-		$services['app.page_filters.author_filter'] = function($c) {
-			$filter = new \Message\Mothership\CMS\Page\Filter\ContentFilter('author', 'Filter by author', $c['db.query.builder.factory']);
-			$filter->setField('author');
 
 			return $filter;
 		};

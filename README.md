@@ -45,7 +45,7 @@ To set up <a href="http://mothership.ec">Mothership</a> using the installer, you
 	+ Composer is not required to install Mothership using the <a href="http://mothership.ec/files/downloads/mothership.phar">automatic installer</a>, but will be required for keeping your installation up to date, or installing Mothership manually
 	+ It is recommended that you install Composer globally
 + **Git**
-    + We recommend using Git for version control, and this base installation takes the assumption that you are using Git to manage and track changes to your installation
+    + We recommend using <a href="https://git-scm.com/">Git</a> for version control, and this base installation takes the assumption that you are using Git to manage and track changes to your installation
 
 ## Installation
 

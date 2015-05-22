@@ -82,4 +82,4 @@ To set up an environment to develop on this repository
 1. Create a `config/local` directory
 1. Move **all** config files into this directory. Be sure not to commit any of these config files.
 1. Follow instructions from **3.** onwards from the manual install guide above
-1. Be sure to follow our <a href="http://wiki.mothership.ec/Mothership#Contributing_to_Mothership>contribution guidelines</a> and <a href="CODE_OF_CONDUCT.md">code of conduct</a>
+1. Be sure to follow our <a href="http://wiki.mothership.ec/Mothership#Contributing_to_Mothership">contribution guidelines</a> and <a href="CODE_OF_CONDUCT.md">code of conduct</a>

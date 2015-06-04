@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.1
+
+- Update readme
+- Fix issue where state selector wouldn't display when creating an account via the checkout
+
 ## 1.1.0
 
 - Added `BlogPost` page type by default

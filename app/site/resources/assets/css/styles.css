@@ -711,6 +711,24 @@ article .image figcaption {
     color: #666; 
 }
 
+/*    Filter
+/* ------------------------------------------------------- */
+
+.filter {
+    background: #EEE;
+    padding: 20px;
+}
+
+.filter .field label {
+    font-weight: normal;
+}
+
+.loading article,
+.loading .filter {
+    opacity: .5;
+}
+
+
 /*    Pagination
 /* ------------------------------------------------------- */
 

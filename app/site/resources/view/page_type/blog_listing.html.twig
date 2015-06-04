@@ -11,22 +11,26 @@
 {% endblock %}
 
 {% block content %}
-	<div id='filter-form'>
-		{{ render(controller('Message:Mothership:CMS::Controller:Module:PageFilter#filterForm', {
-			filters: 'app.page_filters'
-		})) }}
-	</div>
+	
 	<main class="content generic" id="content" role="main">
 		<div class="row">
 			<div class="col-12">
 				<h1>{{ page.title }}</h1>
-
+			</div>					
+		</div>	
+		<div class="row">
+			<div class="col-9">
 				<section id="blog-listing">
 					{{ render(controller('Mothership:Site::Controller:Module:Blog#blogListing', {
 						page: page,
 						filters: 'app.page_filters'
 					})) }}
 				</section>
+			</div>
+			<div id="filter-form" class="col-3 filter">
+				{{ render(controller('Message:Mothership:CMS::Controller:Module:PageFilter#filterForm', {
+					filters: 'app.page_filters'
+				})) }}
 			</div>
 		</div>
 	</main>

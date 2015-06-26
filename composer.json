@@ -22,6 +22,7 @@
 	"issues": "http://github.com/mothership-ec/mothership/issues"
   },
   "require": {
+	"mothership-ec/cog"                      : "dev-windows-support as 4.5.1",
 	"mothership-ec/cog-mothership-user"      : "~4.0",
 	"mothership-ec/cog-mothership-cms"       : "~4.0",
 	"mothership-ec/cog-mothership-ecommerce" : "~3.0",

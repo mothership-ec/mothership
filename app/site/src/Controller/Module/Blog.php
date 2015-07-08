@@ -40,7 +40,7 @@ class Blog extends Controller
 		$data = [];
 
 		if (null !== $filters) {
-			$filters = $this->_getFilters($filters);
+			$filters = $this->_getFilters($filters, $page);
 			$form = $this->_getFiltersForm($filters);
 
 			if ($form->isValid()) {
@@ -64,7 +64,7 @@ class Blog extends Controller
 	 *
 	 * @return FilterCollection
 	 */
-	private function _getFilters($filters)
+	private function _getFilters($filters, Page\Page $page)
 	{
 		if (!is_string($filters) && !$filters instanceof FilterCollection) {
 			throw new \InvalidArgumentException('Parameter to render filter form must be either the service name of the filter collection or an instance of \\Message\\Cog\\Filter\\FilterCollection');
@@ -77,6 +77,15 @@ class Blog extends Controller
 			}
 
 			$filters = $filterCollection;
+
+			foreach ($filters as $filter) {
+				if ($filter instanceof Page\Filter\TagFilter) {
+					$tags = $this->get('cms.page.tag.loader')->getTagsFromChildren($page);
+					$filter->setOptions([
+						'choices' => array_combine($tags, $tags)
+					]);
+				}
+			}
 		}
 
 		return $filters;

@@ -99,11 +99,7 @@ class Services implements ServicesInterface
 		};
 
 		$services['app.page_filters.tag_filter'] = function($c) {
-			$tags = $c['cms.page.tag.loader']->getAll();
 			$filter = new \Message\Mothership\CMS\Page\Filter\TagFilter('tag', 'Filter by tag');
-			$filter->setOptions([
-				'choices' => array_combine($tags, $tags)
-			]);
 
 			return $filter;
 		};

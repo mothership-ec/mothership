@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.1.3
+
+- Update Cog to version 4.6.0
+- Update CMS to version 4.5.0
+- Update Commerce to version 5.7.0
+- Update Control Panel to version 3.4.3
+- Update E-commerce to version 3.1.0
+- Update File Manager to version 3.1.1
+- Update Returns to 5.0.2
+- Update MS User to 4.0.3
+- Update Voucher to 2.1.2
+
 ## 1.1.2
 
 - Update Mothership components with Composer

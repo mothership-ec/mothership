@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.3
+
+- Update Mothership components with Composer
+
 ## 1.1.2
 
 - Update Mothership components with Composer

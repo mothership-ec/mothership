@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.1.4
+
+- Renamed "Continue 'Shopping'" link on checkout complete stage to "Continue shopping"
+- "Continue shopping" link on checkout complete stage no longer links to '/shop' but rather back to the home page.
+- Resolve issue where `delivery_note_print.css` stylesheet was not called correctly when rendering a delivery note
+- Resolve issue where returns overview in admin panel was overriden by another view file (`Message:Mothership:OrderReturn/return/template.html.twig`)
+- Update Cog to version 4.9.1
+- Update Cog User to version 2.0.3
+- Update CMS to version 4.8.0
+- Update Commerce to version 5.13.0
+- Update E-commerce to version 3.2.1
+- Update File Manager to version 3.1.2
+- Update MS User to 4.2.1
+- Update Discount to version 2.1.2
+- Update Returns to 5.1.0
+
 ## 1.1.3
 
 - Update Cog to version 4.6.0

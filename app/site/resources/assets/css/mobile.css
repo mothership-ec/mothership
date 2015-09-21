@@ -306,4 +306,9 @@
 		background: #999;
 	}
 
+	.items img {
+		width: auto;
+		height: auto;
+	}
+
 }

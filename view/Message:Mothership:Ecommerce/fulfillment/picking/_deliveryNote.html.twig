@@ -83,7 +83,7 @@
 				<tbody>
 				{% for item in order.items %}
 					<tr>
-						<td>{{ item.productName }}</td>
+						<td>{{ item.productName }} ({{ item.options }})</td>
 
 						{% if item.status.code == 1000 %}
 							<td>Sent</td>

@@ -1111,6 +1111,11 @@ nav ol {
     background: #6788b5;
 }
 
+a.forgotten-password {
+    display: block;
+    margin: 10px 0 25px;
+}
+
 
 
 /* Loading spinner

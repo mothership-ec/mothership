@@ -1,0 +1,11 @@
+hostname: 127.0.0.1
+user: user
+pass: password
+name: schema_name
+charset: utf8
+
+# Results can be cached to optimise load times. Set the caching method here
+# Cog comes packaged with two options:
+# - `mysql_memory` stores the results of identical MySQL queries in memory until a non-select query is made
+# - `none` disables database caching
+cache: mysql_memory

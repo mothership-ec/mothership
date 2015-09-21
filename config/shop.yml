@@ -1,0 +1,2 @@
+# The ID of the shop parent page. If there are multiple shop parent pages, use an array i.e. [1,2,3]
+shop-parent-page:

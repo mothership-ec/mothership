@@ -1,0 +1,11 @@
+company-name:
+vat-registration:
+company-number:
+telephone:
+email:
+address:
+  lines:
+  town:
+  postcode:
+  country-id:
+  state-id:

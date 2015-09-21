@@ -1,0 +1,16 @@
+tax-strategy: inclusive
+rates:
+  GB: &GB
+    default:
+      voucher-tax:
+      product-tax:
+        - {name: VAT, rate: 20.000}
+      shipping-tax:
+        - {name: VAT, rate: 20.000}
+  default:
+    default:
+      voucher-tax:
+      shipping-tax:
+tax-address:
+  country: GB
+  region:

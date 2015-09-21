@@ -505,7 +505,8 @@ audio:not([controls]) {
     height: 0;
 }
 
-[hidden] {
+[hidden],
+.hidden {
     display: none;
 }
 

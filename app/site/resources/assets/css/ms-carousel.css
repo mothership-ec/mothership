@@ -1,0 +1,90 @@
+.carousel,
+.thumbs {
+	overflow: hidden;
+	clear: both;
+	position: relative;
+}
+
+.thumbs li {
+	padding-left: .2%;
+	padding-right: .2%;
+}
+
+.carousel ul, 
+.carousel ol {
+	list-style: none;
+}
+
+.carousel ul li {
+	float: left;
+}
+
+.carousel ul li, 
+.carousel ul img {
+	margin: 0;
+	width: 100%;
+	height: auto;
+}
+
+.slides {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	overflow: hidden;
+}
+
+.carousel .arrow.disabled {
+	display: none;
+}
+
+.carousel .arrow {
+	position: absolute;
+}
+
+.carousel .arrow.left {
+	left: 0;
+}
+
+.carousel .arrow.right {
+	right: 0;
+}
+
+.carousel-zoom {
+	clear: both;
+	position: relative;
+	padding: 20px 0;
+}
+
+.carousel-zoom .unzoom {
+	position: absolute;
+	right: 0;
+	background: #333;
+	color: #fff;
+	padding: 10px;
+	display: block;
+}
+
+.arrow {
+	text-decoration: none;
+	color: black;
+}
+
+.carousel .dots {
+	bottom: 0;
+	width: 100%;
+	padding: 0;
+}
+
+.carousel .dots li {
+	margin-left: 2px;
+	margin-right: 2px;
+	display: inline-block;
+}
+
+.carousel .dots li a {
+	display: inline-block;
+}
+
+.carousel .control {
+	cursor: pointer;
+}

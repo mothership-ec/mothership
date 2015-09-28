@@ -2,7 +2,12 @@
 
 ## 1.2.0
 
-
+- Returns address on delivery note is pulled from `merchant.yml` instead of being hard coded
+- Added item options on delivery note
+- Changed logo image on delivery note to `logo-print.png`
+- Added `Contact` page type with contact form integrated
+- Replace default 'Terms and Conditions' link on return submission confirmation to `/terms-and-conditions` in `view/Message:Mothership:Orderreturn/return/account/confirm.html.twig` view override
+- Replace current carousel with <a href="https://github.com/mothership-ec/ms-carousel">Mothership Carousel</a>
 - Update Cog to version 4.11.0
 - Update Control Panel to version 3.5.0
 - Update Commerce to version 5.14.0

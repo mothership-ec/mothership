@@ -19,18 +19,21 @@ class Gallery extends Controller
 		if (count($gallery)) {
 			$thumbs  = $this->_getFilesFromGallery($gallery);
 		} else {
+			$options = ($options !== null && !empty($options->name) && !empty($options->value)) ? 
+				[ $options->name => $options->value ] : null;
+
+			$defaultImage = $product->hasImage('default', $options) ?
+				$product->getImage('default', $options) : $product->getImage('default', null)
+			;
 			$thumbs = [
-				$product->getImage('default', 
-					($options !== null && $options->name && $options->value) ? 
-					[ $options->name => $options->value ] : null
-				),
+				$defaultImage,
 			];
 		}
 
 		$current = (array_key_exists($currentIndex, $thumbs)) ? $thumbs[$currentIndex] : $thumbs[0];
 
 		return $this->render('Mothership:Site::module:gallery', [
-			'thumbs'  => (count($thumbs) > 1) ? $thumbs : [],
+			'thumbs'  => (count($thumbs) > 0) ? $thumbs : [],
 			'current' => $current,
 		]);
 	}
@@ -47,7 +50,7 @@ class Gallery extends Controller
 		$current = (array_key_exists($currentIndex, $thumbs)) ? $thumbs[$currentIndex] : $thumbs[0];
 
 		return $this->render('Mothership:Site::module:gallery', [
-			'thumbs'  => (count($thumbs) > 1) ? $thumbs : [],
+			'thumbs'  => $thumbs,
 			'current' => $current,
 		]);
 	}

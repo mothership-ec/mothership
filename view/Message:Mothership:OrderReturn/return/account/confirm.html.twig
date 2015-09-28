@@ -15,7 +15,7 @@
 			<dd>{{ data.note }}</dd>
 		</dl>
 		{{ form_start(confirmForm) }}
-			<p>Please view the <a href="{{ url('ms.return.terms') }}" target="_blank">terms and conditions for returning an item here</a>.</p>
+			<p>Please view the <a href="/terms-and-conditions" target="_blank">terms and conditions for returning an item here</a>.</p>
 			{{ form_row(confirmForm.terms) }}
 			<button type="submit" class="button submit">Complete Returns Process</button>
 		{{ form_end(confirmForm) }}

@@ -1,15 +1,14 @@
 {% javascripts
 	'@Mothership:Site::resources/assets/js/jquery.1.11.1.min.js'
 	'@Mothership:Site::resources/assets/js/jquery.touch-swipe.js'
-	'@Mothership:Site::resources/assets/js/jquery.gallery.js'
 	'@Mothership:Site::resources/assets/js/jquery.menu.js'
-	'@Mothership:Site::resources/assets/js/jquery.carousel.js'
 	'@Mothership:Site::resources/assets/js/jquery.offcanvas.js'
 	'@Mothership:Site::resources/assets/js/jquery.basket.js'
+	'@Mothership:Site::resources/assets/js/ms-carousel.min.js'
 	'@Mothership:Site::resources/assets/js/jquery.setup.js'
 
 	output='/assets/js/ms-site-*.js'
+	filter='?jsmin'
 %}
-	<!-- filter='?jsmin' -->
 	<script src="{{ asset_url }}"></script>
 {% endjavascripts %}

@@ -476,7 +476,7 @@
     display: none;
 }
 
-.carousel .indicators {
+.carousel .dots {
     position: absolute;
     bottom: 10px;
     right: 0;
@@ -486,7 +486,7 @@
     padding: 0;
 }
 
-.carousel .indicators li {
+.carousel .dots li {
     display: inline-block;
     width: 15px;
     height: 15px;
@@ -496,7 +496,12 @@
     box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
 }
 
-.carousel .indicators li.active {
+.carousel .dots li a {
+    display: block;
+    text-indent: -999em;
+}
+
+.carousel .dots li.active {
     background: #333;
 }
 

@@ -1,18 +1,22 @@
-{% if current %}
-<section class="gallery col-6">
-	<div class="image">
-		<a href="{{ current.file.getPublicUrl }}" data-main>
-			{{ getResizedImage(current, 655, 655) }}
-		</a>
-	</div>
-	<ul class="thumbnails">
+{% if thumbs|length %}
+<section id="gallery" class="carousel" data-thumbs="#thumbs" data-zoom="#zoom">
+	<ul class="slides">
 		{% for key, thumb in thumbs %}
-			<li>
-				<a href="?gallery_image={{ key }}" data-zoom="{{ thumb.getUrl }}" data-preview="{{ getResizedUrl(thumb, 655, 655) }}">
-					{{ getResizedImage(thumb, 126, 126) }}
-				</a>
-			</li>
+			<li data-zoom="{{ thumb.getUrl }}" data-thumb="{{ getResizedUrl(thumb, 126, 126) }}" data-image="{{ getResizedUrl(thumb, 655, 655) }}"></li>
 		{% endfor %}
 	</ul>
 </section>
+<div class="thumbs-wrap">
+	<div id="thumbs" class="thumbs carousel"></div>
+	{% if thumbs|length > 4 %}
+	<div id="thumbs-arrow-left" class="arrow left">Previous</div>
+	<div id="thumbs-arrow-right" class="arrow right">Next</div>
+{% endif %}
+</div>
+
+
+{# Carousel Javascript #}
+<script type="text/javascript">
+	$(function(){$("#gallery").carousel({useArrows:!1,useThumbs:!0,allowZoom:!0,animation:{type:"custom"},animations:{custom:function(o,e){$.when(o.$slides.children().hide()).done(function(){o.$slides.children("*:nth-child("+(e+1)+")").show()})}},hideElementsOnZoom:[$("main")],hideCarouselOnZoom:!1,hideThumbsOnZoom:!1,thumbConfig:{imagesPerSlide:4,arrowLeft:$("#thumbs-arrow-left"),arrowRight:$("#thumbs-arrow-right")}})});
+</script>
 {% endif %}

@@ -50,17 +50,7 @@ jQuery(document).ready(function($) {
 		$('.tab-menu li:first-child a').click();
 	})();
 
-	// Carousel functionality
-	$('.carousel ul').carousel({
-		arrows    : true,
-		indicators: true,
-		flexible  : true,
-		interval  : false,
-		speed     : 400,
-		onInteraction: function(e) {
-			e.carousel('stop');
-		}
-	});
+
 
 	// Returns Toggle
 

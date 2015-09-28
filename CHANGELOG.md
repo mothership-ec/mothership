@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.2.0
+
+
+- Update Cog to version 4.11.0
+- Update Control Panel to version 3.5.0
+- Update Commerce to version 5.14.0
+- Update Discount to version 2.1.3
+- Update Voucher to version 2.2.2
+
 ## 1.1.4
 
 - Renamed "Continue 'Shopping'" link on checkout complete stage to "Continue shopping"

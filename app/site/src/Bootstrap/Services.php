@@ -28,11 +28,11 @@ class Services implements ServicesInterface
 		});
 
 		// Commerce
-		$services['product.types'] = function($c) {
-			return new Product\Type\Collection([
-				new Product\Type\ApparelProductType($c['db.query']),
-			]);
-		};
+		$services->extend('product.types', function($types, $c) {
+			$types->add(new Product\Type\ApparelProductType($c['db.query']));
+
+			return $types;
+		});
 
 		$services->extend('product.image.types', function($types) {
 
@@ -88,9 +88,21 @@ class Services implements ServicesInterface
 		});
 
 		// CMS
-
 		$services['app.shop.product_page_loader'] = function($c) {
 			return new \Mothership\Site\Shop\ProductPageLoader($c['cms.page.loader'], $c['cms.page.content_loader']);
 		};
+
+		// EPOS
+		$services->extend('branches', function ($branches) {
+			$branches->add(new \Mothership\Site\Epos\Branch\SampleBranch);
+
+			return $branches;
+		});
+
+		$services->extend('user.groups', function ($groups) {
+			$groups->add(new \Mothership\Site\Epos\UserGroup\SampleStaff);
+
+			return $groups;
+		});
 	}
 }

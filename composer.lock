@@ -657,12 +657,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:messagedigital/cog-mothership-epos.git",
-                "reference": "1afd06a2d3d0ac6d5b47ed0555abab6d9275abd2"
+                "reference": "ba0e0df6acad13bde5011e1e55c5ee644ebac549"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/messagedigital/cog-mothership-epos/zipball/1afd06a2d3d0ac6d5b47ed0555abab6d9275abd2",
-                "reference": "1afd06a2d3d0ac6d5b47ed0555abab6d9275abd2",
+                "url": "https://api.github.com/repos/messagedigital/cog-mothership-epos/zipball/ba0e0df6acad13bde5011e1e55c5ee644ebac549",
+                "reference": "ba0e0df6acad13bde5011e1e55c5ee644ebac549",
                 "shasum": ""
             },
             "require": {
@@ -704,7 +704,7 @@
                 "issues": "http://github.com/mothership-ec/cog-mothership-epos/issues",
                 "source": "https://github.com/messagedigital/cog-mothership-epos/tree/feature/documentation"
             },
-            "time": "2015-09-30 10:43:57"
+            "time": "2015-09-30 14:50:18"
         },
         {
             "name": "message/wkhtmltopdf",

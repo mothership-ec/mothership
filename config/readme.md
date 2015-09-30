@@ -22,15 +22,15 @@ be different, so your `config/live/db.yml` file will might look like this:
 Therefore, in the live environment, when accessing the database, it will still look at `localhost` for the server,
 but will connect to the `mothership_db_live` database with the `mothership_user` user.
 
-To set the environment to live in Apache, add the following line to your server configuration:
+To set the environment in Apache, add the following line to your server configuration (replacing the square brackets with the environment name):
 
-    SetEnv COG_ENV live
+    SetEnv COG_ENV [your environment]
 
-To set the environment to live in Nginx, add the following to your server configuration:
+To set the environment to live in Nginx, add the following to your server configuration (replacing the square brackets with the environment name):
 
     location ~ \.php$ {
             include snippets/fastcgi-php.conf;
-            fastcgi_param COG_ENV live;
+            fastcgi_param COG_ENV [your environment];
 
             fastcgi_pass unix:/var/run/php5-fpm.sock;
     }

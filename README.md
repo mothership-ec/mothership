@@ -49,7 +49,7 @@ To set up <a href="http://mothership.ec">Mothership</a> using the installer, you
 + **PHP** 5.4.0 or higher (Mothership may have issues running on PHP 7)
 	+ **PHP intl extention** (see <a href="http://php.net/manual/en/intl.setup.php">http://php.net/manual/en/intl.setup.php</a>)
 + **MySQL** 5.1.0 or higher
-+ **Apache or Nginx**
++ **Apache** or **Nginx**
 + A **Unix-like** operating system (i.e. OSX, Linux, etc)
 	+ Mothership **will not** work in a Windows environment at present
 

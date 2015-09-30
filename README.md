@@ -6,6 +6,7 @@
 
 It incorporates the full range of applications you'd expect to run an online store, with some rather nice surprises too. Here's an incomplete list of the headline functionality Mothership currently supports:
 
+* Electronic Point of Sale (EPOS)
 * CMS
 * Inventory
 * Shopping cart and checkout
@@ -20,11 +21,15 @@ It incorporates the full range of applications you'd expect to run an online sto
 
 ## Coming soon!
 
-* Electronic Point of Sale (EPOS)
 * Xero online accounts integration
 * Campaign Monitor mailing list integration
 
 A comprehensive [Functionality Reference list](http://wiki.mothership.ec/Functionality_Reference) is available on the Mothership Wiki.
+
+## EPOS
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ahMedgeHLKU" frameborder="0" allowfullscreen></iframe>
+Mothership's integrated EPOS solution allows businesses to keep their web and bricks-and-mortar stores in perfect harmony, with stock levels always up to date, and reporting giving oversight of the entire business.
 
 ## System requirements
 
@@ -73,6 +78,16 @@ To install Mothership using the installer:
 1. Run `bin/cog asset:dump` and `bin/cog asset:generate` from the installation directory in the terminal
 1. Run `chmod -R 777 tmp public logs data` from the installation directory in the terminal
 1. Run `bin/cog task:run user:create_admin` in your terminal to create the first admin user
+
+### Setting up EPOS
+
+The majority of the work with regards to setting up EPOS on your Mothership installation has already been done for you.
+
+All you need to do now is:
+
+1. Edit <a href="app/site/src/Epos/Branch/SampleBranch.php">this file</a> so that it applies to your shop.
+1. Set the URL you want to use to access the EPOS system in your browser in <a href="config/epos.yml">this config file</a>.
+1. Add some users to the <a href="app/site/src/Epos/UserGroup/ShopStaff.php">Shop Staff</a> group in the admin panel.
 
 ## Working on and contributing to this repository
 

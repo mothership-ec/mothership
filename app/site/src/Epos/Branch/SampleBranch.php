@@ -2,7 +2,7 @@
 
 namespace Mothership\Site\Epos\Branch;
 
-use Mothership\Site\Epos\UserGroup\SampleStaff;
+use Mothership\Site\Epos\UserGroup\ShopStaff;
 
 use Message\User;
 use Message\Mothership\Epos\Branch\BranchInterface;
@@ -83,7 +83,7 @@ class SampleBranch implements BranchInterface
 	 */
 	public function getOperators(User\Loader $loader)
 	{
-		return $loader->getByGroup(SampleStaff::NAME);
+		return $loader->getByGroup(ShopStaff::NAME);
 	}
 
 	/**

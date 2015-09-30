@@ -100,7 +100,7 @@ class Services implements ServicesInterface
 		});
 
 		$services->extend('user.groups', function ($groups) {
-			$groups->add(new \Mothership\Site\Epos\UserGroup\SampleStaff);
+			$groups->add(new \Mothership\Site\Epos\UserGroup\ShopStaff);
 
 			return $groups;
 		});

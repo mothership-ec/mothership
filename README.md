@@ -31,15 +31,23 @@ A comprehensive [Functionality Reference list](http://wiki.mothership.ec/Functio
 <img src="readme_files/epos.jpg">
 Mothership's integrated EPOS solution allows businesses to keep their web and bricks-and-mortar stores in perfect harmony, with stock levels always up to date, and reporting giving oversight of the entire business.
 
+### Receipt printing and Waldo
+
+Receipt printing does not come packaged with the EPOS module. However, we have a device called **Waldo** which connects the
+EPOS system to the till printer via your wifi network.
+
+Waldo uses a combination of websockets, node.js and a Raspberry Pi to communicate data sent from the Mothership EPOS site to the receipt
+printer. Our Waldo extension allows retailers to print receipts, scannable vouchers and end of day reports. All receipts come with a barcode for the
+order ID, allowing for easy order identification when processing a return. If you would like to know more about Waldo, please <a href="http://mothership.ec/contact">contact us</a>.
+
 ## System requirements
 
 To set up <a href="http://mothership.ec">Mothership</a> using the installer, you must have the following:
 
-+ **PHP** 5.4.0 or higher
++ **PHP** 5.4.0 or higher (Mothership may have issues running on PHP 7)
 	+ **PHP intl extention** (see <a href="http://php.net/manual/en/intl.setup.php">http://php.net/manual/en/intl.setup.php</a>)
 + **MySQL** 5.1.0 or higher
-+ **Apache**
-	+ **We cannot currently offer any guarantee that Mothership works with Nginx or other server software**
++ **Apache or Nginx**
 + A **Unix-like** operating system (i.e. OSX, Linux, etc)
 	+ Mothership **will not** work in a Windows environment at present
 
@@ -86,7 +94,7 @@ The majority of the work with regards to setting up EPOS on your Mothership inst
 All you need to do now is:
 
 1. Edit <a href="app/site/src/Epos/Branch/SampleBranch.php">this file</a> so that it applies to your shop.
-1. Set the URL you want to use to access the EPOS system in your browser in <a href="config/epos.yml">this config file</a>.
+1. Set the URL you want to use to access the EPOS system in your browser in the `epos.yml` config file.
 1. Add some users to the <a href="app/site/src/Epos/UserGroup/ShopStaff.php">Shop Staff</a> group in the admin panel.
 
 ## Working on and contributing to this repository

@@ -102,7 +102,7 @@ class SampleBranch implements BranchInterface
 	 * from the same place, this should return 'web'. However, if there is more than one
 	 * branch, or the web stock is sold from a warehouse, this should return the name of the
 	 * location from which the stock for this branch will be sold. It can also return an instance
-	 * of \Message\Mothership\Commerce\Product\Stock\Location\Location
+	 * of \Message\Mothership\Commerce\Product\Stock\Location\Location if you are feeling fancy
 	 *
 	 * {@inheritDoc}
 	 */

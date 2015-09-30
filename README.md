@@ -28,7 +28,7 @@ A comprehensive [Functionality Reference list](http://wiki.mothership.ec/Functio
 
 ## EPOS
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ahMedgeHLKU" frameborder="0" allowfullscreen></iframe>
+<img src="readme_files/epos.jpg">
 Mothership's integrated EPOS solution allows businesses to keep their web and bricks-and-mortar stores in perfect harmony, with stock levels always up to date, and reporting giving oversight of the entire business.
 
 ## System requirements

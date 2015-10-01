@@ -30,8 +30,9 @@ A comprehensive [Functionality Reference list](http://wiki.mothership.ec/Functio
 
 Mothership's integrated EPOS solution allows businesses to keep their web and bricks-and-mortar stores in perfect harmony, with stock levels always up to date, and reporting giving oversight of the entire business.
 
-To see EPOS in action, be sure to <a href="https://youtu.be/ahMedgeHLKU">check out our video</a>
 <img src="readme_files/epos.jpg">
+
+To see EPOS in action, be sure to <a href="https://youtu.be/ahMedgeHLKU">check out our video</a>
 
 ### Receipt printing with Waldo
 

@@ -41,5 +41,6 @@ The acceptable environment names are:
 + `local`
 + `staging`
 + `dev`
++ `test`
 
 For more information, see <a href="http://wiki.mothership.ec/Developer_Guide:_Setting_up_Mothership_environments_in_Apache#Environments>the wiki</a>

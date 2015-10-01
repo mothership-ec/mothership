@@ -33,7 +33,7 @@ Mothership's integrated EPOS solution allows businesses to keep their web and br
 
 To see EPOS in action, be sure to <a href="https://youtu.be/ahMedgeHLKU">check out our video</a>
 
-### Receipt printing and Waldo
+### Receipt printing with Waldo
 
 Receipt printing does not come packaged with the EPOS module. However, we have a device called **Waldo** which connects the
 EPOS system to the till printer via your wifi network.

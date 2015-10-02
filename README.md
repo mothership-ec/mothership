@@ -6,6 +6,7 @@
 
 It incorporates the full range of applications you'd expect to run an online store, with some rather nice surprises too. Here's an incomplete list of the headline functionality Mothership currently supports:
 
+* Electronic Point of Sale (EPOS)
 * CMS
 * Inventory
 * Shopping cart and checkout
@@ -20,21 +21,36 @@ It incorporates the full range of applications you'd expect to run an online sto
 
 ## Coming soon!
 
-* Electronic Point of Sale (EPOS)
 * Xero online accounts integration
 * Campaign Monitor mailing list integration
 
 A comprehensive [Functionality Reference list](http://wiki.mothership.ec/Functionality_Reference) is available on the Mothership Wiki.
 
+## EPOS
+
+Mothership's integrated EPOS solution allows businesses to keep their web and bricks-and-mortar stores in perfect harmony, with stock levels always up to date, and reporting giving oversight of the entire business.
+
+<img src="readme_files/epos.jpg">
+
+To see EPOS in action, be sure to <a href="https://youtu.be/ahMedgeHLKU">check out our video</a>
+
+### Receipt printing with Waldo
+
+Receipt printing does not come packaged with the EPOS module. However, we have a device called **Waldo** which connects the
+EPOS system to the till printer via your wifi network.
+
+Waldo uses a combination of websockets, node.js and a Raspberry Pi to communicate data sent from the Mothership EPOS site to the receipt
+printer. Our Waldo extension allows retailers to print receipts, scannable vouchers and end of day reports. All receipts come with a barcode for the
+order ID, allowing for easy order identification when processing a return. If you would like to know more about Waldo, please <a href="http://mothership.ec/contact">contact us</a>.
+
 ## System requirements
 
 To set up <a href="http://mothership.ec">Mothership</a> using the installer, you must have the following:
 
-+ **PHP** 5.4.0 or higher
++ **PHP** 5.4.0 or higher (Mothership may have issues running on PHP 7)
 	+ **PHP intl extention** (see <a href="http://php.net/manual/en/intl.setup.php">http://php.net/manual/en/intl.setup.php</a>)
 + **MySQL** 5.1.0 or higher
-+ **Apache**
-	+ **We cannot currently offer any guarantee that Mothership works with Nginx or other server software**
++ **Apache** or **Nginx**
 + A **Unix-like** operating system (i.e. OSX, Linux, etc)
 	+ Mothership **will not** work in a Windows environment at present
 
@@ -73,6 +89,17 @@ To install Mothership using the installer:
 1. Run `bin/cog asset:dump` and `bin/cog asset:generate` from the installation directory in the terminal
 1. Run `chmod -R 777 tmp public logs data` from the installation directory in the terminal
 1. Run `bin/cog task:run user:create_admin` in your terminal to create the first admin user
+
+### Setting up EPOS
+
+The majority of the work with regards to setting up EPOS on your Mothership installation has already been done for you.
+
+All you need to do now is:
+
+1. Edit <a href="app/site/src/Epos/Branch/SampleBranch.php">this file</a> so that it applies to your shop.
+1. The `SampleBranch` class is called in the <a href="app/site/src/Bootstrap/Services.php">service container</a>, so if you have renamed it, you will need to rename it there too (and add any additional branches you have created).
+1. Set the URL you want to use to access the EPOS system in your browser in the `epos.yml` config file.
+1. Add some users to the <a href="app/site/src/Epos/UserGroup/ShopStaff.php">Shop Staff</a> group in the admin panel.
 
 ## Working on and contributing to this repository
 

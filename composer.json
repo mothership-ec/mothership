@@ -21,6 +21,12 @@
 	"wiki": "http://wiki.mothership.ec/",
 	"issues": "http://github.com/mothership-ec/mothership/issues"
   },
+  "repositories": [
+	{
+	  "type": "composer",
+	  "url" : "http://packages.message.co.uk"
+	}
+  ],
   "require": {
 	"mothership-ec/cog-mothership-user"      : "~4.0",
 	"mothership-ec/cog-mothership-cms"       : "~4.0",
@@ -28,7 +34,8 @@
 	"mothership-ec/cog-mothership-discount"  : "~2.0",
 	"mothership-ec/cog-mothership-returns"   : "~5.0",
 	"mothership-ec/cog-mothership-voucher"   : "~2.0",
-	"mothership-ec/cog-mothership-reports"   : "~2.0"
+	"mothership-ec/cog-mothership-reports"   : "~2.0",
+	"message/cog-mothership-epos"      : "dev-feature/documentation as 1.0.0"
   },
   "config": {
 	"bin-dir": "bin"

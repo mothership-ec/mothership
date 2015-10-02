@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "05ae98fb5ef5fe4450913ed14aec0eff",
+    "hash": "b9c1483d71d07263d4b98e498bfcdb8b",
     "packages": [
         {
             "name": "dflydev/markdown",
@@ -652,6 +652,61 @@
             "time": "2013-02-28 11:59:46"
         },
         {
+            "name": "message/cog-mothership-epos",
+            "version": "dev-feature/documentation",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:messagedigital/cog-mothership-epos.git",
+                "reference": "ba0e0df6acad13bde5011e1e55c5ee644ebac549"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/messagedigital/cog-mothership-epos/zipball/ba0e0df6acad13bde5011e1e55c5ee644ebac549",
+                "reference": "ba0e0df6acad13bde5011e1e55c5ee644ebac549",
+                "shasum": ""
+            },
+            "require": {
+                "mothership-ec/cog": "~4.0",
+                "mothership-ec/cog-mothership-commerce": "~5.0",
+                "mothership-ec/cog-mothership-returns": "~5.0",
+                "mothership-ec/cog-mothership-voucher": "~2.2",
+                "php": ">=5.4.0"
+            },
+            "suggest": {
+                "mothership-ec/cog-mothership-ecommerce": "Provides e-commerce functionality such as checkout and order fulfillment"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Message\\Mothership\\Epos\\": "src",
+                    "Message\\Mothership\\Epos\\Test\\": "tests"
+                }
+            },
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "The Mothership Development Team",
+                    "email": "dev@mothership.ec"
+                }
+            ],
+            "description": "Electronic Point of Sale functionality for Mothership",
+            "homepage": "http://mothership.ec",
+            "keywords": [
+                "cash",
+                "epos",
+                "shop",
+                "till"
+            ],
+            "support": {
+                "wiki": "http://wiki.mothership.ec/EPOS_module",
+                "issues": "http://github.com/mothership-ec/cog-mothership-epos/issues",
+                "source": "https://github.com/messagedigital/cog-mothership-epos/tree/feature/documentation"
+            },
+            "time": "2015-09-30 14:50:18"
+        },
+        {
             "name": "message/wkhtmltopdf",
             "version": "1.0.0",
             "source": {
@@ -866,16 +921,16 @@
         },
         {
             "name": "mothership-ec/cog-imageresize",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog-imageresize.git",
-                "reference": "4987d2ce1d2470683540c91873cf88c598798990"
+                "reference": "11f62c0bdfd9e452b76e85857e85e9cb392345a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog-imageresize/zipball/4987d2ce1d2470683540c91873cf88c598798990",
-                "reference": "4987d2ce1d2470683540c91873cf88c598798990",
+                "url": "https://api.github.com/repos/mothership-ec/cog-imageresize/zipball/11f62c0bdfd9e452b76e85857e85e9cb392345a0",
+                "reference": "11f62c0bdfd9e452b76e85857e85e9cb392345a0",
                 "shasum": ""
             },
             "require": {
@@ -895,7 +950,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "proprietary"
+                "GPL-3.0+"
             ],
             "authors": [
                 {
@@ -910,7 +965,7 @@
                 "resize",
                 "thumbnail"
             ],
-            "time": "2015-02-24 15:42:16"
+            "time": "2015-09-29 11:30:04"
         },
         {
             "name": "mothership-ec/cog-mothership-cms",
@@ -1238,16 +1293,16 @@
         },
         {
             "name": "mothership-ec/cog-mothership-reports",
-            "version": "2.0.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog-mothership-reports.git",
-                "reference": "c6ffc5dde5174e2336e08a45ecd8d467ae79cf33"
+                "reference": "08509152a97a468e4fb250cebe6cad3c7745096f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-reports/zipball/c6ffc5dde5174e2336e08a45ecd8d467ae79cf33",
-                "reference": "c6ffc5dde5174e2336e08a45ecd8d467ae79cf33",
+                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-reports/zipball/08509152a97a468e4fb250cebe6cad3c7745096f",
+                "reference": "08509152a97a468e4fb250cebe6cad3c7745096f",
                 "shasum": ""
             },
             "require": {
@@ -1282,7 +1337,7 @@
                 "reports",
                 "stats"
             ],
-            "time": "2015-02-24 15:06:23"
+            "time": "2015-09-28 13:33:50"
         },
         {
             "name": "mothership-ec/cog-mothership-returns",
@@ -3144,9 +3199,18 @@
         }
     ],
     "packages-dev": [],
-    "aliases": [],
+    "aliases": [
+        {
+            "alias": "1.0.0",
+            "alias_normalized": "1.0.0.0",
+            "version": "dev-feature/documentation",
+            "package": "message/cog-mothership-epos"
+        }
+    ],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "message/cog-mothership-epos": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

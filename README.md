@@ -96,7 +96,7 @@ The majority of the work with regards to setting up EPOS on your Mothership inst
 
 All you need to do now is:
 
-1. Edit <a href="app/site/src/Epos/Branch/SampleBranch.php">this file</a> so that it applies to your shop.
+1. Edit <a href="app/site/src/Epos/Branch/SampleBranch.php">this file</a> so that it applies to your shop (if you rename the class, be sure search for it in the <a href="">service container</a> and rename it there too).
 1. Set the URL you want to use to access the EPOS system in your browser in the `epos.yml` config file.
 1. Add some users to the <a href="app/site/src/Epos/UserGroup/ShopStaff.php">Shop Staff</a> group in the admin panel.
 

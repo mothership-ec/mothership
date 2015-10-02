@@ -17,6 +17,9 @@ use Message\Mothership\Commerce\Address\Address;
  * Example class representing a Branch which uses the Mothership EPOS system. This class is not
  * intended to be used as is. Please edit or replace this class if you want to use the EPOS system
  * in a live environment.
+ *
+ * Note: This class is called in the Bootstrap\Services class under the 'branches' service. Be sure
+ * add any new branch classes there. If you rename this class, you will need to rename it there too.
  */
 class SampleBranch implements BranchInterface
 {

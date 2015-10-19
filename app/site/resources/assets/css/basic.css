@@ -233,13 +233,6 @@ a:focus {
     color: #000;
 }
 
-a:focus {
-    /*
-     * Addresses outline displayed oddly in Chrome
-     */
-    outline: thin dotted;
-}
-
 p a,
 p a:visited {
     line-height: inherit;
@@ -1132,6 +1125,27 @@ a.forgotten-password {
     margin: 10px 0 25px;
 }
 
+.contact-form .required label:after {
+    content: '*';
+    font-size: 15px;
+    vertical-align: middle;
+    margin-left: 5px;
+    top: 0px;
+    position: relative;
+    color: #333;
+}
+
+.contact-form form:after {
+    content: '* Required field';
+    font-size: 15px;
+    vertical-align: middle;
+    margin: 10px 0;
+    top: 0px;
+    position: relative;
+    color: #999;
+    display: block;
+    clear: both;
+}
 
 
 /* Loading spinner

@@ -6,8 +6,8 @@
 			{% stylesheets
 				'@Mothership:Site::resources/assets/css/delivery_note_print.css'
 
-				output='/assets/css/ms_print.css'
-				filter='csscogulerewrite'
+				output='/assets/css/delivery_note.css'
+				filter='csscogulerewrite,?cssmin'
 			%}
 				<link rel="stylesheet" href="{{ asset_url }}">
 			{% endstylesheets %}

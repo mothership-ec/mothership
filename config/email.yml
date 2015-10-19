@@ -1,0 +1,8 @@
+# The email address that emails will be sent to when in a non-live environment
+fallback-email: joebloggs@example.com
+
+# Array of email addresses, email address segments, or regular expressions to add to an email whitelist.
+# If an email is sent to an address that matches anything in the white list, it will be sent to this email address
+# instead of the fallback email. Note that regular expressions must use forward slashes for delimiters
+# e.g. ['joebloggs@example.com', '@test.com', '/.+@example\.com/']
+whitelist: []

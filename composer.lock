@@ -5,6 +5,7 @@
         "This file is @generated automatically"
     ],
     "hash": "05ae98fb5ef5fe4450913ed14aec0eff",
+    "content-hash": "d3a12268bf5e52a45d60698cf6493ee7",
     "packages": [
         {
             "name": "dflydev/markdown",
@@ -771,16 +772,16 @@
         },
         {
             "name": "mothership-ec/cog",
-            "version": "4.11.0",
+            "version": "4.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog.git",
-                "reference": "a36a5e0c98458aeb6a152ad38c8c8a78e13d5fe8"
+                "reference": "d569d3401103454dca8615d75c0fea68694a759f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog/zipball/a36a5e0c98458aeb6a152ad38c8c8a78e13d5fe8",
-                "reference": "a36a5e0c98458aeb6a152ad38c8c8a78e13d5fe8",
+                "url": "https://api.github.com/repos/mothership-ec/cog/zipball/d569d3401103454dca8615d75c0fea68694a759f",
+                "reference": "d569d3401103454dca8615d75c0fea68694a759f",
                 "shasum": ""
             },
             "require": {
@@ -862,20 +863,20 @@
                 "cog",
                 "framework"
             ],
-            "time": "2015-09-23 13:13:32"
+            "time": "2015-10-09 16:31:08"
         },
         {
             "name": "mothership-ec/cog-imageresize",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog-imageresize.git",
-                "reference": "4987d2ce1d2470683540c91873cf88c598798990"
+                "reference": "11f62c0bdfd9e452b76e85857e85e9cb392345a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog-imageresize/zipball/4987d2ce1d2470683540c91873cf88c598798990",
-                "reference": "4987d2ce1d2470683540c91873cf88c598798990",
+                "url": "https://api.github.com/repos/mothership-ec/cog-imageresize/zipball/11f62c0bdfd9e452b76e85857e85e9cb392345a0",
+                "reference": "11f62c0bdfd9e452b76e85857e85e9cb392345a0",
                 "shasum": ""
             },
             "require": {
@@ -895,7 +896,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "proprietary"
+                "GPL-3.0+"
             ],
             "authors": [
                 {
@@ -910,24 +911,24 @@
                 "resize",
                 "thumbnail"
             ],
-            "time": "2015-02-24 15:42:16"
+            "time": "2015-09-29 11:30:04"
         },
         {
             "name": "mothership-ec/cog-mothership-cms",
-            "version": "4.8.0",
+            "version": "4.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog-mothership-cms.git",
-                "reference": "cc5b22052cfd0f15176f1a6505b00b1bf3bc5562"
+                "reference": "75e478e0a9ae99b3535f9beb25d9bd159d556d38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-cms/zipball/cc5b22052cfd0f15176f1a6505b00b1bf3bc5562",
-                "reference": "cc5b22052cfd0f15176f1a6505b00b1bf3bc5562",
+                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-cms/zipball/75e478e0a9ae99b3535f9beb25d9bd159d556d38",
+                "reference": "75e478e0a9ae99b3535f9beb25d9bd159d556d38",
                 "shasum": ""
             },
             "require": {
-                "mothership-ec/cog": "~4.8",
+                "mothership-ec/cog": "~4.13",
                 "mothership-ec/cog-imageresize": "~2.0",
                 "mothership-ec/cog-mothership-cp": "~3.3",
                 "mothership-ec/cog-mothership-file-manager": "~3.0",
@@ -964,25 +965,25 @@
                 "editing",
                 "mothership"
             ],
-            "time": "2015-09-15 15:42:06"
+            "time": "2015-10-19 11:18:31"
         },
         {
             "name": "mothership-ec/cog-mothership-commerce",
-            "version": "5.14.0",
+            "version": "5.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog-mothership-commerce.git",
-                "reference": "32d9c57e7aabc89fa49a55f23cf6316e3eb6f266"
+                "reference": "84292181a438569c2639c174d071249128640175"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-commerce/zipball/32d9c57e7aabc89fa49a55f23cf6316e3eb6f266",
-                "reference": "32d9c57e7aabc89fa49a55f23cf6316e3eb6f266",
+                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-commerce/zipball/84292181a438569c2639c174d071249128640175",
+                "reference": "84292181a438569c2639c174d071249128640175",
                 "shasum": ""
             },
             "require": {
                 "domisys/image_barcode2": "3.0.0",
-                "mothership-ec/cog": "~4.9",
+                "mothership-ec/cog": "~4.10",
                 "mothership-ec/cog-imageresize": "~2.0",
                 "mothership-ec/cog-mothership-cp": "~3.2",
                 "mothership-ec/cog-mothership-file-manager": "~3.1",
@@ -1021,20 +1022,20 @@
                 "orders",
                 "products"
             ],
-            "time": "2015-09-18 16:27:48"
+            "time": "2015-10-20 14:36:06"
         },
         {
             "name": "mothership-ec/cog-mothership-cp",
-            "version": "3.5.0",
+            "version": "3.5.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog-mothership-cp.git",
-                "reference": "e3ba65f3c213ff4a1a708e6f1ba06d00ef69b29c"
+                "reference": "213ed169e4420ca7b6f74cfa6c346e3dfa4865ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-cp/zipball/e3ba65f3c213ff4a1a708e6f1ba06d00ef69b29c",
-                "reference": "e3ba65f3c213ff4a1a708e6f1ba06d00ef69b29c",
+                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-cp/zipball/213ed169e4420ca7b6f74cfa6c346e3dfa4865ed",
+                "reference": "213ed169e4420ca7b6f74cfa6c346e3dfa4865ed",
                 "shasum": ""
             },
             "require": {
@@ -1071,7 +1072,7 @@
                 "control panel",
                 "mothership"
             ],
-            "time": "2015-09-23 13:51:53"
+            "time": "2015-10-20 10:04:05"
         },
         {
             "name": "mothership-ec/cog-mothership-discount",
@@ -1126,22 +1127,22 @@
         },
         {
             "name": "mothership-ec/cog-mothership-ecommerce",
-            "version": "3.2.1",
+            "version": "3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog-mothership-ecommerce.git",
-                "reference": "9216ecc7084fd08c203e63d4802cd41defa23ec7"
+                "reference": "cfdb37e2898cb3b393e44c849d7cf8982e64d8cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-ecommerce/zipball/9216ecc7084fd08c203e63d4802cd41defa23ec7",
-                "reference": "9216ecc7084fd08c203e63d4802cd41defa23ec7",
+                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-ecommerce/zipball/cfdb37e2898cb3b393e44c849d7cf8982e64d8cd",
+                "reference": "cfdb37e2898cb3b393e44c849d7cf8982e64d8cd",
                 "shasum": ""
             },
             "require": {
                 "mothership-ec/cog": "~4.0",
                 "mothership-ec/cog-mothership-cms": "~4.7",
-                "mothership-ec/cog-mothership-commerce": "~5.10",
+                "mothership-ec/cog-mothership-commerce": "~5.14",
                 "mothership-ec/cog-mothership-cp": "~3.0",
                 "mothership-ec/cog-mothership-user": "~4.0",
                 "omnipay/common": "~2.0",
@@ -1181,7 +1182,7 @@
                 "orders",
                 "products"
             ],
-            "time": "2015-09-16 13:43:52"
+            "time": "2015-10-05 13:45:49"
         },
         {
             "name": "mothership-ec/cog-mothership-file-manager",
@@ -1238,16 +1239,16 @@
         },
         {
             "name": "mothership-ec/cog-mothership-reports",
-            "version": "2.0.0",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog-mothership-reports.git",
-                "reference": "c6ffc5dde5174e2336e08a45ecd8d467ae79cf33"
+                "reference": "f1a6fe7556b0072e41a34c292f1c99c710730091"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-reports/zipball/c6ffc5dde5174e2336e08a45ecd8d467ae79cf33",
-                "reference": "c6ffc5dde5174e2336e08a45ecd8d467ae79cf33",
+                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-reports/zipball/f1a6fe7556b0072e41a34c292f1c99c710730091",
+                "reference": "f1a6fe7556b0072e41a34c292f1c99c710730091",
                 "shasum": ""
             },
             "require": {
@@ -1282,7 +1283,7 @@
                 "reports",
                 "stats"
             ],
-            "time": "2015-02-24 15:06:23"
+            "time": "2015-10-07 09:50:19"
         },
         {
             "name": "mothership-ec/cog-mothership-returns",
@@ -1338,16 +1339,16 @@
         },
         {
             "name": "mothership-ec/cog-mothership-user",
-            "version": "4.2.1",
+            "version": "4.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog-mothership-user.git",
-                "reference": "1f146f6a3e8f585383631a2ddc8f71317719359f"
+                "reference": "4cde8112673b228189d9456ad2e270b455a255c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-user/zipball/1f146f6a3e8f585383631a2ddc8f71317719359f",
-                "reference": "1f146f6a3e8f585383631a2ddc8f71317719359f",
+                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-user/zipball/4cde8112673b228189d9456ad2e270b455a255c0",
+                "reference": "4cde8112673b228189d9456ad2e270b455a255c0",
                 "shasum": ""
             },
             "require": {
@@ -1355,7 +1356,7 @@
                 "mothership-ec/cog": "~4.9",
                 "mothership-ec/cog-mothership-cp": "~3.0",
                 "mothership-ec/cog-mothership-file-manager": "~3.0",
-                "mothership-ec/cog-mothership-reports": "~2.0",
+                "mothership-ec/cog-mothership-reports": "~2.2",
                 "mothership-ec/cog-user": "~2.0",
                 "php": ">=5.4.0"
             },
@@ -1385,7 +1386,7 @@
                 "mothership",
                 "user"
             ],
-            "time": "2015-09-16 10:45:17"
+            "time": "2015-10-08 13:14:09"
         },
         {
             "name": "mothership-ec/cog-mothership-voucher",

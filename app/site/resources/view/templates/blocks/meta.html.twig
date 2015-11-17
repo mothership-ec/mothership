@@ -3,3 +3,4 @@
 <meta name="description" content="{{ page.metaDescription|default(page.title ~ ' | ' ~ app.cfg.app.name) }}">
 <title>{% block title %}{{ page.metaTitle|default(page.title ~ ' | ' ~ app.cfg.app.name) }}{% endblock %}</title>
 <link rel="icon" type="image/png" href="/cogules/Mothership:Site/images/favicon.png">
+{{ render(controller('Message:Mothership:CMS::Controller:Module:Analytics#analytics')) }}

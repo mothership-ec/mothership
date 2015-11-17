@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.2.1
+
+- Automatically packaged with Google Analytics integration, configure in `analytics.yml`
+- Update Cog to version 4.14.0
+- Update Control Panel to version 3.5.5
+- Update Reports to version 2.2.0
+- Update ImageResize to version 2.0.1
+- Update MS User to version 4.3.1
+- Update CMS to version 4.11.0
+- Update Commerce to version 5.16.1
+- Update E-commerce to version 3.6.1
+- Update Returns to version 5.1.1
+
 ## 1.2.0
 
 - Returns address on delivery note is pulled from `merchant.yml` instead of being hard coded

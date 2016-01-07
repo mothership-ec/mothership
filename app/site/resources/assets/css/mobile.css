@@ -7,11 +7,9 @@
 /* ======================================================= */
 /*
 /*
-/*    Development by Message
-/*    http://www.message.co.uk
+/*    Development by Mothership
+/*    http://mothership.ec
 /*
-/*    Mobile Style Sheet v1.0
-/*    Created by Richard McCartney
 /*
 /*
 /* ======================================================= */
@@ -306,6 +304,11 @@
 
 	.carousel .indicators li {
 		background: #999;
+	}
+
+	.items img {
+		width: auto;
+		height: auto;
 	}
 
 }

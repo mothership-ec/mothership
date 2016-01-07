@@ -7,7 +7,7 @@
 		<section class="account">
 			<div class="password">
 				<h1>{{ 'ms.user.password.reset.title'|trans }}</h1>
-				<p>{{ 'ms.user.password.reset.intro'|trans({'%email%': email}) }}</p>
+				<p>{{ 'ms.user.password.reset.intro'|trans({'%email%': email}) | raw }}</p>
 
 				{{ render(controller('Message:User::Controller:ForgottenPassword#reset', {
 					email      : email,

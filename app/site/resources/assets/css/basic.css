@@ -1185,7 +1185,7 @@ nav ol {
     }
     100% {
         -webkit-transform: scale(1, 1);
-    };
+    }
 }
 
 @keyframes pulse {
@@ -1197,7 +1197,7 @@ nav ol {
     }
     100% {
         transform: scale(1, 1);
-    };
+    }
 }
 
 

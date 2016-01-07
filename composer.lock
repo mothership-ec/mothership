@@ -772,16 +772,16 @@
         },
         {
             "name": "mothership-ec/cog",
-            "version": "4.14.0",
+            "version": "4.14.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog.git",
-                "reference": "e5aa233f17e816ec750c339e8040de4aa77596aa"
+                "reference": "c8b2abf0674d0d6ae2a6ee0ada9390143bba254e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog/zipball/e5aa233f17e816ec750c339e8040de4aa77596aa",
-                "reference": "e5aa233f17e816ec750c339e8040de4aa77596aa",
+                "url": "https://api.github.com/repos/mothership-ec/cog/zipball/c8b2abf0674d0d6ae2a6ee0ada9390143bba254e",
+                "reference": "c8b2abf0674d0d6ae2a6ee0ada9390143bba254e",
                 "shasum": ""
             },
             "require": {
@@ -863,7 +863,7 @@
                 "cog",
                 "framework"
             ],
-            "time": "2015-10-26 15:15:45"
+            "time": "2015-11-17 16:42:42"
         },
         {
             "name": "mothership-ec/cog-imageresize",
@@ -969,16 +969,16 @@
         },
         {
             "name": "mothership-ec/cog-mothership-commerce",
-            "version": "5.16.1",
+            "version": "5.17.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog-mothership-commerce.git",
-                "reference": "e89a2daec7c48be5b766732655d2b855171bd284"
+                "reference": "4d0eea2c4b47f6302ce99091f0e9d3a468e187d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-commerce/zipball/e89a2daec7c48be5b766732655d2b855171bd284",
-                "reference": "e89a2daec7c48be5b766732655d2b855171bd284",
+                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-commerce/zipball/4d0eea2c4b47f6302ce99091f0e9d3a468e187d2",
+                "reference": "4d0eea2c4b47f6302ce99091f0e9d3a468e187d2",
                 "shasum": ""
             },
             "require": {
@@ -1022,7 +1022,7 @@
                 "orders",
                 "products"
             ],
-            "time": "2015-10-29 11:30:41"
+            "time": "2015-12-08 12:21:33"
         },
         {
             "name": "mothership-ec/cog-mothership-cp",
@@ -1127,22 +1127,22 @@
         },
         {
             "name": "mothership-ec/cog-mothership-ecommerce",
-            "version": "3.6.1",
+            "version": "3.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog-mothership-ecommerce.git",
-                "reference": "4ff42b24683ca51832281916444515b75aa9b534"
+                "reference": "6c566f70909dc3e945f789bc8f06c0ee2e5706c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-ecommerce/zipball/4ff42b24683ca51832281916444515b75aa9b534",
-                "reference": "4ff42b24683ca51832281916444515b75aa9b534",
+                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-ecommerce/zipball/6c566f70909dc3e945f789bc8f06c0ee2e5706c3",
+                "reference": "6c566f70909dc3e945f789bc8f06c0ee2e5706c3",
                 "shasum": ""
             },
             "require": {
                 "mothership-ec/cog": "~4.10",
                 "mothership-ec/cog-mothership-cms": "~4.7",
-                "mothership-ec/cog-mothership-commerce": "~5.14",
+                "mothership-ec/cog-mothership-commerce": "~5.17",
                 "mothership-ec/cog-mothership-cp": "~3.0",
                 "mothership-ec/cog-mothership-user": "~4.0",
                 "omnipay/common": "~2.0",
@@ -1182,7 +1182,7 @@
                 "orders",
                 "products"
             ],
-            "time": "2015-11-16 16:32:49"
+            "time": "2016-01-06 14:52:58"
         },
         {
             "name": "mothership-ec/cog-mothership-file-manager",
@@ -1287,22 +1287,22 @@
         },
         {
             "name": "mothership-ec/cog-mothership-returns",
-            "version": "5.1.1",
+            "version": "5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog-mothership-returns.git",
-                "reference": "0df3ff71d8a12abf1ee7685e6ffac310e7e94b07"
+                "reference": "bdd510843bb747b7d274fea05287602bc7b81a42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-returns/zipball/0df3ff71d8a12abf1ee7685e6ffac310e7e94b07",
-                "reference": "0df3ff71d8a12abf1ee7685e6ffac310e7e94b07",
+                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-returns/zipball/bdd510843bb747b7d274fea05287602bc7b81a42",
+                "reference": "bdd510843bb747b7d274fea05287602bc7b81a42",
                 "shasum": ""
             },
             "require": {
                 "mothership-ec/cog": "~4.10",
                 "mothership-ec/cog-mothership-commerce": "~5.0",
-                "mothership-ec/cog-mothership-ecommerce": "~3.0",
+                "mothership-ec/cog-mothership-ecommerce": "~3.7",
                 "mothership-ec/cog-mothership-reports": "~2.0",
                 "php": ">=5.4.0"
             },
@@ -1335,20 +1335,20 @@
                 "products",
                 "returns"
             ],
-            "time": "2015-11-11 17:29:50"
+            "time": "2015-12-08 14:26:35"
         },
         {
             "name": "mothership-ec/cog-mothership-user",
-            "version": "4.3.1",
+            "version": "4.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog-mothership-user.git",
-                "reference": "7628781c834178b85b528f8baf5859e003012f1c"
+                "reference": "c8d87d90d0906044554f7fc52fe39b93c36f566e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-user/zipball/7628781c834178b85b528f8baf5859e003012f1c",
-                "reference": "7628781c834178b85b528f8baf5859e003012f1c",
+                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-user/zipball/c8d87d90d0906044554f7fc52fe39b93c36f566e",
+                "reference": "c8d87d90d0906044554f7fc52fe39b93c36f566e",
                 "shasum": ""
             },
             "require": {
@@ -1386,24 +1386,24 @@
                 "mothership",
                 "user"
             ],
-            "time": "2015-11-11 15:12:06"
+            "time": "2015-11-24 10:43:56"
         },
         {
             "name": "mothership-ec/cog-mothership-voucher",
-            "version": "2.2.2",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog-mothership-voucher.git",
-                "reference": "22390210a04752fba2eac3af7bfb94808c77343f"
+                "reference": "b7e35f69c041da745296876da765a9ec8454c362"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-voucher/zipball/22390210a04752fba2eac3af7bfb94808c77343f",
-                "reference": "22390210a04752fba2eac3af7bfb94808c77343f",
+                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-voucher/zipball/b7e35f69c041da745296876da765a9ec8454c362",
+                "reference": "b7e35f69c041da745296876da765a9ec8454c362",
                 "shasum": ""
             },
             "require": {
-                "mothership-ec/cog": "~4.11",
+                "mothership-ec/cog": "~4.13",
                 "mothership-ec/cog-mothership-commerce": "~5.0",
                 "mothership-ec/cog-mothership-reports": "~2.0",
                 "php": ">=5.4.0"
@@ -1436,7 +1436,7 @@
                 "mothership",
                 "voucher"
             ],
-            "time": "2015-09-23 13:29:04"
+            "time": "2015-11-26 15:05:42"
         },
         {
             "name": "mothership-ec/cog-user",
@@ -1856,16 +1856,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v2.7.6",
+            "version": "v2.7.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "5efd632294c8320ea52492db22292ff853a43766"
+                "reference": "4e35a78f932a4c07bd349efea647ac741c1419b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/5efd632294c8320ea52492db22292ff853a43766",
-                "reference": "5efd632294c8320ea52492db22292ff853a43766",
+                "url": "https://api.github.com/repos/symfony/console/zipball/4e35a78f932a4c07bd349efea647ac741c1419b6",
+                "reference": "4e35a78f932a4c07bd349efea647ac741c1419b6",
                 "shasum": ""
             },
             "require": {
@@ -1890,7 +1890,10 @@
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\Console\\": ""
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1908,20 +1911,20 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2015-10-20 14:38:46"
+            "time": "2015-12-23 11:17:38"
         },
         {
             "name": "symfony/debug",
-            "version": "v2.7.6",
+            "version": "v2.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/debug.git",
-                "reference": "fb9e6887db716939f41af0ba8ef38a1582eb501b"
+                "reference": "83e51a0e8940ed5e85788ba6bfa022634aa07869"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/debug/zipball/fb9e6887db716939f41af0ba8ef38a1582eb501b",
-                "reference": "fb9e6887db716939f41af0ba8ef38a1582eb501b",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/83e51a0e8940ed5e85788ba6bfa022634aa07869",
+                "reference": "83e51a0e8940ed5e85788ba6bfa022634aa07869",
                 "shasum": ""
             },
             "require": {
@@ -1932,19 +1935,22 @@
                 "symfony/http-kernel": ">=2.3,<2.3.24|~2.4.0|>=2.5,<2.5.9|>=2.6,<2.6.2"
             },
             "require-dev": {
-                "symfony/class-loader": "~2.2",
-                "symfony/http-kernel": "~2.3.24|~2.5.9|~2.6,>=2.6.2"
+                "symfony/class-loader": "~2.2|~3.0.0",
+                "symfony/http-kernel": "~2.3.24|~2.5.9|~2.6,>=2.6.2|~3.0.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.7-dev"
+                    "dev-master": "2.8-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\Debug\\": ""
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -1962,7 +1968,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2015-10-11 09:39:48"
+            "time": "2015-12-26 13:37:56"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -2017,17 +2023,17 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v2.3.34",
+            "version": "v2.3.36",
             "target-dir": "Symfony/Component/Filesystem",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "2545e943c4cf01cefbc440407204955cbbe2d29c"
+                "reference": "959fe03e3212e909c286043863ee1f54799dcac0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/2545e943c4cf01cefbc440407204955cbbe2d29c",
-                "reference": "2545e943c4cf01cefbc440407204955cbbe2d29c",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/959fe03e3212e909c286043863ee1f54799dcac0",
+                "reference": "959fe03e3212e909c286043863ee1f54799dcac0",
                 "shasum": ""
             },
             "require": {
@@ -2042,7 +2048,10 @@
             "autoload": {
                 "psr-0": {
                     "Symfony\\Component\\Filesystem\\": ""
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2060,7 +2069,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2015-10-13 15:24:19"
+            "time": "2015-12-19 11:15:11"
         },
         {
             "name": "symfony/finder",
@@ -2113,17 +2122,17 @@
         },
         {
             "name": "symfony/form",
-            "version": "v2.3.34",
+            "version": "v2.3.36",
             "target-dir": "Symfony/Component/Form",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/form.git",
-                "reference": "3e82fcc4d2a0c0b4d8e6c8809723bd54fbb51af3"
+                "reference": "f87ebd8ba6cae60f3739930f62711f9fa8fb58d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/form/zipball/3e82fcc4d2a0c0b4d8e6c8809723bd54fbb51af3",
-                "reference": "3e82fcc4d2a0c0b4d8e6c8809723bd54fbb51af3",
+                "url": "https://api.github.com/repos/symfony/form/zipball/f87ebd8ba6cae60f3739930f62711f9fa8fb58d2",
+                "reference": "f87ebd8ba6cae60f3739930f62711f9fa8fb58d2",
                 "shasum": ""
             },
             "require": {
@@ -2152,7 +2161,10 @@
             "autoload": {
                 "psr-0": {
                     "Symfony\\Component\\Form\\": ""
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2170,40 +2182,41 @@
             ],
             "description": "Symfony Form Component",
             "homepage": "https://symfony.com",
-            "time": "2015-10-22 00:46:43"
+            "time": "2015-12-18 16:43:49"
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v2.7.6",
+            "version": "v2.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "7598eea151ae3d4134df1f9957364b17809eea75"
+                "reference": "dc5172ce2d01965f50b6c51bccc5ae243709b3c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/7598eea151ae3d4134df1f9957364b17809eea75",
-                "reference": "7598eea151ae3d4134df1f9957364b17809eea75",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/dc5172ce2d01965f50b6c51bccc5ae243709b3c2",
+                "reference": "dc5172ce2d01965f50b6c51bccc5ae243709b3c2",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.9"
+                "php": ">=5.3.9",
+                "symfony/polyfill-php54": "~1.0"
             },
             "require-dev": {
-                "symfony/expression-language": "~2.4"
+                "symfony/expression-language": "~2.4|~3.0.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.7-dev"
+                    "dev-master": "2.8-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\HttpFoundation\\": ""
                 },
-                "classmap": [
-                    "Resources/stubs"
+                "exclude-from-classmap": [
+                    "/Tests/"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2222,21 +2235,21 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2015-10-23 14:47:27"
+            "time": "2015-12-18 15:38:35"
         },
         {
             "name": "symfony/http-kernel",
-            "version": "v2.3.34",
+            "version": "v2.3.36",
             "target-dir": "Symfony/Component/HttpKernel",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "bd6b6d88eff6b52b84f9b451811e01e620df57ce"
+                "reference": "33dda48705a9ed31cb43bce68bb522bb48299a3e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/bd6b6d88eff6b52b84f9b451811e01e620df57ce",
-                "reference": "bd6b6d88eff6b52b84f9b451811e01e620df57ce",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/33dda48705a9ed31cb43bce68bb522bb48299a3e",
+                "reference": "33dda48705a9ed31cb43bce68bb522bb48299a3e",
                 "shasum": ""
             },
             "require": {
@@ -2277,7 +2290,10 @@
             "autoload": {
                 "psr-0": {
                     "Symfony\\Component\\HttpKernel\\": ""
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2295,27 +2311,29 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
-            "time": "2015-10-27 16:29:44"
+            "time": "2015-12-26 14:07:57"
         },
         {
             "name": "symfony/intl",
-            "version": "v2.7.6",
+            "version": "v2.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/intl.git",
-                "reference": "330f52a996749eb6a2fdc1506c7a4868e070d678"
+                "reference": "3bac8c613f94f8e497d4da6a8c439839e0ebd7b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/intl/zipball/330f52a996749eb6a2fdc1506c7a4868e070d678",
-                "reference": "330f52a996749eb6a2fdc1506c7a4868e070d678",
+                "url": "https://api.github.com/repos/symfony/intl/zipball/3bac8c613f94f8e497d4da6a8c439839e0ebd7b4",
+                "reference": "3bac8c613f94f8e497d4da6a8c439839e0ebd7b4",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.9"
+                "php": ">=5.3.9",
+                "symfony/polyfill-intl-icu": "~1.0",
+                "symfony/polyfill-php54": "~1.0"
             },
             "require-dev": {
-                "symfony/filesystem": "~2.1"
+                "symfony/filesystem": "~2.1|~3.0.0"
             },
             "suggest": {
                 "ext-intl": "to use the component with locales other than \"en\""
@@ -2323,7 +2341,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.7-dev"
+                    "dev-master": "2.8-dev"
                 }
             },
             "autoload": {
@@ -2333,8 +2351,8 @@
                 "classmap": [
                     "Resources/stubs"
                 ],
-                "files": [
-                    "Resources/stubs/functions.php"
+                "exclude-from-classmap": [
+                    "/Tests/"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -2369,11 +2387,11 @@
                 "l10n",
                 "localization"
             ],
-            "time": "2015-10-11 09:39:48"
+            "time": "2015-12-05 11:09:21"
         },
         {
             "name": "symfony/options-resolver",
-            "version": "v2.6.11",
+            "version": "v2.6.12",
             "target-dir": "Symfony/Component/OptionsResolver",
             "source": {
                 "type": "git",
@@ -2427,6 +2445,119 @@
             "time": "2015-05-13 11:33:56"
         },
         {
+            "name": "symfony/polyfill-intl-icu",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-intl-icu.git",
+                "reference": "2deb44160e1c886241c06602b12b98779f728177"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-icu/zipball/2deb44160e1c886241c06602b12b98779f728177",
+                "reference": "2deb44160e1c886241c06602b12b98779f728177",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/intl": "~2.3|~3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for intl's ICU-related data and classes",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "icu",
+                "intl",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2015-11-04 20:28:58"
+        },
+        {
+            "name": "symfony/polyfill-php54",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php54.git",
+                "reference": "2c9f6d98eb30dc04fe0b06f9cc92a55acea5bdcc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php54/zipball/2c9f6d98eb30dc04fe0b06f9cc92a55acea5bdcc",
+                "reference": "2c9f6d98eb30dc04fe0b06f9cc92a55acea5bdcc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php54\\": ""
+                },
+                "files": [
+                    "bootstrap.php"
+                ],
+                "classmap": [
+                    "Resources/stubs"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 5.4+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "time": "2015-11-04 20:28:58"
+        },
+        {
             "name": "symfony/process",
             "version": "v2.1.13",
             "target-dir": "Symfony/Component/Process",
@@ -2472,16 +2603,16 @@
         },
         {
             "name": "symfony/property-access",
-            "version": "v2.7.6",
+            "version": "v2.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/property-access.git",
-                "reference": "368b784738fa932e6d86866038312b03e073a824"
+                "reference": "ac5c775454c3da1c0c8cc50831ccbd30634aeb86"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/property-access/zipball/368b784738fa932e6d86866038312b03e073a824",
-                "reference": "368b784738fa932e6d86866038312b03e073a824",
+                "url": "https://api.github.com/repos/symfony/property-access/zipball/ac5c775454c3da1c0c8cc50831ccbd30634aeb86",
+                "reference": "ac5c775454c3da1c0c8cc50831ccbd30634aeb86",
                 "shasum": ""
             },
             "require": {
@@ -2490,13 +2621,16 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.7-dev"
+                    "dev-master": "2.8-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\PropertyAccess\\": ""
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2525,21 +2659,21 @@
                 "property path",
                 "reflection"
             ],
-            "time": "2015-10-23 14:47:27"
+            "time": "2015-12-23 07:56:26"
         },
         {
             "name": "symfony/routing",
-            "version": "v2.3.34",
+            "version": "v2.3.36",
             "target-dir": "Symfony/Component/Routing",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/routing.git",
-                "reference": "f241daca4c032793aaaef7dae75cf9e115d9b01e"
+                "reference": "104c77ad83b4551d9d184660d0dd1ad8226b447c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/routing/zipball/f241daca4c032793aaaef7dae75cf9e115d9b01e",
-                "reference": "f241daca4c032793aaaef7dae75cf9e115d9b01e",
+                "url": "https://api.github.com/repos/symfony/routing/zipball/104c77ad83b4551d9d184660d0dd1ad8226b447c",
+                "reference": "104c77ad83b4551d9d184660d0dd1ad8226b447c",
                 "shasum": ""
             },
             "require": {
@@ -2566,7 +2700,10 @@
             "autoload": {
                 "psr-0": {
                     "Symfony\\Component\\Routing\\": ""
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2584,7 +2721,7 @@
             ],
             "description": "Symfony Routing Component",
             "homepage": "https://symfony.com",
-            "time": "2015-10-24 12:07:54"
+            "time": "2015-12-22 13:55:19"
         },
         {
             "name": "symfony/templating",
@@ -2632,17 +2769,17 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v2.3.34",
+            "version": "v2.3.36",
             "target-dir": "Symfony/Component/Translation",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "f2dbeb87710446df8b8d8c2960d49d15565b96ed"
+                "reference": "08cb7fb6f879ec26898e6563d43186155d2a0afc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/f2dbeb87710446df8b8d8c2960d49d15565b96ed",
-                "reference": "f2dbeb87710446df8b8d8c2960d49d15565b96ed",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/08cb7fb6f879ec26898e6563d43186155d2a0afc",
+                "reference": "08cb7fb6f879ec26898e6563d43186155d2a0afc",
                 "shasum": ""
             },
             "require": {
@@ -2666,7 +2803,10 @@
             "autoload": {
                 "psr-0": {
                     "Symfony\\Component\\Translation\\": ""
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2684,7 +2824,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2015-10-23 09:44:09"
+            "time": "2015-12-01 22:08:33"
         },
         {
             "name": "symfony/twig-bridge",
@@ -2758,17 +2898,17 @@
         },
         {
             "name": "symfony/twig-bundle",
-            "version": "v2.3.34",
+            "version": "v2.3.36",
             "target-dir": "Symfony/Bundle/TwigBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/twig-bundle.git",
-                "reference": "af66a2645712a4ed7a1e0e944dca4d97548acbe8"
+                "reference": "d63fca2866cea8a8ebdb3ba31a5bd699179cb56c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/twig-bundle/zipball/af66a2645712a4ed7a1e0e944dca4d97548acbe8",
-                "reference": "af66a2645712a4ed7a1e0e944dca4d97548acbe8",
+                "url": "https://api.github.com/repos/symfony/twig-bundle/zipball/d63fca2866cea8a8ebdb3ba31a5bd699179cb56c",
+                "reference": "d63fca2866cea8a8ebdb3ba31a5bd699179cb56c",
                 "shasum": ""
             },
             "require": {
@@ -2792,7 +2932,10 @@
             "autoload": {
                 "psr-0": {
                     "Symfony\\Bundle\\TwigBundle\\": ""
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2810,21 +2953,21 @@
             ],
             "description": "Symfony TwigBundle",
             "homepage": "https://symfony.com",
-            "time": "2015-10-11 09:37:49"
+            "time": "2015-12-10 14:12:08"
         },
         {
             "name": "symfony/validator",
-            "version": "v2.3.34",
+            "version": "v2.3.36",
             "target-dir": "Symfony/Component/Validator",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/validator.git",
-                "reference": "1b57ec8ff07dd59b167896f03a23e9215aa61a5b"
+                "reference": "25c1765c1325c0cf596445ea1135c29080cf70da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/validator/zipball/1b57ec8ff07dd59b167896f03a23e9215aa61a5b",
-                "reference": "1b57ec8ff07dd59b167896f03a23e9215aa61a5b",
+                "url": "https://api.github.com/repos/symfony/validator/zipball/25c1765c1325c0cf596445ea1135c29080cf70da",
+                "reference": "25c1765c1325c0cf596445ea1135c29080cf70da",
                 "shasum": ""
             },
             "require": {
@@ -2854,7 +2997,10 @@
             "autoload": {
                 "psr-0": {
                     "Symfony\\Component\\Validator\\": ""
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -2872,7 +3018,7 @@
             ],
             "description": "Symfony Validator Component",
             "homepage": "https://symfony.com",
-            "time": "2015-10-16 13:12:47"
+            "time": "2015-12-26 11:56:14"
         },
         {
             "name": "symfony/yaml",

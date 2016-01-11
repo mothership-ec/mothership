@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "69c734676bb1f0c66251b7aab0c7decd",
-    "content-hash": "e275854ff3053e5c13b4c47cde40ec02",
+    "hash": "3296204fbc8b12eae81761587c9803ed",
+    "content-hash": "41e54f44d77ded5284a0bbbc8b5ae69c",
     "packages": [
         {
             "name": "dflydev/markdown",
@@ -969,16 +969,16 @@
         },
         {
             "name": "mothership-ec/cog-mothership-commerce",
-            "version": "5.17.0",
+            "version": "5.17.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog-mothership-commerce.git",
-                "reference": "4d0eea2c4b47f6302ce99091f0e9d3a468e187d2"
+                "reference": "ca35a66a5a2aaf6193b763e045efe73513bf3ac1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-commerce/zipball/4d0eea2c4b47f6302ce99091f0e9d3a468e187d2",
-                "reference": "4d0eea2c4b47f6302ce99091f0e9d3a468e187d2",
+                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-commerce/zipball/ca35a66a5a2aaf6193b763e045efe73513bf3ac1",
+                "reference": "ca35a66a5a2aaf6193b763e045efe73513bf3ac1",
                 "shasum": ""
             },
             "require": {
@@ -1022,7 +1022,7 @@
                 "orders",
                 "products"
             ],
-            "time": "2015-12-08 12:21:33"
+            "time": "2016-01-11 11:39:19"
         },
         {
             "name": "mothership-ec/cog-mothership-cp",

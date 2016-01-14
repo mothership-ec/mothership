@@ -19,14 +19,12 @@
 			<div class="col-6 no-gutter">
 				{% set address = billingAddress %}
 				{% include 'Message:Mothership:Commerce::order:detail:address:detail' %}
-				<a href="{{ url('ms.user.edit') }}">Edit</a>
 			</div>
 		{% endif %}
 		{% if deliveryAddress %}
 			<div class="col-6 no-gutter">
 				{% set address = deliveryAddress %}
 				{% include 'Message:Mothership:Commerce::order:detail:address:detail' %}
-				<a href="{{ url('ms.user.edit') }}">Edit</a>
 			</div>
 		{% endif %}
 		<div class="col-12 no-gutter">

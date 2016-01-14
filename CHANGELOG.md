@@ -1,5 +1,36 @@
 # Changelog
 
+## 1.2.2
+
+- Resolve issue that prevents CSS from rendering correctly in Safari
+- Removed references to individuals in CSS files
+- Styled required fields in checkout
+- Improved spacing on 'Forgotten password' link
+- Resolve issue where raw HTML was displaying on password edit form
+- Remove duplicate edit buttons on account section
+- Resolve issue where checkout images are stretched on mobile
+- Hide address lines 3 and 4 in address form in checkout
+- Amend styling on select fields in address forms
+- Update Cog to version 4.14.1
+- Update MS User to version 4.3.2
+- Update Commerce to version 5.17.0
+- Update E-commerce to version 3.7.1
+- Update Returns to version 5.2.0
+- Update Voucher to version 2.3.0
+
+## 1.2.1
+
+- Automatically packaged with Google Analytics integration, configure in `analytics.yml`
+- Update Cog to version 4.14.0
+- Update Control Panel to version 3.5.5
+- Update Reports to version 2.2.0
+- Update ImageResize to version 2.0.1
+- Update MS User to version 4.3.1
+- Update CMS to version 4.11.0
+- Update Commerce to version 5.16.1
+- Update E-commerce to version 3.6.1
+- Update Returns to version 5.1.1
+
 ## 1.2.0
 
 - Returns address on delivery note is pulled from `merchant.yml` instead of being hard coded

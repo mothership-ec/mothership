@@ -24,7 +24,7 @@
   "require": {
 	"mothership-ec/cog-mothership-user"      : "~4.0",
 	"mothership-ec/cog-mothership-cms"       : "~4.0",
-	"mothership-ec/cog-mothership-ecommerce" : "~3.0",
+	"mothership-ec/cog-mothership-ecommerce" : "~3.7.0",
 	"mothership-ec/cog-mothership-discount"  : "~2.0",
 	"mothership-ec/cog-mothership-returns"   : "~5.0",
 	"mothership-ec/cog-mothership-voucher"   : "~2.0",

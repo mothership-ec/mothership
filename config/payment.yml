@@ -1,0 +1,3 @@
+gateway: local-payment
+use-test-payments: false
+salt:

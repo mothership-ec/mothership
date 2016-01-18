@@ -1,0 +1,4 @@
+cookie-length: 30 days
+session-name: cog-basket
+cookie-name: cog-basket
+pepper: abvC84bXkD8MXs4aZ37FGx # pepper to use for basket token hashes (change this to invalidate all existing baskets)

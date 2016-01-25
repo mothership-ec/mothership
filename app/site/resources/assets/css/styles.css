@@ -612,47 +612,35 @@
     right: 20px;
 }
 
-.tab-menu {
-    float: left;
-    width: 100%;
-    border-bottom: 1px solid #CCC;
-    margin-bottom: 20px;
+ul.tabs{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    clear: both;
 }
 
-.tab-menu li {
-    float: left;
-    width: auto;
-    font-size: .875em;
-    font-weight: 400;
-    line-height: 1.42857143;
+ul.tabs li{
+    background: none;
+    color: #222;
     display: inline-block;
-    margin-right: 2px;
-    margin-bottom: 0;
-    padding: 5px 15px;
+    padding: 10px 15px;
     cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    text-align: center;
-    vertical-align: middle;
-    white-space: nowrap;
-    color: #333;
-    border: 1px solid transparent;
-    border-bottom: none;
-    border-color: #CCC;
-    border-radius: 4px 4px 0px 0px;
-    background-color: #fff;
-    background-image: none;
-    text-decoration: none;
-    opacity: 0.7;
+    margin: 0;
 }
 
-.tab-menu li.current {
-    opacity: 1;
-    border-bottom: 1px solid #FFF;
-    padding-bottom: 6px;
-    margin-bottom: -1px;
+ul.tabs li.current{
+    background: #ededed;
+    color: #222;
+}
+
+.tab-content{
+    display: none;
+    background: #ededed;
+    padding: 15px;
+}
+
+.tab-content.current{
+    display: inherit;
 }
 
 /*    Blog listing

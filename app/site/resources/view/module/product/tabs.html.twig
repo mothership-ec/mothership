@@ -1,28 +1,33 @@
-<section class="tabs col-12">
-	{# Details #}
-	<div class="details">
-		<h3>Details</h3>
-		{% if content.details.value %}
-			{{ content.details | raw }}
-		{% else %}
-			<p>{{ product.description | nl2br }}</p>
-		{% endif %}
-	</div>
+<ul class="tabs">
+	<li class="tab-link current" data-tab="tab-1">Details</li>
+	{% if product.details.sizing.value %}
+		<li class="tab-link" data-tab="tab-2">Fitting Guide</li>
+	{% endif %}	
+	{% if content.shipping.value %}
+		<li class="tab-link" data-tab="tab-3">Shipping &amp; Returns</li>
+	{% endif %}
+</ul>
 
+<div id="tab-1" class="tab-content current">
+	<h3>Details</h3>
+	{% if content.details.value %}
+		{{ content.details | raw }}
+	{% else %}
+		<p>{{ product.description | nl2br }}</p>
+	{% endif %}
+</div>
+<div id="tab-2" class="tab-content">
 	{# Fitting guide #}
 	{% if product.details.sizing.value %}
-		<div class="fitting">
-			<h3>Fitting guide</h3>
-			{{ product.details.sizing | raw }}
-		</div>
+		<h3>Fitting guide</h3>
+		{{ product.details.sizing | raw }}
 	{% endif %}
-
+</div>
+<div id="tab-3" class="tab-content">
 	{# Shipping and returns #}
 	{% if content.shipping.value %}
-		<div class="shipping">
-			<h3>Shipping &amp; returns</h3>
-			{{ content.shipping | raw }}
-		</div>
+		<h3>Shipping &amp; returns</h3>
+		{{ content.shipping | raw }}
 	{% endif %}
+</div>
 
-</section>

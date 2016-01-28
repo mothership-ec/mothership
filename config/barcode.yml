@@ -1,9 +1,0 @@
-file-type: 'png'
-
-# determines the class that will be used to automatically assign barcodes to products. If left blank, Mothership
-# will check to see if the deprecated 'barcode-type' config option exists. If this is not set, it will default
-# to the generator declared in the service container
-generator: 'ean13'
-
-# determines the template that will be used to output the barcodes in a printable format
-sheet-type: '5x13'

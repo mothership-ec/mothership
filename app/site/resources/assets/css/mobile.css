@@ -311,4 +311,14 @@
 		height: auto;
 	}
 
+	.comments img {
+		width: auto;
+		height: auto;
+	}
+
+	.comments li .meta,
+	.comments li p  {
+		width: 100%;
+	}
+
 }

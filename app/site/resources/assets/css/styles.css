@@ -704,6 +704,113 @@ article .image figcaption {
     color: #666; 
 }
 
+/*    Comments
+/* ------------------------------------------------------- */
+
+.comments {
+    clear: both;
+    border-top: 1px solid #ede6df;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.comments input,
+.comments textarea {
+    width: 75%;
+}
+
+.comments label {
+    float: left;
+    padding: 15px 0;
+    width: 80px;
+    font-weight: normal;
+    font-size: 0.86em;
+    margin-bottom: 0;
+}
+
+.comments label[for=ms_blog_comment_captcha] {
+    width: 100%;
+    float: none;
+    padding: 0;
+    margin-left: 80px;
+}
+
+.comments input[id=ms_blog_comment_captcha] {
+    margin-left: 80px;
+}
+
+.comments label[for=ms_blog_comment_website],
+.comments input[id=ms_blog_comment_website] {
+    display: none;
+}
+
+.comments .required label:after {
+    content: '*';
+    font-size: 15px;
+    vertical-align: middle;
+    margin-left: 5px;
+    top: 0px;
+    position: relative;
+    color: #333;
+}
+
+.comments form:after {
+    content: '* Required field';
+    font-size: 15px;
+    vertical-align: middle;
+    margin: 10px 0;
+    top: 0px;
+    position: relative;
+    color: #999;
+    display: block;
+    clear: both;
+}
+
+.comments ul {
+    padding: 0;
+    list-style: none;
+    margin-bottom: 60px;
+}
+
+.comments li {
+    border-bottom: 1px solid #eee;   
+    padding: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    width: 85%;
+}
+
+.comments li p {
+    width: 60%;
+    float: right;
+}
+
+.comments li .meta {
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+
+.comments li .meta img {
+    float: left;
+    margin: 0 10px 10px 0;
+}
+
+.comments li .meta p {
+    margin: 0;
+    width: auto;
+    float: none;
+}
+
+.comments button {
+    background: #333;
+    color: #fff;
+    float: right;
+    margin-right: 16%;
+    border: 0;
+    border-radius: 0;
+}
+
 /*    Pagination
 /* ------------------------------------------------------- */
 

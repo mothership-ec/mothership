@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.3.0
+
+- Support for multiple payment gateways out of the box
+- Lines 3 and 4 on address forms hidden by default (with CSS)
+- Updated MS Carousel plugin to version 1.0.0 (from development version)
+- Carousel pauses on interaction by default
+- No longer uses javascript to render product info tabs
+- Grammatical fixes
+- Update Commerce to version 5.17.2
+- Update E-commerce to version 3.7.2
+- Update Returns to version 5.3.0
+
 ## 1.2.2
 
 - Resolve issue that prevents CSS from rendering correctly in Safari

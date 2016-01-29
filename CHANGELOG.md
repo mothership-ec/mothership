@@ -1,5 +1,35 @@
 # Changelog
 
+## 1.3.0
+
+- Support for multiple payment gateways out of the box
+- Lines 3 and 4 on address forms hidden by default (with CSS)
+- Updated MS Carousel plugin to version 1.0.0 (from development version)
+- Carousel pauses on interaction by default
+- No longer uses javascript to render product info tabs
+- Grammatical fixes
+- Update Commerce to version 5.17.2
+- Update E-commerce to version 3.7.2
+- Update Returns to version 5.3.0
+
+## 1.2.2
+
+- Resolve issue that prevents CSS from rendering correctly in Safari
+- Removed references to individuals in CSS files
+- Styled required fields in checkout
+- Improved spacing on 'Forgotten password' link
+- Resolve issue where raw HTML was displaying on password edit form
+- Remove duplicate edit buttons on account section
+- Resolve issue where checkout images are stretched on mobile
+- Hide address lines 3 and 4 in address form in checkout
+- Amend styling on select fields in address forms
+- Update Cog to version 4.14.1
+- Update MS User to version 4.3.2
+- Update Commerce to version 5.17.0
+- Update E-commerce to version 3.7.1
+- Update Returns to version 5.2.0
+- Update Voucher to version 2.3.0
+
 ## 1.2.1
 
 - Automatically packaged with Google Analytics integration, configure in `analytics.yml`

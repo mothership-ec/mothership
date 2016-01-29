@@ -50,7 +50,7 @@
 						{% for item in basket %}
 							<tr>
 								<td class="image">
-									{{ getResizedImage(item.item.product.getUnitImage(item.item.unit, 'default'), 80, 80) }}
+									{{ getResizedImage(item.item.product.getUnitImage(item.item.unit, 'default'), 768, 768) }}
 								</td>
 								<td class="item">
 									{{ item.item.productName }} <span>{{ item.item.options }}</span>

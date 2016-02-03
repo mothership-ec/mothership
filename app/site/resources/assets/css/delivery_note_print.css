@@ -1,0 +1,301 @@
+/* ======================================================= */
+/*                                                         */
+/*                                                         */
+/*    Print Styles for Packing Slips                       */
+/*                                                         */
+/*                                                         */
+/* ======================================================= */
+/*
+/*
+/*    Development by Mothership
+/*    http://mothership.ec
+/*
+/*
+/* ======================================================= */
+
+body
+{
+    font: normal 10px Arial, Helvetica, sans-serif;
+
+    margin: 0;
+
+    color: #000;
+    background: #eee;
+}
+
+#wrapper
+{
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+.page
+{
+    position: relative;
+
+    zoom: 1;
+
+    width: 8.27in;
+    height: 11.69in;
+    margin-bottom: 10px;
+    padding: 10px;
+
+    color: #000;
+    border: 1px solid #aaa;
+    background: #fff;
+
+    _height: 1200px;
+}
+
+.page_first
+{
+    position: relative;
+
+    margin-bottom: 10px;
+    padding: 10px;
+
+    color: #000;
+    border: 1px solid #aaa;
+    background: #fff;
+}
+
+#wrapper > br
+{
+    display: none !important;
+}
+
+button
+{
+    display: block;
+
+    width: 100px;
+    margin: 10px auto;
+}
+
+h1
+{
+    font: bold 24px Arial, Helvetica, sans-serif;
+}
+
+h2
+{
+    font: bold 12px Arial, Helvetica, sans-serif;
+
+    clear: both;
+
+    margin: 0 0 10px 0;
+}
+
+table
+{
+    font: normal 10px Arial, Helvetica, sans-serif;
+
+    width: 100%;
+    margin: 0 0 30px 0;
+
+    border-collapse: collapse;
+}
+
+table th,
+table td
+{
+    padding: 5px;
+
+    text-align: left;
+}
+
+table th
+{
+    background: #eee;
+}
+
+table tr
+{
+    border-bottom: 1px solid #ccc;
+}
+
+.half-col
+{
+    float: left;
+
+    width: 45%;
+}
+
+dl
+{
+    margin: 0 0 20px 0;
+    padding: 5px;
+}
+
+dt
+{
+    font-weight: bold;
+
+    float: left;
+    clear: left;
+
+    width: 150px;
+    margin: 0 0 10px 0;
+}
+
+dd
+{
+    float: left;
+    clear: both;
+    min-height: 15px;
+    margin: 0 0 10px 0;
+}
+
+/* Packing Slip with Labels */
+
+.packingslip-labels h1
+{
+    padding: 0 0 20px 0;
+    text-align: center;
+    border-bottom: 2px solid #000;
+}
+
+.packingslip-labels h1 img {
+    width: 2in;
+    height: auto;
+}
+
+.packingslip-labels hr,
+hr
+{
+    clear: both;
+
+    border: none;
+    border-bottom: 2px solid #666;
+}
+
+.packingslip-labels dl
+{
+    margin: 0;
+}
+
+.labels
+{
+    font-size: 1.3em;
+
+    position: absolute;
+    top: 710px;
+    left: 20px;
+
+    width: 100%;
+    height: 250px;
+}
+
+.label
+{
+    position: absolute;
+    top: 100px;
+    left: 50px;
+
+    display: block;
+}
+
+.labels .return-address
+{
+    left: 450px;
+    color: #888;
+}
+
+.labels .delivery-address
+{
+    width: 320px;
+}
+
+.labels .reusable span:first-child
+{
+    font-size: 2em;
+}
+
+.label span
+{
+    display: block;
+}
+
+/* Packing Slip with One Large Label */
+
+.packingslip-half h1,
+.return h1 {
+    padding: 0 0 20px 0;
+    text-align: center; 
+    float: left;
+    margin: 0 30px 0 20px
+}
+
+.packingslip-half h1 img,
+.return h1 img {
+    width: 0.75in;
+    height: auto;
+}
+
+
+.packingslip-half .half-col {
+    width: 40%;
+    float: left;
+}
+
+.packingslip-half .quarter-col {
+    width: 20%;
+    float: left;
+}
+
+.packingslip-half .labels {
+    height: 5in;
+    position: absolute;
+    bottom: 0;
+    font-size: 2em;
+}
+
+/* Print Query to remove preview stuff */
+
+@media print {
+
+    html, body {
+        height: 99%;
+
+        background: #fff;
+    }
+
+    #wrapper {
+        padding-top: 0;
+    }
+
+    h1 img {
+        margin-left: 3px;
+    }
+
+    .page
+    {
+        height: 297mm;
+        min-height: 297mm;
+        padding: 4mm 2mm;
+        margin: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+        border: none;
+
+        page-break-after: always;
+        page-break-inside: avoid;
+    }
+
+    .page.last {
+        page-break-after: auto;
+    }
+
+    .labels .delivery-address {
+        margin-left: 12mm;
+    }
+
+    button,
+    button.save
+    {
+        display: none;
+    }
+}

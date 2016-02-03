@@ -233,13 +233,6 @@ a:focus {
     color: #000;
 }
 
-a:focus {
-    /*
-     * Addresses outline displayed oddly in Chrome
-     */
-    outline: thin dotted;
-}
-
 p a,
 p a:visited {
     line-height: inherit;
@@ -505,7 +498,8 @@ audio:not([controls]) {
     height: 0;
 }
 
-[hidden] {
+[hidden],
+.hidden {
     display: none;
 }
 
@@ -665,8 +659,23 @@ textarea {
 
 select {
     display: block;
-    clear: both;
-    margin: 0 0 31px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 20px;
+    padding: 6px 4px;
+    -webkit-transition: border-color .2s, box-shadow .2s;
+    -o-transition: border-color .2s, box-shadow .2s;
+    transition: border-color .2s, box-shadow .2s;
+    color: #777;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    outline: none;
+    outline: none;
+    -webkit-appearance: none;
+    background: url(../images/down-arrow.svg) 98% center no-repeat;
+    background-size: 20px;
 }
 
 select[multiple],
@@ -1111,6 +1120,32 @@ nav ol {
     background: #6788b5;
 }
 
+a.forgotten-password {
+    display: block;
+    margin: 10px 0 25px;
+}
+
+.contact-form .required label:after {
+    content: '*';
+    font-size: 15px;
+    vertical-align: middle;
+    margin-left: 5px;
+    top: 0px;
+    position: relative;
+    color: #333;
+}
+
+.contact-form form:after {
+    content: '* Required field';
+    font-size: 15px;
+    vertical-align: middle;
+    margin: 10px 0;
+    top: 0px;
+    position: relative;
+    color: #999;
+    display: block;
+    clear: both;
+}
 
 
 /* Loading spinner
@@ -1171,7 +1206,7 @@ nav ol {
     }
     100% {
         -webkit-transform: scale(1, 1);
-    };
+    }
 }
 
 @keyframes pulse {
@@ -1183,7 +1218,7 @@ nav ol {
     }
     100% {
         transform: scale(1, 1);
-    };
+    }
 }
 
 

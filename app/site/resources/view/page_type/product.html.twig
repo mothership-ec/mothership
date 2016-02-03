@@ -10,27 +10,24 @@
 				page: page,
 				}))
 			}}
-			{# Product info #}
-			{% block productinfo %}
-				{% include 'Mothership:Site::module:product:product_info' %}
-			{% endblock %}
-
-			{# Product gallery #}
-			{% block gallery %}
-				{{
-					render(controller('Mothership:Site::Controller:Module:Gallery#productGallery', {
-						product: product,
-						gallery: content.gallery,
-						options: content.product.option
-					}))
-				}}
-			{% endblock %}
-		</div>
-		<div class="row">
-			{# Product tabs #}
-			{% block tabs %}
-				{% include 'Mothership:Site::module:product:tabs' %}
-			{% endblock %}
+			<div class="col-6">
+				{# Product info #}
+				{% block productinfo %}
+					{% include 'Mothership:Site::module:product:product_info' %}
+				{% endblock %}
+			</div>
+			<div class="col-6">
+				{# Product gallery #}
+				{% block gallery %}
+					{{
+						render(controller('Mothership:Site::Controller:Module:Gallery#productGallery', {
+							product: product,
+							gallery: content.gallery,
+							options: content.product.option
+						}))
+					}}
+				{% endblock %}
+			</div>
 		</div>
 		{# Cross sell #}
 		{{

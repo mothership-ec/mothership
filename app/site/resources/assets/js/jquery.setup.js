@@ -21,46 +21,18 @@ jQuery(document).ready(function($) {
 		return false;
 	});
 
-	// Insets the tabs menu
-	$('.tabs').prepend('<nav class="tab-menu"><ul><li class="details"><a href="#details">Details</a></li></ul></nav>');
+	// Tabs 
 
-	if ($('.fitting').is(':visible')) {
-		$('.tab-menu ul').append('<li class="fitting"><a href="#fitting">Fitting guide</a></li>');
-	}
+	$('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
 
-	if ($('.shipping').is(':visible')) {
-		$('.tab-menu ul').append('<li class="shipping"><a href="#shipping">Shipping &amp; returns</a></li>');
-	}
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
 
-	// product page tab
-	(function(){
-		$('.tab-menu a').click(function(){
-			if($(this).hasClass('current')) {
-				return false;
-			}
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	})
 
-			$('.tab-menu .current').removeClass('current');
-			$('.tabs > div').hide();
-			$('.tabs div.'+$(this).parent().attr('class')).show();
-			$(this).parent().addClass('current');
-
-			return false;
-		});
-		// select the first tab
-		$('.tab-menu li:first-child a').click();
-	})();
-
-	// Carousel functionality
-	$('.carousel ul').carousel({
-		arrows    : true,
-		indicators: true,
-		flexible  : true,
-		interval  : false,
-		speed     : 400,
-		onInteraction: function(e) {
-			e.carousel('stop');
-		}
-	});
 
 	// Returns Toggle
 

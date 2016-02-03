@@ -37,6 +37,13 @@
     clear: both;
 }
 
+.checkout .required label:after {
+    content: '*';
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 0.86em;
+}
+
 
 /* Progress
  *
@@ -285,6 +292,7 @@
 .checkout-nav .continue
 {
     float: right;
+    margin-left: 10px;
 }
 
 

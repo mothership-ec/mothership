@@ -37,9 +37,15 @@ To set up <a href="http://mothership.ec">Mothership</a> using the installer, you
 	+ **We cannot currently offer any guarantee that Mothership works with Nginx or other server software**
 + A **Unix-like** operating system (i.e. OSX, Linux, etc)
 	+ Mothership **will not** work in a Windows environment at present
+
+### Recommended
+
 + **Composer**
-	+ Composer is a PHP dependency manager which can be downloaded from <a href="https://getcomposer.org/download/">the Composer website</a>. It handles the installation, updating and removal of Mothership modules.
+	+ Composer is a PHP dependency manager which can be downloaded from <a href="https://getcomposer.org/download/">the Composer website</a>.
+	+ Composer is not required to install Mothership using the <a href="http://mothership.ec/files/downloads/mothership.phar">automatic installer</a>, but will be required for keeping your installation up to date, or installing Mothership manually
 	+ It is recommended that you install Composer globally
++ **Git**
+    + We recommend using <a href="https://git-scm.com/">Git</a> for version control, and this base installation takes the assumption that you are using Git to manage and track changes to your installation
 
 ## Installation
 
@@ -47,6 +53,8 @@ There are two ways to install Mothership:
 
 + Using the automatic installer
 + Manually
+
+To install, follow the instructions below. For more help, be sure to check out <a href="http://wiki.mothership.ec">our wiki</a>, or visit <a href="http://forum.mothership.ec">our forum</a>.
 
 ### The installer
 
@@ -74,3 +82,4 @@ To set up an environment to develop on this repository
 1. Create a `config/local` directory
 1. Move **all** config files into this directory. Be sure not to commit any of these config files.
 1. Follow instructions from **3.** onwards from the manual install guide above
+1. Be sure to follow our <a href="http://wiki.mothership.ec/Mothership#Contributing_to_Mothership">contribution guidelines</a> and <a href="CODE_OF_CONDUCT.md">code of conduct</a>

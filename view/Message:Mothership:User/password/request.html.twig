@@ -7,7 +7,7 @@
 		<section class="account">
 			<div class="password">
 				<h1>{{ 'ms.user.password.request.title'|trans }}</h1>
-				<p>{{ 'ms.user.password.request.intro'|trans({'%email%': app.cfg.app.defaultContactEmail}) }}</p>
+				<p>{{ 'ms.user.password.request.intro'|trans({'%email%': app.cfg.app.defaultContactEmail}) | raw }}</p>
 				{{ render(controller('Message:User::Controller:ForgottenPassword#request', {
 					resetRoute: 'ms.user.password.reset'
 				})) }}

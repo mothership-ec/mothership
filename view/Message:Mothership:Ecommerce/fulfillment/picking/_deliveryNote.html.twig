@@ -1,7 +1,7 @@
 
 <div class="page last">
 	<div class="packingslip-labels">
-		<h1><img src="/cogules/Mothership:Site/images/logo.png" title="Mothership Site" /></h1>
+		<h1><img src="/cogules/Mothership:Site/images/logo-print.png" title="Mothership Site" /></h1>
 			<dl class="half-col">
 				<h2>Order details</h2>
 				<dt>Order number</dt>
@@ -83,7 +83,7 @@
 				<tbody>
 				{% for item in order.items %}
 					<tr>
-						<td>{{ item.productName }}</td>
+						<td>{{ item.productName }} ({{ item.options }})</td>
 
 						{% if item.status.code == 1000 %}
 							<td>Sent</td>
@@ -134,12 +134,11 @@
 			</div>
 			<div class="label return-address">
 				<span>RETURNS:</span>
-				<span>Mothership Site</span>
-				<span>Address 1</span>
-				<span>Address 2</span>
-				<span>City</span>
-				<span>Post Code</span>
-				<span>Country</span>
+				<span>{{ app.cfg.merchant.companyName }}</span>
+				<span>{{ app.cfg.merchant.address.lines }}</span>
+				<span>{{ app.cfg.merchant.address.town }}</span>
+				<span>{{ app.cfg.merchant.address.postcode }}</span>
+				<span>{{ app.cfg.merchant.address.countryId }}</span>
 			</div>
 		</div>
 	</div>

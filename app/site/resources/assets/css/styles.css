@@ -476,7 +476,7 @@
     display: none;
 }
 
-.carousel .dots {
+.carousel .indicators {
     position: absolute;
     bottom: 10px;
     right: 0;
@@ -486,7 +486,7 @@
     padding: 0;
 }
 
-.carousel .dots li {
+.carousel .indicators li {
     display: inline-block;
     width: 15px;
     height: 15px;
@@ -496,12 +496,7 @@
     box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
 }
 
-.carousel .dots li a {
-    display: block;
-    text-indent: -999em;
-}
-
-.carousel .dots li.active {
+.carousel .indicators li.active {
     background: #333;
 }
 
@@ -703,6 +698,24 @@ article .image figcaption {
     font-size: 0.8em;
     color: #666; 
 }
+
+/*    Filter
+/* ------------------------------------------------------- */
+
+.filter {
+    background: #EEE;
+    padding: 20px;
+}
+
+.filter .field label {
+    font-weight: normal;
+}
+
+.loading article,
+.loading .filter {
+    opacity: .5;
+}
+
 
 /*    Comments
 /* ------------------------------------------------------- */

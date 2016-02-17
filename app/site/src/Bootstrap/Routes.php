@@ -23,7 +23,12 @@ class Routes implements RoutesInterface, ContainerAwareInterface
 		// Call $this->enableSSL($router) here if the live site has an SSL certificate
 
 		$router->add('app.subscribe.action', '/mailing-list/subscribe', 'Mothership:Site::Controller:Module:Subscribe#subscribeAction')
-			->setMethod('POST');
+			->setMethod('POST')
+		;
+
+		$router->add('app.blog.listing', '/blog-listing/{page}/{filters}', 'Mothership:Site::Controller:Module:Blog#blogListing')
+			->setMethod('GET')
+		;
 	}
 
 	public function enableSSL($router)

@@ -1,14 +1,38 @@
 {% extends 'Mothership:Site::templates/base' %}
 
+{% block javascripts %}
+	{{ parent() }}
+
+	<script>
+		$(document).ready(function () {
+			filterPages('{{ url('app.blog.listing', {page: page.id, filters: 'app.page_filters'}) }}', '#blog-listing');
+		});
+	</script>
+{% endblock %}
+
 {% block content %}
-	<main class="content generic"  id="content" role="main">
+	
+	<main class="content generic" id="content" role="main">
 		<div class="row">
 			<div class="col-12">
 				<h1>{{ page.title }}</h1>
-				{{ render(controller('Mothership:Site::Controller:Module:Blog#blogListing', {
-					page: page
+			</div>					
+		</div>	
+		<div class="row">
+			<div class="col-9">
+				<section id="blog-listing">
+					{{ render(controller('Mothership:Site::Controller:Module:Blog#blogListing', {
+						page: page,
+						filters: 'app.page_filters'
+					})) }}
+				</section>
+			</div>
+			<div id="filter-form" class="col-3 filter">
+				{{ render(controller('Message:Mothership:CMS::Controller:Module:PageFilter#filterForm', {
+					filters: 'app.page_filters'
 				})) }}
 			</div>
 		</div>
 	</main>
+
 {% endblock %}

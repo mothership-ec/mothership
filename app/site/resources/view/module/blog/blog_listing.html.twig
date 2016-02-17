@@ -1,6 +1,5 @@
 {% import 'Mothership:Site::macro:authorship' as auth %}
 
-<section>
 {% for page in pages %}
 	<article class="row">
 		<div class="col-3 no-gutter">
@@ -8,11 +7,11 @@
 			{% if page.content.images.get(0).image %}
 				<a href="{{ page.slug }}">
 					{{ getResizedImage(page.content.images.get(0).image, 710, 'AUTO') }}
-				</a>	
+				</a>
 			{% endif %}
 			</a>
 		</div>
-		
+
 		<div class="col-9">
 			<h1><a href="{{ page.slug }}">{{ page.title }}</a></h1>
 			<span class="post-meta">
@@ -24,11 +23,11 @@
 									page: page
 								}))
 							}}
-					</div>	
+					</div>
 			</span>
 			<div class="description">
-				{{ ((page.content.description.value ?: page.content.body.value)|length > 300 
-					? page.content.description.value ?: page.content.body.value|slice(0, 300) ~ '...' 
+				{{ ((page.content.description.value ?: page.content.body.value)|length > 300
+					? page.content.description.value ?: page.content.body.value|slice(0, 300) ~ '...'
 					: page.content.description.value ?: page.content.body.value) | raw }}
 			</div>
 		</div>
@@ -36,7 +35,7 @@
 {% endfor %}
 
 {% if pagination %}
-<div class="pagination">
+<div class="pagination" id="pagination-menu">
 	{% if pagination.hasPreviousPage() %}
 		<a href="?list-page={{ pagination.getPreviousPage() }}" class="newer">Previous</a>
 	{% else %}
@@ -100,5 +99,3 @@
 	{% endif %}
 </div>
 {% endif %}
-</section>
-

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d6de8a2cf3f6dc7b84ad2c2c20126cba",
-    "content-hash": "a282fe304e84cda4465c938cff8a2088",
+    "hash": "dd9110dacbbc8f237de597952431c8a1",
+    "content-hash": "e44ce7fa11cc6017d6d4971166a9a771",
     "packages": [
         {
             "name": "dflydev/markdown",
@@ -1011,16 +1011,16 @@
         },
         {
             "name": "mothership-ec/cog-mothership-commerce",
-            "version": "5.17.2",
+            "version": "5.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog-mothership-commerce.git",
-                "reference": "d0a88c09d9acb436cd83992e0f0c15d5dac4cc3a"
+                "reference": "833ca13bc578f300d40d322afdfcb24dd90648e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-commerce/zipball/d0a88c09d9acb436cd83992e0f0c15d5dac4cc3a",
-                "reference": "d0a88c09d9acb436cd83992e0f0c15d5dac4cc3a",
+                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-commerce/zipball/833ca13bc578f300d40d322afdfcb24dd90648e3",
+                "reference": "833ca13bc578f300d40d322afdfcb24dd90648e3",
                 "shasum": ""
             },
             "require": {
@@ -1034,7 +1034,7 @@
                 "php": ">=5.4.0"
             },
             "require-dev": {
-                "mockery/mockery": "dev-master@dev"
+                "mockery/mockery": "~0.9"
             },
             "type": "library",
             "autoload": {
@@ -1064,7 +1064,7 @@
                 "orders",
                 "products"
             ],
-            "time": "2016-01-22 15:00:04"
+            "time": "2016-02-03 12:23:42"
         },
         {
             "name": "mothership-ec/cog-mothership-cp",

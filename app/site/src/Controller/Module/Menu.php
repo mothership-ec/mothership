@@ -18,7 +18,12 @@ class Menu extends Controller
 			->includeDeleted(false)
 			->includeUnpublished(false)
 			->getChildren($page);
-		$pages = ($pages) ? (array) $pages : [];
+
+		$pages = $pages ? $pages : [];
+
+		if (!is_array($pages)) {
+			$pages = [$pages];
+		}
 
 		if ($currentPage && (null === $active)) {
 			$this->_setActiveItems($currentPage);
@@ -37,7 +42,12 @@ class Menu extends Controller
 	public function footer()
 	{
 		$pages = $this->get('cms.page.loader')->getByTag(self::FOOTER_TAG);
-		$pages = ($pages) ? (array) $pages : [];
+
+		$pages = $pages ? $pages : [];
+
+		if (!is_array($pages)) {
+			$pages = [$pages];
+		}
 
 		$children = [];
 

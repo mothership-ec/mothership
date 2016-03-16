@@ -89,7 +89,10 @@ class Services implements ServicesInterface
 		// CMS
 
 		$services['app.shop.product_page_loader'] = function ($c) {
-			return new \Mothership\Site\Shop\ProductPageLoader($c['cms.page.loader'], $c['cms.page.content_loader']);
+			return new \Mothership\Site\Shop\ProductPageLoader(
+				$c['cms.page.loader']->includeUnpublished(false)->includeDeleted(false),
+				$c['cms.page.content_loader']
+			);
 		};
 	}
 }

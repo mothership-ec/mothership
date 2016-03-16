@@ -35,6 +35,11 @@ class Blog extends Controller
 
 	protected function _sortPages($pages, $sort = null)
 	{
+		// Pre-load content to prevent errors with data changing in usort() call
+		foreach ($pages as $page) {
+			$page->getContent();
+		}
+
 		if ($sort === null) {
 			usort($pages, function($a, $b) {
 				if (!$a instanceof Page\Page || !$b instanceof Page\Page) {

@@ -1,18 +1,24 @@
 <section class="product-listing">
 	<div class="row">
 		{% for key, page in pages %}
-			{% set image = page.content.gallery.all[0].image ?: 
-				page.content.product.product.product.getImage('default', {
-					(page.content.product.option.name) : page.content.product.option.value
-				}) 
+			{% set product = page.content.product.product.product %}
+			{% set options = page.content.product.option.value ? {
+				(page.content.product.option.name) : page.content.product.option.value
+			} : null %}
+			{% set image = page.content.gallery.all[0].image ?:
+				product.getImage('default', options)
 			%}
 			<div class="product col-3">
 				<a href="{{ page.slug }}">
 					{{ getResizedImage(image, 360,455) }}
-					<h3>{{ page.content.product.product.product.displayName }}</h3>
+					<h3>{{ product.displayName ?: product.name }}</h3>
+					{% if options %}
 					<h5>{{ page.content.product.option.value }}
-						<span class="price">{{ page.content.product.product.product.getPrice | price }}</span>
+						<span class="price">{{ product.getOptionPrice(options) | price }}</span>
 					</h5>
+					{% else %}
+						<h5><span class="price">{{ product.getPrice | price }}</span></h5>
+					{% endif %}
 				</a>
 			</div>
 		{% endfor %}

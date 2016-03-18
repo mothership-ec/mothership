@@ -18,6 +18,7 @@ class App extends \Message\Cog\Application\Loader
 			'Message\\Mothership\\Voucher',
 			'Message\\Mothership\\Discount',
 			'Message\\Mothership\\Report',
+			'Message\\Mothership\\Mailing',
 			'Mothership\\Site',
 		];
 	}

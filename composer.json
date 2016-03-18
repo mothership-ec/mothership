@@ -28,7 +28,8 @@
 	"mothership-ec/cog-mothership-discount"  : "~2.0",
 	"mothership-ec/cog-mothership-returns"   : "~5.0",
 	"mothership-ec/cog-mothership-voucher"   : "~2.0",
-	"mothership-ec/cog-mothership-reports"   : "~2.0"
+	"mothership-ec/cog-mothership-reports"   : "~2.0",
+	"mothership-ec/cog-mothership-mailing"   : "~1.1"
   },
   "config": {
 	"bin-dir": "bin"

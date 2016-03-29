@@ -1160,7 +1160,11 @@ a.forgotten-password {
 }
 
 .ms-cookie-warning a {
-    color: #333;
+    color: #999;
+}
+
+.ms-cookie-warning a:hover {
+    color: #000;
 }
 
 .ms-cookie-warning .cookie-agree {
@@ -1177,6 +1181,7 @@ a.forgotten-password {
 
 .ms-cookie-warning .cookie-agree:hover  {
     background: rgba(0,0,0,1);
+    color: #fff;
 }
 
 

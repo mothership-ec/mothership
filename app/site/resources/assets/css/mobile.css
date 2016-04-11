@@ -75,8 +75,8 @@
 		font-size: 2em;
 		cursor: pointer;
 		position: absolute;
-		top: 7px;
-		left: 0;
+		top: 20px;
+		left: 10px;
 	}
 
 	.nav-close {
@@ -87,8 +87,9 @@
 		font-size: 2em;
 		cursor: pointer;
 		position: absolute;
-		top: 17px;
+		top: 12px;
 		right: 5px;
+		color: #333;
 	}
 
 	.shop-access {
@@ -96,31 +97,33 @@
 		top: 0;
 		left: 0;
 		width: 100%;
-		max-width: 300px;
-		background: #EEE;
-		padding: 19px 15px 18px;
-		border-bottom: 1px solid #333;
-		z-index: 1000;
+		max-width: 200px;
+		padding: 19px 15px 0;
+		z-index: 1;
+		margin-left: -200px;
+		background: #eee;
 	}
 
-	.nav-offcanvas {
-		margin-left: -300px;
+
+	.nav-offcanvas,
+	.shop-access {
+		margin-left: -200px;
 	}
 
 	.nav-open i {
-		font-size: 0.75em;
+		font-size: 1em;
+		color: #333;
+		display: block;
 	}
 
 	.navigation {
 		position: fixed;
-		top: 53px;
+		top: 80px;
 		bottom: 0;
 		left: 0;
 		width: 100%;
-		max-width: 300px;
-		padding-top: 20px;
-		background: #b4b0a6;
-		z-index: 9999;
+		max-width: 200px;
+		padding: 0;
 	}
 
 	.navigation ol {
@@ -137,11 +140,15 @@
 	.navigation a,
 	.navigation a:hover {
 		border: none;
+		width: 100%;
+		padding: 10px 20px;
+		text-align: left;
 	}
 
 	.navigation .current > a,
 	.navigation a.current {
-	    color: #be8e2d;
+	    width: 100%;
+	    display: block;
 	    position: relative;
 	}
 
@@ -167,12 +174,11 @@
 		padding: 0 0 20px;
 	}
 
-	/* Sub navigation */
+		/* Sub navigation */
 
 	.subnav-wrapper,
 	.sub-navigation {
 	    position: absolute;
-	    z-index: 1000;
 	    left: 0;
 	    right: 0;
 
@@ -183,11 +189,24 @@
     
 	    padding: 10px 0;
 
-	    background: #b4b0a6;
+	    background: #eee;
+	}
+
+	.subnav-wrapper .sub-navigation {
+		position: relative;
 	}
 
 	.sub-navigation ul {
-	    margin: 0;
+	    margin-top: 100px;
+	}
+
+	.subnav-wrapper {
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+
+	::-webkit-scrollbar {
+	    width: 0;
 	}
 
 	.subnav-wrapper li {
@@ -195,53 +214,79 @@
 	    font-size: 0.85em;
 	    margin-bottom: 0;
 	    display: block;
+	    text-align: left;
 	}
 
 	.subnav-wrapper a  {
 	    text-decoration: none;
-		color: #121212;
+		color: #FFF;
 		font-size: 16px;
-
+		padding: 0 10px;
 	}
 
 	.subnav-wrapper {
     	width: 100%;
     	height: 100%;
     	position: fixed;
-		top: 55px;
-	    z-index: 9999;
-
-	    width: 300px;
-
+    	top:49px;
+		padding-top: 10px;
+	    background: #eee;
+	    width: 200px;
+		z-index: 10;
 	    display: none;
 
-	    -webkit-transition: margin .2s;
-	         -o-transition: margin .2s;
-	            transition: margin .2s;
+	    -webkit-transition: margin 0s;
+	         -o-transition: margin 0s;
+	            transition: margin 0s;
+
+	    box-sizing: border-box;
+	   	border: 0;
 	}
 
-	.sub-navigation .current a,
-	.subnav-wrapper .current a {
-	    color: #3071a9;
-	}
-
-	.subnav-wrapper ol {
+	.subnav-wrapper ul {
+	    padding: 0;
+	    float: left;
 	    width: 100%;
-	    margin: auto;
-	    list-style: none;
-
-	    padding-left: 0px;
 	}
 
-	a.mobile-back {
+	.subnav-wrapper ul li {
+		padding: 0;
+	}
+
+	.subnav-wrapper li a {
+		color: #333;
+		padding: 10px 20px;
+		display: block;
+	}
+
+	.subnav-wrapper ul li.shop-menu {
+		margin-right: 0;
+	}
+
+	.subnav-wrapper li.cat {
+		display: block;
+	}
+
+	.subnav-wrapper ul:first-of-type li {
+		width: 100%;
+	}
+
+	.subnav-wrapper form,
+	.subnav-wrapper .search form {
+		margin: 15px 0;
+	}
+
+	.subnav-wrapper ul li.shop-menu .sub-navigation li {
+		white-space: normal;
+	}
+
+	.nav-close {
 		position: absolute;
 		top: 0;
 		right: 0;
-		width: 90px;
-		height: 55px;
-		background: #707172;
+		padding: 12px 30px;
+		background: #4a5258;
 		display: block;
-		line-height: 50px;
 		font-size: 0.86em;
 		text-align: center;
 		display: block;
@@ -250,9 +295,28 @@
 		cursor: pointer;
 	}
 
-	a.mobile-back:hover {
-		opacity: 1;
-		text-decoration: none;
+	.nav-close:hover {
+		background: ##4a5258;
+	}
+
+	.mobile-back {
+		display: none;
+		position: absolute;
+		padding: 30px 10px;
+		top: -87px;
+		right: 0;
+		cursor: pointer;
+		width: 200px;
+		background: #eee;
+		float: none;
+		z-index: 99999 !important;
+	}
+
+	.mobile-back:hover {
+		border: none;
+	    width: inherit;
+	    padding: 30px 10px;
+	    text-align: inherit;
 	}
 
 	.basket-icon {

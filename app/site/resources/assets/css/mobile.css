@@ -58,7 +58,12 @@
 
 	.search form {
 		float: left;
+		width: 100%;
 	}
+
+	.search.form-inline .field {
+	 	width: 100%;
+	 }
 
 	.search label {
 		display: none;
@@ -76,8 +81,8 @@
 		font-size: 2em;
 		cursor: pointer;
 		position: absolute;
-		top: 20px;
-		left: 10px;
+		top: 10px;
+		left: 0;
 	}
 
 	.nav-close {
@@ -99,18 +104,6 @@
 		left: 0;
 		width: 100%;
 		max-width: 200px;
-<<<<<<< Updated upstream
-		padding: 19px 15px 0;
-		z-index: 1;
-		margin-left: -200px;
-		background: #eee;
-	}
-
-
-	.nav-offcanvas,
-	.shop-access {
-		margin-left: -200px;
-=======
 		background: #EEE;
 		padding: 19px 15px 18px;
 		border-bottom: 1px solid #333;
@@ -246,7 +239,7 @@
 		padding-top: 10px;
 	    background: #eee;
 	    width: 200px;
-		z-index: 10;
+		z-index: 99999;
 	    display: none;
 	    width: 200px;
 	   	border: 0;
@@ -312,20 +305,21 @@
 		display: none;
 		position: absolute;
 		padding: 30px 10px;
-		top: -87px;
+		top: -112px;
 		right: 0;
 		cursor: pointer;
 		width: 200px;
 		background: #eee;
 		float: none;
 		z-index: 99999 !important;
+		text-align: center;
 	}
 
 	.mobile-back:hover {
 		border: none;
 	    width: inherit;
 	    padding: 30px 10px;
-	    text-align: inherit;
+	    text-align: center;
 	}
 
 	.basket-icon {

@@ -16,6 +16,7 @@ jQuery(document).ready(function($) {
 		link      = $('.nav-open'),
 		icon      = $('.nav-open i'),
 		close     = $('.close'),
+		backLink  = $('.mobile-back'),
 		offSet    = -200,
 		open      = false,
 		mobile    = false;
@@ -50,6 +51,9 @@ jQuery(document).ready(function($) {
 			navigation.animate({'marginLeft': offSet}, 250);
 
 			icon.removeClass('fa-close').addClass('fa-bars');
+
+			backLink.hide();
+			$('.subnav-wrapper').hide();
         }
 	}
 
@@ -84,10 +88,8 @@ jQuery(document).ready(function($) {
 		// Check if the site is below 924px width
 		if (window.innerWidth <= 924) {
 			mobile = true;
-			// navigation.animate({'marginLeft': offSet}, 0);
 		} else {
 			mobile = false;
-			// navigation.css('margin-left', 'auto');
 		}
 	}
 
@@ -96,7 +98,7 @@ jQuery(document).ready(function($) {
         if(($(window).width() != width) && (window.innerWidth <= 924)){
             closeCanvas();
         } else if (($(window).width() != width) && (window.innerWidth >= 924)) {
-        	navigation.css('padding-left', '270');
+        	navigation.css('margin-left', '0');
         }
     });
 

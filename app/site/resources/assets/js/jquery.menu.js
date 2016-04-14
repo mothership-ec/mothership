@@ -40,6 +40,7 @@ jQuery(document).ready(function($) {
 			mobile = false;
 		}
 	
+
 	// Insert the subnavigation wrapper
 	navigation.after('<div class="subnav-wrapper"></div>');
 	var wrapper = $('.subnav-wrapper');
@@ -52,6 +53,7 @@ jQuery(document).ready(function($) {
 	});
 
 	backLink.hide();
+
 
 	// Click on main navigation
 	navLink.on('click', function() {

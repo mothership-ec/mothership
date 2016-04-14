@@ -12,11 +12,10 @@
 jQuery(document).ready(function($) {
 
 	var container = $('.inner-container'),
-		navigation    = $('.nav-offcanvas'),
+		navigation    = $('.nav-offcanvas, .icons'),
 		link      = $('.nav-open'),
 		icon      = $('.nav-open i'),
 		close     = $('.close'),
-		backLink = $('.mobile-back'),
 		offSet    = -200,
 		open      = false,
 		mobile    = false;
@@ -51,7 +50,6 @@ jQuery(document).ready(function($) {
 			navigation.animate({'marginLeft': offSet}, 250);
 
 			icon.removeClass('fa-close').addClass('fa-bars');
-			backLink.hide();
         }
 	}
 

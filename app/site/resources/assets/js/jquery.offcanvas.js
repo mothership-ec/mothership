@@ -102,7 +102,6 @@ jQuery(document).ready(function($) {
         }
     });
 
-	// $(window).on('resize-end', checkMobile);
 	$(window).on('resize', checkMobile);
 
 });

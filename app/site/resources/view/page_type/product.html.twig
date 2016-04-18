@@ -29,12 +29,6 @@
 				{% endblock %}
 			</div>
 		</div>
-		<div class="row">
-			{# Product tabs #}
-			{% block tabs %}
-				{% include 'Mothership:Site::module:product:tabs' %}
-			{% endblock %}
-		</div>
 		{# Cross sell #}
 		{{
 			render(controller('Mothership:Site::Controller:Module:Shop#crossSell', {

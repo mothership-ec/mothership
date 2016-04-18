@@ -37,35 +37,25 @@ jQuery(document).ready(function($) {
     // Set JS class
     $('.no-js').removeClass('no-js').addClass('js');
 
-	// Insets the tabs menu
-	$('.tabs').prepend('<nav class="tab-menu"><ul><li class="details"><a href="#details">Details</a></li></ul></nav>');
 
-	if ($('.fitting').is(':visible')) {
-		$('.tab-menu ul').append('<li class="fitting"><a href="#fitting">Fitting guide</a></li>');
-	}
+	// Scroll to top button
+	$('.top').on('click', function(){
+		$('html, body').animate({scrollTop : 0},800);
+		return false;
+	});
 
-	if ($('.shipping').is(':visible')) {
-		$('.tab-menu ul').append('<li class="shipping"><a href="#shipping">Shipping &amp; returns</a></li>');
-	}
+	// Tabs 
 
-	// product page tab
-	(function(){
-		$('.tab-menu a').click(function(){
-			if($(this).hasClass('current')) {
-				return false;
-			}
 
-			$('.tab-menu .current').removeClass('current');
-			$('.tabs > div').hide();
-			$('.tabs div.'+$(this).parent().attr('class')).show();
-			$(this).parent().addClass('current');
+	$('ul.tabs li').click(function(){
+		var tab_id = $(this).attr('data-tab');
 
-			return false;
-		});
-		// select the first tab
-		$('.tab-menu li:first-child a').click();
-	})();
+		$('ul.tabs li').removeClass('current');
+		$('.tab-content').removeClass('current');
 
+		$(this).addClass('current');
+		$("#"+tab_id).addClass('current');
+	})
 
 
 	// Returns Toggle

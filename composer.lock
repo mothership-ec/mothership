@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "d6de8a2cf3f6dc7b84ad2c2c20126cba",
-    "content-hash": "a282fe304e84cda4465c938cff8a2088",
+    "hash": "69c734676bb1f0c66251b7aab0c7decd",
+    "content-hash": "e275854ff3053e5c13b4c47cde40ec02",
     "packages": [
         {
             "name": "dflydev/markdown",
@@ -1011,16 +1011,16 @@
         },
         {
             "name": "mothership-ec/cog-mothership-commerce",
-            "version": "5.17.2",
+            "version": "5.17.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog-mothership-commerce.git",
-                "reference": "d0a88c09d9acb436cd83992e0f0c15d5dac4cc3a"
+                "reference": "ca35a66a5a2aaf6193b763e045efe73513bf3ac1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-commerce/zipball/d0a88c09d9acb436cd83992e0f0c15d5dac4cc3a",
-                "reference": "d0a88c09d9acb436cd83992e0f0c15d5dac4cc3a",
+                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-commerce/zipball/ca35a66a5a2aaf6193b763e045efe73513bf3ac1",
+                "reference": "ca35a66a5a2aaf6193b763e045efe73513bf3ac1",
                 "shasum": ""
             },
             "require": {
@@ -1064,7 +1064,7 @@
                 "orders",
                 "products"
             ],
-            "time": "2016-01-22 15:00:04"
+            "time": "2016-01-11 11:39:19"
         },
         {
             "name": "mothership-ec/cog-mothership-cp",
@@ -1169,16 +1169,16 @@
         },
         {
             "name": "mothership-ec/cog-mothership-ecommerce",
-            "version": "3.7.2",
+            "version": "3.7.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog-mothership-ecommerce.git",
-                "reference": "7055ab3fe20f5b600010646d73322fa6eddd11d7"
+                "reference": "6c566f70909dc3e945f789bc8f06c0ee2e5706c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-ecommerce/zipball/7055ab3fe20f5b600010646d73322fa6eddd11d7",
-                "reference": "7055ab3fe20f5b600010646d73322fa6eddd11d7",
+                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-ecommerce/zipball/6c566f70909dc3e945f789bc8f06c0ee2e5706c3",
+                "reference": "6c566f70909dc3e945f789bc8f06c0ee2e5706c3",
                 "shasum": ""
             },
             "require": {
@@ -1191,7 +1191,7 @@
                 "php": ">=5.4.0"
             },
             "require-dev": {
-                "mockery/mockery": "~0.9"
+                "mockery/mockery": "dev-master"
             },
             "suggest": {
                 "mothership-ec/cog-mothership-stripe": "The Stripe gateway integration for Mothership"
@@ -1224,7 +1224,7 @@
                 "orders",
                 "products"
             ],
-            "time": "2016-01-28 16:36:32"
+            "time": "2016-01-06 14:52:58"
         },
         {
             "name": "mothership-ec/cog-mothership-file-manager",
@@ -1329,16 +1329,16 @@
         },
         {
             "name": "mothership-ec/cog-mothership-returns",
-            "version": "5.3.0",
+            "version": "5.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mothership-ec/cog-mothership-returns.git",
-                "reference": "b46d3175451bb59acae6842a0ead12eab2ebf2a5"
+                "reference": "bdd510843bb747b7d274fea05287602bc7b81a42"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-returns/zipball/b46d3175451bb59acae6842a0ead12eab2ebf2a5",
-                "reference": "b46d3175451bb59acae6842a0ead12eab2ebf2a5",
+                "url": "https://api.github.com/repos/mothership-ec/cog-mothership-returns/zipball/bdd510843bb747b7d274fea05287602bc7b81a42",
+                "reference": "bdd510843bb747b7d274fea05287602bc7b81a42",
                 "shasum": ""
             },
             "require": {
@@ -1377,7 +1377,7 @@
                 "products",
                 "returns"
             ],
-            "time": "2016-01-28 16:02:23"
+            "time": "2015-12-08 14:26:35"
         },
         {
             "name": "mothership-ec/cog-mothership-user",
@@ -1664,16 +1664,16 @@
         },
         {
             "name": "omnipay/common",
-            "version": "v2.4.1",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/omnipay-common.git",
-                "reference": "5a618b4083a63b2e1405529d16c8d546a6788921"
+                "reference": "8e396e9af39d2b0176e9a05a764a5afce8ad21ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/omnipay-common/zipball/5a618b4083a63b2e1405529d16c8d546a6788921",
-                "reference": "5a618b4083a63b2e1405529d16c8d546a6788921",
+                "url": "https://api.github.com/repos/thephpleague/omnipay-common/zipball/8e396e9af39d2b0176e9a05a764a5afce8ad21ef",
+                "reference": "8e396e9af39d2b0176e9a05a764a5afce8ad21ef",
                 "shasum": ""
             },
             "require": {
@@ -1692,6 +1692,7 @@
                 "gateways": [
                     "AuthorizeNet_AIM",
                     "AuthorizeNet_SIM",
+                    "Buckaroo",
                     "Buckaroo_Ideal",
                     "Buckaroo_PayPal",
                     "CardSave",
@@ -1756,7 +1757,7 @@
                 "payment",
                 "purchase"
             ],
-            "time": "2016-01-27 03:04:53"
+            "time": "2015-10-27 19:40:30"
         },
         {
             "name": "pimple/pimple",
@@ -2488,16 +2489,16 @@
         },
         {
             "name": "symfony/polyfill-intl-icu",
-            "version": "v1.1.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-icu.git",
-                "reference": "66b0bb4abda229bc073eff6bbc8f2685bdaac165"
+                "reference": "2deb44160e1c886241c06602b12b98779f728177"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-icu/zipball/66b0bb4abda229bc073eff6bbc8f2685bdaac165",
-                "reference": "66b0bb4abda229bc073eff6bbc8f2685bdaac165",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-icu/zipball/2deb44160e1c886241c06602b12b98779f728177",
+                "reference": "2deb44160e1c886241c06602b12b98779f728177",
                 "shasum": ""
             },
             "require": {
@@ -2507,7 +2508,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "1.0-dev"
                 }
             },
             "autoload": {
@@ -2539,20 +2540,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-01-20 09:13:37"
+            "time": "2015-11-04 20:28:58"
         },
         {
             "name": "symfony/polyfill-php54",
-            "version": "v1.1.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php54.git",
-                "reference": "74663d5a2ff3c530c1bc0571500e0feec9094054"
+                "reference": "2c9f6d98eb30dc04fe0b06f9cc92a55acea5bdcc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php54/zipball/74663d5a2ff3c530c1bc0571500e0feec9094054",
-                "reference": "74663d5a2ff3c530c1bc0571500e0feec9094054",
+                "url": "https://api.github.com/repos/symfony/polyfill-php54/zipball/2c9f6d98eb30dc04fe0b06f9cc92a55acea5bdcc",
+                "reference": "2c9f6d98eb30dc04fe0b06f9cc92a55acea5bdcc",
                 "shasum": ""
             },
             "require": {
@@ -2561,7 +2562,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "1.0-dev"
                 }
             },
             "autoload": {
@@ -2597,20 +2598,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-01-20 09:13:37"
+            "time": "2015-11-04 20:28:58"
         },
         {
             "name": "symfony/polyfill-php55",
-            "version": "v1.1.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php55.git",
-                "reference": "b4f3f07d91702f8f926339fc4fcf81671d8c27e6"
+                "reference": "3adc962a6250c02adb508e85ecfa6fcfee9eec47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php55/zipball/b4f3f07d91702f8f926339fc4fcf81671d8c27e6",
-                "reference": "b4f3f07d91702f8f926339fc4fcf81671d8c27e6",
+                "url": "https://api.github.com/repos/symfony/polyfill-php55/zipball/3adc962a6250c02adb508e85ecfa6fcfee9eec47",
+                "reference": "3adc962a6250c02adb508e85ecfa6fcfee9eec47",
                 "shasum": ""
             },
             "require": {
@@ -2620,7 +2621,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1-dev"
+                    "dev-master": "1.0-dev"
                 }
             },
             "autoload": {
@@ -2653,7 +2654,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-01-20 09:13:37"
+            "time": "2015-11-04 20:28:58"
         },
         {
             "name": "symfony/process",

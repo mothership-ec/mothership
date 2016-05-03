@@ -12,8 +12,31 @@ jQuery(document).ready(function($) {
 	    resizeTimeout = setTimeout(function(){$(window).trigger('resize-end')}, 500);
 	});
 
+	var mobile = false;
+
+    if (window.innerWidth <= 768) {
+        mobile = true;
+    } else {
+        mobile = false;
+    }
+
+	 var stickyFooter = function(){
+    	var marginals = $('.header').height() + $('.footer').height(),
+    		winHeight = $(window).height(),
+    		content = $('main.content');
+
+        if (mobile == false) {
+            content.css('min-height',  winHeight - marginals);
+        } 
+    }
+
+    $(window).on('load', stickyFooter);
+    $(window).on('resize', stickyFooter);
+
+
     // Set JS class
     $('.no-js').removeClass('no-js').addClass('js');
+
 
 	// Scroll to top button
 	$('.top').on('click', function(){
@@ -22,6 +45,7 @@ jQuery(document).ready(function($) {
 	});
 
 	// Tabs 
+
 
 	$('ul.tabs li').click(function(){
 		var tab_id = $(this).attr('data-tab');

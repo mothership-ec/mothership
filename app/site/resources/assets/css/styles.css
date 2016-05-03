@@ -288,6 +288,36 @@
 
     margin: 0;
     width: auto;
+    position: relative;
+}
+
+.search button {
+    border: 0;
+    background: none;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.search button:before {
+    content: '\f002';
+    font-family: "FontAwesome";
+    font-size: 16px;
+    margin-right: 20px;
+    display: block;
+    line-height: 0;
+    padding: 10px 5px;
+    width: 20px;
+    height: 20px;
+}
+
+.search input,
+ .form-inline input[type='search'] {
+    margin-right: 0;
 }
 
 
@@ -1062,7 +1092,6 @@ article .image figcaption {
 .footer {
     position: relative;
     z-index: 2;
-    padding-bottom: 20px;
 
     float: left;
 

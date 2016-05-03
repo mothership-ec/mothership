@@ -11,11 +11,13 @@
 
 jQuery(document).ready(function($) {
 
-	var container = $('#container'),
-		navigation    = $('.nav-offcanvas'),
+	var container = $('.inner-container'),
+		navigation    = $('.nav-offcanvas, .icons'),
 		link      = $('.nav-open'),
+		icon      = $('.nav-open i'),
 		close     = $('.close'),
-		offSet    = -300,
+		backLink  = $('.mobile-back'),
+		offSet    = -200,
 		open      = false,
 		mobile    = false;
 
@@ -32,6 +34,8 @@ jQuery(document).ready(function($) {
 
 			container.animate({'left': -offSet}, 250);
 			navigation.animate({'marginLeft': 0}, 250);
+			container.css('overflow', 'hidden');
+			icon.removeClass('fa-bars').addClass('fa-close');
 		}
 
 	}
@@ -45,6 +49,11 @@ jQuery(document).ready(function($) {
 
 			container.animate({'left': 0}, 250);
 			navigation.animate({'marginLeft': offSet}, 250);
+
+			icon.removeClass('fa-close').addClass('fa-bars');
+
+			backLink.hide();
+			$('.subnav-wrapper').hide();
         }
 	}
 
@@ -58,8 +67,10 @@ jQuery(document).ready(function($) {
 
 		if (open === false) {
 			openCanvas(canvasTarget, canvasDir);
+			
 		} else {
 			closeCanvas();
+		
 		}
 
 	});
@@ -71,35 +82,26 @@ jQuery(document).ready(function($) {
 		closeCanvas();
 	});
 
-		// Swipe to close navigation
-	$(function() {
-		//Enable swiping...
-		$('.nav-offcanvas').swipe( {
-
-			//Generic swipe handler for all directions
-			swipeRight:function(event, direction, distance, duration) {
-				if (open === true) {
-					closeCanvas();
-				}
-			},
-			//Default is 75px, set to 0 for demo so any distance triggers swipe
-			threshold: 100
-		});
-	});
 
 	var checkMobile = function() {
 
-		// Check if the site is below 768px width
-		if (window.innerWidth <= 768) {
+		// Check if the site is below 924px width
+		if (window.innerWidth <= 924) {
 			mobile = true;
-			navigation.animate({'marginLeft': offSet}, 0);
 		} else {
 			mobile = false;
-			navigation.css('margin-left', 'auto');
 		}
 	}
 
-	// $(window).on('resize-end', checkMobile);
+	var width = $(window).width();
+    $(window).resize(function(){
+        if(($(window).width() != width) && (window.innerWidth <= 924)){
+            closeCanvas();
+        } else if (($(window).width() != width) && (window.innerWidth >= 924)) {
+        	navigation.css('margin-left', '0');
+        }
+    });
+
 	$(window).on('resize', checkMobile);
 
 });

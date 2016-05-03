@@ -13,23 +13,53 @@ jQuery(document).ready(function($) {
 
 	// Set all required variables
 	var navigation = $('.navigation'),
-		navLink    = navigation.find('ul > li > a'),
-		backLink   = $('.mobile-back'),
+		header  = $('.header'),
+		navLink    = header.find('ul > li > a, .mailing-icon, .search-icon'),
+		subscribe  = $('#subscribe ul'),
+		offSet     = -300,
+		mobile = false,
 		open 	   = false;
+
+	var checkMobile = function() {
+
+		// Check if the site is below 768px width
+		if (window.innerWidth <= 768) {
+			mobile = true;
+		} else {
+			mobile = false;
+		}
+	}
+
+	$(window).on('resize-end', checkMobile);
+	$(window).on('resize', checkMobile);
+
+	// Check if the site is below 768px width
+		if (window.innerWidth <= 768) {
+			mobile = true;
+		} else {
+			mobile = false;
+		}
+	
 
 	// Insert the subnavigation wrapper
 	navigation.after('<div class="subnav-wrapper"></div>');
 	var wrapper = $('.subnav-wrapper');
 
-	backLink.css({
-		zIndex: '-9999'
-	})
+	var backLink = $('.mobile-back')
+
+	backLink.on('click', function() {
+		backLink.hide();
+		open = false;
+	});
+
+	backLink.hide();
+
 
 	// Click on main navigation
 	navLink.on('click', function() {
 
 		var self = $(this),
-			subnav = self.parent().find('.sub-navigation ul');
+			subnav = self.parent().find('.sub-navigation ul').first();
 
 		// Allow clicks on links without sub navigation
 		if(!self.siblings('.sub-navigation').length) {
@@ -45,9 +75,9 @@ jQuery(document).ready(function($) {
 
 			open = self.data('pushid');
 
-			backLink.css({
-				zIndex: '999999'
-			})
+			if (window.innerWidth <= 768) {
+				backLink.show();
+			} 	
 
 		}
 
@@ -59,17 +89,20 @@ jQuery(document).ready(function($) {
 			wrapper.slideUp(500, callback);
 
 			open = false;
-
 		}
-		$(window).unbind('resize.offcanvas');
-		$(window).on('resize.offcanvas', function(){closeNav.call(this)});
 
-		// Open and close if statement
+		var width = $(window).width();
+   		$(window).resize(function(){
+        if($(window).width() != width){
+            $(window).unbind('resize.offcanvas');
+			$(window).on('resize.offcanvas', function(){closeNav.call(this)});
+        }
+    	});
+		
 		if (open !== false) {
 			if (open !== self.data('pushid')){
 				closeNav(openNav);
 			}else {
-
 				closeNav();
 			}
 		} else if (open === false) {
@@ -80,14 +113,28 @@ jQuery(document).ready(function($) {
 		return false;
 	});
 
-	$('.mobile-back').on('click', function() {
-		wrapper.children('.sub-navigation').remove();
-		wrapper.slideUp(500);
-		open = false;
-
-		backLink.css({
-			zIndex: '-9999'
-		});
+	//Close the basket when you click anywhere on the page except when clicking input
+	$('html, body').on('click', function(e) {
+		if (!$(e.target).parents('.subnav-wrapper').size()) {
+			if(!$(e.target).is('input')) {
+				wrapper.slideUp(500);
+				open = false;
+			}
+		}
 	});
 
+	// If '#subscribe' is appended to URL, open subscribe box and focus it
+	if (window.location.hash == '#subscribe' && (window.innerWidth > 768)) {
+		wrapper.html(subscribe.clone());
+		wrapper.show();
+
+		wrapper.children().show();
+
+		open = $('.newsletter-icon').data('pushid');
+
+
+		setTimeout(function() {
+			$('#app_subscribe_email_address').focus();
+		}, 20);
+	}
 });

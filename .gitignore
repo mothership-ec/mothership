@@ -4,11 +4,4 @@
 .idea
 /data/*
 /bin/*
-/public/assets/*
-/public/files/*
-/public/resize/*
-/public/cogules/*
-/public/barcodes/*
-/logs/*
-/tmp/*
 /config/local/*

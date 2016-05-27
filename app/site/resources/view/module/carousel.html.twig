@@ -1,27 +1,29 @@
-<section id="home-carousel" class="carousel">
-	<ul class="slides">
-		{% for slide in page.content.carousel %}
-		<li>
-			{% if not slide.link.value.target is empty %}<a href="{{ slide.link }}">{% endif %}
-				<img src="{{ getResizedUrl(slide.image, 1140, 450) }}">
-				<div class="wrap">
-					{% if not slide.header.value is empty or not slide.subheader.value is empty %}
-					<div class="overlay overlay-{{ slide.overlay_pos }}"> 
-						{% if not slide.header.value is empty %}<h1>{{ slide.header }}</h1>{% endif %}
-						{% if not slide.subheader.value is empty %}<p>{{ slide.subheader }}</p>{% endif %}
-					</div> 
-					{% endif %}
-				</div>
-			{% if not slide.link.value.target is empty %}</a>{% endif %}
-		</li>
-		{% endfor %}
-	</ul>
-</section>
+{% if page.content.carousel | length %}
+	<section id="home-carousel" class="carousel">
+		<ul class="slides">
+			{% for slide in page.content.carousel %}
+			<li>
+				{% if not slide.link.value.target is empty %}<a href="{{ slide.link }}">{% endif %}
+					<img src="{{ getResizedUrl(slide.image, 1140, 450) }}">
+					<div class="wrap">
+						{% if not slide.header.value is empty or not slide.subheader.value is empty %}
+						<div class="overlay overlay-{{ slide.overlay_pos }}">
+							{% if not slide.header.value is empty %}<h1>{{ slide.header }}</h1>{% endif %}
+							{% if not slide.subheader.value is empty %}<p>{{ slide.subheader }}</p>{% endif %}
+						</div>
+						{% endif %}
+					</div>
+				{% if not slide.link.value.target is empty %}</a>{% endif %}
+			</li>
+			{% endfor %}
+		</ul>
+	</section>
 
-{# Carousel Javascript #}
-<script type="text/javascript">
-	$('#home-carousel').carousel({
-		useArrows: true,
-		useDots: true
-	});
-</script>
+	{# Carousel Javascript #}
+	<script type="text/javascript">
+		$('#home-carousel').carousel({
+			useArrows: true,
+			useDots: true
+		});
+	</script>
+{% endif %}

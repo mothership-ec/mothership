@@ -12,7 +12,7 @@ class Services implements ServicesInterface
 {
 	public function registerServices($services)
 	{
-		$services->extend('cms.page.types', function($collection, $c) {
+		$services->extend('cms.page.types', function ($collection, $c) {
 			$collection
 				->add(new PageType\Home)
 				->add(new PageType\Generic)
@@ -21,54 +21,53 @@ class Services implements ServicesInterface
 				->add(new PageType\BlogListing)
 				->add(new PageType\BlogPost($c['user.groups']))
 				->add(new PageType\Contact)
-				->add(new PageType\RedirectToFirstChild)
-			;
+				->add(new PageType\RedirectToFirstChild);
 
 			return $collection;
 		});
 
 		// Commerce
-		$services['product.types'] = function($c) {
-			return new Product\Type\Collection([
-				new Product\Type\ApparelProductType($c['db.query']),
-			]);
-		};
-
-		$services->extend('product.image.types', function($types) {
+		$services['product.types'] = $services->extend('product.types', function ($types, $c) {
+			$types->add(new Product\Type\ApparelProductType($c['db.query']));
 
 			return $types;
 		});
 
-		$services->extend('stock.locations', function($locations) {
-			$locations->add(new Product\Stock\Location\Location('web',  'Web'));
-			$locations->add(new Product\Stock\Location\Location('bin',  'Bin'));
+		$services->extend('product.image.types', function ($types) {
+
+			return $types;
+		});
+
+		$services->extend('stock.locations', function ($locations) {
+			$locations->add(new Product\Stock\Location\Location('web', 'Web'));
+			$locations->add(new Product\Stock\Location\Location('bin', 'Bin'));
 			$locations->add(new Product\Stock\Location\Location('hold', 'Hold'));
 
 			$locations->setRoleLocation($locations::SELL_ROLE, 'web');
-			$locations->setRoleLocation($locations::BIN_ROLE,  'bin');
+			$locations->setRoleLocation($locations::BIN_ROLE, 'bin');
 			$locations->setRoleLocation($locations::HOLD_ROLE, 'hold');
 
 			return $locations;
 		});
 
-		$services['app.form.subscribe'] = function($c) {
+		$services['app.form.subscribe'] = function ($c) {
 			return new \Mothership\Site\Form\Subscribe;
 		};
 
-		$services->extend('shipping.methods', function($methods) {
+		$services->extend('shipping.methods', function ($methods) {
 			$methods->add(new \Mothership\Site\ShippingMethod\Uk);
 
 			return $methods;
 		});
 
-		$services->extend('order.dispatch.methods', function($methods) {
+		$services->extend('order.dispatch.methods', function ($methods) {
 			$methods->add(new \Mothership\Site\DispatchMethod\Manual);
 
 			return $methods;
 		});
 
-		$services->extend('order.dispatch.method.selector', function($selector) {
-			$selector->setFunction(function($order) {
+		$services->extend('order.dispatch.method.selector', function ($selector) {
+			$selector->setFunction(function ($order) {
 				return 'manual';
 			});
 
@@ -76,7 +75,7 @@ class Services implements ServicesInterface
 		});
 
 		// Extend reasons collection
-		$services->extend('return.reasons', function($c) {
+		$services->extend('return.reasons', function ($c) {
 			return new OrderReturn\Collection\Collection(array(
 				new OrderReturn\Collection\Item('wrong-colour', 'Wrong colour'),
 				new OrderReturn\Collection\Item('doesnt-suit-me', 'Doesn\'t suit me'),
@@ -89,8 +88,11 @@ class Services implements ServicesInterface
 
 		// CMS
 
-		$services['app.shop.product_page_loader'] = function($c) {
-			return new \Mothership\Site\Shop\ProductPageLoader($c['cms.page.loader'], $c['cms.page.content_loader']);
+		$services['app.shop.product_page_loader'] = function ($c) {
+			return new \Mothership\Site\Shop\ProductPageLoader(
+				$c['cms.page.loader']->includeUnpublished(false)->includeDeleted(false),
+				$c['cms.page.content_loader']
+			);
 		};
 	}
 }

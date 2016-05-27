@@ -22,6 +22,7 @@
 	{# Main navigation #}
 	{% block navigation %}
 		<nav class="navigation row nav-offcanvas" role="navigation">
+			<div class="mobile-back">Back</div>
 			{{
 				render(controller('Mothership:Site::Controller:Module:Menu#menu', {
 					currentPage: page

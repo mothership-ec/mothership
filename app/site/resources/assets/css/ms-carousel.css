@@ -52,7 +52,7 @@
 .carousel-zoom {
 	clear: both;
 	position: relative;
-	padding: 20px 0;
+	padding: 0;
 }
 
 .carousel-zoom .unzoom {

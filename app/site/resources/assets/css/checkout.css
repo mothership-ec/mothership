@@ -130,9 +130,14 @@
     text-align: left;
 }
 
+.selection .image {
+    width: 20%;
+}
+
 .selection img
 {
-    margin: 0 20px 0 0;
+    margin: 0;
+    width: 50%;
 }
 
 .selection input
@@ -541,8 +546,7 @@
 ---------------------------------------------------------- */
 
 
-@media screen and (max-width: 768px)
-{
+@media screen and (max-width: 768px) {
     .checkout .button,
     .checkout button
     {
@@ -567,6 +571,10 @@
 
     /* Selection */
 
+    .selection table {
+        table-layout: fixed;
+    }
+
     .selection thead,
     .selection th
     {
@@ -575,9 +583,7 @@
 
     .selection tr
     {
-        float: left;
-
-        width: 100%;
+        width: 100% !important;
         margin-bottom: 20px;
 
         border: 1px solid #ccc;
@@ -594,9 +600,9 @@
         position: relative;
 
         display: block;
-        float: left;
+        float: none;
 
-        width: 100%;
+        width: 100% !important;
         height: auto;
         padding: 30px 0 30px 50% !important;
 
@@ -606,14 +612,13 @@
 
     .selection .image
     {
-        width: 100%;
         padding: 0 !important;
+        width: 100%;
     }
 
-    .selection .image img
+    .selection img
     {
-        width: 100%;
-        max-width: 100%;
+        width: auto;
     }
 
     .selection td:before

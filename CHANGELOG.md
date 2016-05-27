@@ -11,9 +11,10 @@
 - Resolve issue where blog listing could break by loading page content within a `usort()` block
 - Do not load unpublished or deleted product pages from product page loader
 - Refactor off canvas mobile menu
+- Update CMS requirement to at least 4.14.0
 - Update Cog to version 4.16.0
 - Update Cog User to version 2.1.0
-- Update CMS to version 4.14
+- Update CMS to version 4.14.0
 - Update Commerce to version 5.20.0
 - Update Discounts to version 2.1.4
 - Update E-commerce to version 3.8.0

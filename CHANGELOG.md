@@ -1,5 +1,24 @@
 # Changelog
 
+## 1.4.0
+
+- Integrate cookie warning
+- Footer sticks to bottom of the screen
+- Resolve issue where checkout tables break in Firefox on mobile breakpoints
+- Resolve issue where javascript on home page breaks if no images have been assigned to the carousel
+- Do not override `product.types` service, extend it instead
+- Resolve issue where menus break if there is only one page present
+- Resolve issue where blog listing could break by loading page content within a `usort()` block
+- Do not load unpublished or deleted product pages from product page loader
+- Refactor off canvas mobile menu
+- Update Cog to version 4.16.0
+- Update Cog User to version 2.1.0
+- Update CMS to version 4.14
+- Update Commerce to version 5.20.0
+- Update Discounts to version 2.1.4
+- Update E-commerce to version 3.8.0
+- Update Returns to version 5.4.0
+
 ## 1.3.0
 
 - Support for multiple payment gateways out of the box

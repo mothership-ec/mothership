@@ -1147,6 +1147,43 @@ a.forgotten-password {
     clear: both;
 }
 
+/* Cookie Warning
+---------------------------------------------------------- */
+
+.ms-cookie-warning {
+    background: #eee;
+    padding: 0.5em;
+    color: #333;
+    font-size: 0.867em;
+    text-align: center;
+    line-height: 150%;
+}
+
+.ms-cookie-warning a {
+    color: #999;
+}
+
+.ms-cookie-warning a:hover {
+    color: #000;
+}
+
+.ms-cookie-warning .cookie-agree {
+    display: inline-block;
+    background: rgba(0,0,0,0.5);
+    padding: 5px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-left: 10px;
+    border-radius: 2px;
+    color: #fff;
+}
+
+.ms-cookie-warning .cookie-agree:hover  {
+    background: rgba(0,0,0,1);
+    color: #fff;
+}
+
 
 /* Loading spinner
  *

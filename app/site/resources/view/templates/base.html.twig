@@ -24,6 +24,9 @@
 	{# Container #}
 	<div id="container" class="container">
 		<div class="inner-container">
+		{# Cookie Warning #}
+		{% include 'Message:Mothership:CMS::cookie-warning' %}
+			
 		{# Header #}
 		{% block header %}
 			{% include '@Mothership:Site::templates:blocks:header' %}

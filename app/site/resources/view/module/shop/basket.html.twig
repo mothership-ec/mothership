@@ -1,30 +1,31 @@
-<a href="{{ url('ms.ecom.checkout') }}" class="basket-icon open-canvas" data-direction="right">Basket <span>{{ basket.items|length }}</span></a>
-<section class="basket off-canvas" data-height data-offcanvas data-swipe="left">
-	<nav>
-		<div>
-			<a href="{{ url('ms.ecom.checkout') }}">Go to Checkout</a>
-		</div>
-		<a href="#" class="close"><i class="fa fa-times"></i></a>
-	</nav>
+<a href="{{ url('ms.ecom.checkout') }}" class="basket-icon open-canvas" data-direction="right">
+	Basket <span>{{ basket.items|length }}</span>
+</a>
+<section class="basket">
+	<a href="#" class="close"><i class="fa-close"></i></a>
 	<div class="contents">
-		<section class="details">
-			<p>Total item(s) - {{ basket.items|length }}</p>
-			<strong>{{ totalListPrice|price(basket.currencyID) }}</strong>
-		</section>
 		{% if basket.items|length > 0 %}
+			{% set discount = 0 %}
 			<ul class="items">
 				{% for item in basket.items.getRows %}
+					{% set discount = discount + item.sum('discount') %}
 					<li>
 						{{ getResizedImage(item.first.product.getUnitImage(item.first.unit, 'default'), 70, 70) }}
-						<h4>{{ item.first.productName }} <span>{{ item.first.unit.options.colour }} - {{ item.sum('gross')|price }}</span></h4>
-						<p class="qty">Qty: {{ item.quantity }}, {{ item.first.unit.options.size }}</p>
-						<a href="{{ url('ms.ecom.checkout.remove',{'unitID':item.first.unitID}) }}" class="remove">Remove</a>
+						<h4>{{ item.first.productName }} <span>{{ item.first.unit.options.colour }} - {{ item.first.unit.options.size }}</span></h4>
+						<p class="qty">Qty: {{ item.quantity }} <span>{{ item.sum('listPrice')|price(null, null, {'no_decimal': true}) }}</span></p>
+						<a href="{{ url('ms.ecom.checkout.remove',{'unitID':item.first.unitID}) }}" class="remove"><i class="fa-trash-o"></i></a>
 					</li>
 				{% endfor %}
 			</ul>
+			{% if discount > 0 %}
+				<div class="subtotal">Subtotal: <strong>{{ totalListPrice|price(basket.currencyID, null, {'no_decimal': true}) }}</strong></div>
+				<div class="subtotal">Discount: <strong>{{ (0 - discount)|price(basket.currencyID, null, {'no_decimal': true}) }}</strong></div>
+			{% endif %}
+			<div class="subtotal">Total: <strong>{{ (totalListPrice - discount)|price(basket.currencyID) }}</strong></div>
+			<a class="go-checkout" href="{{ url('ms.ecom.checkout') }}">Go to Checkout</a>
 		{% else %}
-			<p class="empty">Your shopping cart is empty&hellip; Go and add something!</p>
-			<a class="go-shopping" href="#">Go shopping</a>
+			<p class="empty">Your shopping cart is empty...</p>
+			<a class="go-shopping" href="/shop">Return to shop</a>
 		{% endif %}
 	</div>
 </section>

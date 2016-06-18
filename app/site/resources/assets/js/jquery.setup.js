@@ -80,5 +80,9 @@ jQuery(document).ready(function($) {
 
         toggleReturnsInput();
     });
-    
+
+    $(document).on('ajaxStop', function(data) {
+        // show error flashes
+        $('[data-feedback]').html($(event.target.response).find('[data-feedback]')).find('.success').hide();
+    });
 });
